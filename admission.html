@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admission Guidance | SAFA TECH</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+    :root{
+      --black:#050505;
+      --dark:#0b0b0b;
+      --card:#111111;
+      --gold:#d4af37;
+      --light-gold:#ffd700;
+      --soft-gold:#f5d76e;
+      --white:#ffffff;
+      --gray:#cfcfcf;
+      --border:rgba(212,175,55,.35);
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+      text-decoration:none;
+    }
+
+    body{
+      background:
+        radial-gradient(circle at top left, rgba(212,175,55,.18), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(255,215,0,.12), transparent 35%),
+        var(--black);
+      color:var(--white);
+      line-height:1.6;
+    }
+
+    .container{
+      width:min(1180px,92%);
+      margin:auto;
+    }
+
+    /* HEADER */
+    header{
+      padding:18px 0;
+      border-bottom:1px solid var(--border);
+      background:rgba(5,5,5,.9);
+      position:sticky;
+      top:0;
+      z-index:10;
+      backdrop-filter:blur(12px);
+    }
+
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      color:var(--white);
+      font-size:24px;
+      font-weight:800;
+      letter-spacing:.5px;
+    }
+
+    .brand img{
+      width:45px;
+      height:45px;
+      object-fit:contain;
+      border-radius:50%;
+      border:1px solid var(--gold);
+    }
+
+    .brand span{
+      color:var(--gold);
+    }
+
+    .nav a.btn-small{
+      color:var(--black);
+      background:linear-gradient(135deg,var(--gold),var(--light-gold));
+      padding:10px 18px;
+      border-radius:30px;
+      font-weight:700;
+      box-shadow:0 0 18px rgba(212,175,55,.35);
+    }
+
+    /* HERO */
+    .hero{
+      padding:75px 0 45px;
+      text-align:center;
+    }
+
+    .tag{
+      display:inline-block;
+      padding:8px 18px;
+      border:1px solid var(--border);
+      color:var(--soft-gold);
+      border-radius:30px;
+      background:rgba(212,175,55,.08);
+      font-size:14px;
+      margin-bottom:18px;
+    }
+
+    .hero h1{
+      font-size:clamp(34px,6vw,62px);
+      line-height:1.1;
+      font-weight:900;
+      margin-bottom:18px;
+    }
+
+    .hero h1 span{
+      color:var(--gold);
+      text-shadow:0 0 22px rgba(212,175,55,.35);
+    }
+
+    .hero p{
+      max-width:820px;
+      margin:0 auto 25px;
+      color:var(--gray);
+      font-size:17px;
+    }
+
+    .hero-buttons{
+      display:flex;
+      justify-content:center;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:25px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:13px 24px;
+      border-radius:35px;
+      font-weight:700;
+      transition:.3s;
+    }
+
+    .btn-gold{
+      background:linear-gradient(135deg,var(--gold),var(--light-gold));
+      color:var(--black);
+      box-shadow:0 0 22px rgba(212,175,55,.35);
+    }
+
+    .btn-border{
+      border:1px solid var(--gold);
+      color:var(--gold);
+    }
+
+    .btn:hover{
+      transform:translateY(-3px);
+    }
+
+    /* INFO STRIP */
+    .info-strip{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+      margin:25px 0 50px;
+    }
+
+    .info-box{
+      background:rgba(17,17,17,.92);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:20px;
+      text-align:center;
+    }
+
+    .info-box h3{
+      color:var(--gold);
+      font-size:26px;
+    }
+
+    .info-box p{
+      color:var(--gray);
+      font-size:14px;
+    }
+
+    /* SECTION */
+    section{
+      padding:45px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:35px;
+    }
+
+    .section-title h2{
+      font-size:clamp(28px,4vw,42px);
+      margin-bottom:10px;
+    }
+
+    .section-title h2 span{
+      color:var(--gold);
+    }
+
+    .section-title p{
+      color:var(--gray);
+      max-width:750px;
+      margin:auto;
+    }
+
+    /* CARDS */
+    .course-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+
+    .course-card{
+      background:linear-gradient(180deg,rgba(17,17,17,.98),rgba(8,8,8,.98));
+      border:1px solid var(--border);
+      border-radius:24px;
+      padding:24px;
+      position:relative;
+      overflow:hidden;
+      transition:.35s;
+    }
+
+    .course-card::before{
+      content:"";
+      position:absolute;
+      top:-50px;
+      right:-50px;
+      width:120px;
+      height:120px;
+      background:rgba(212,175,55,.14);
+      border-radius:50%;
+      filter:blur(5px);
+    }
+
+    .course-card:hover{
+      transform:translateY(-8px);
+      border-color:var(--gold);
+      box-shadow:0 18px 45px rgba(0,0,0,.45);
+    }
+
+    .icon{
+      width:55px;
+      height:55px;
+      display:grid;
+      place-items:center;
+      border-radius:16px;
+      background:rgba(212,175,55,.12);
+      color:var(--gold);
+      font-size:28px;
+      margin-bottom:15px;
+      border:1px solid var(--border);
+    }
+
+    .course-card h3{
+      font-size:22px;
+      color:var(--white);
+      margin-bottom:8px;
+    }
+
+    .course-card .short{
+      color:var(--gray);
+      font-size:14px;
+      margin-bottom:16px;
+    }
+
+    .detail{
+      margin:12px 0;
+      padding:12px;
+      border-radius:14px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.06);
+    }
+
+    .detail strong{
+      display:block;
+      color:var(--soft-gold);
+      margin-bottom:4px;
+      font-size:14px;
+    }
+
+    .detail span{
+      color:var(--gray);
+      font-size:14px;
+    }
+
+    .card-btn{
+      display:block;
+      text-align:center;
+      margin-top:18px;
+      background:linear-gradient(135deg,var(--gold),var(--light-gold));
+      color:#000;
+      padding:11px 16px;
+      border-radius:30px;
+      font-weight:700;
+    }
+
+    /* PROCESS */
+    .process{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+
+    .step{
+      background:rgba(17,17,17,.95);
+      border:1px solid var(--border);
+      padding:22px;
+      border-radius:22px;
+    }
+
+    .step span{
+      width:38px;
+      height:38px;
+      display:grid;
+      place-items:center;
+      background:var(--gold);
+      color:#000;
+      font-weight:800;
+      border-radius:50%;
+      margin-bottom:12px;
+    }
+
+    .step h3{
+      color:var(--white);
+      margin-bottom:8px;
+    }
+
+    .step p{
+      color:var(--gray);
+      font-size:14px;
+    }
+
+    /* DOCUMENTS */
+    .documents{
+      background:rgba(17,17,17,.95);
+      border:1px solid var(--border);
+      border-radius:26px;
+      padding:30px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:25px;
+      align-items:center;
+    }
+
+    .documents h2{
+      font-size:32px;
+      margin-bottom:12px;
+    }
+
+    .documents h2 span{
+      color:var(--gold);
+    }
+
+    .documents p{
+      color:var(--gray);
+      margin-bottom:15px;
+    }
+
+    .doc-list{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+    }
+
+    .doc-list li{
+      list-style:none;
+      background:rgba(255,255,255,.04);
+      padding:12px;
+      border-radius:14px;
+      color:var(--gray);
+      border:1px solid rgba(255,255,255,.06);
+      font-size:14px;
+    }
+
+    .doc-list li::before{
+      content:"✔ ";
+      color:var(--gold);
+      font-weight:700;
+    }
+
+    /* CTA */
+    .cta{
+      text-align:center;
+      padding:55px 25px;
+      border-radius:30px;
+      background:
+        linear-gradient(135deg,rgba(212,175,55,.18),rgba(255,215,0,.06)),
+        rgba(17,17,17,.95);
+      border:1px solid var(--border);
+      margin:40px 0 60px;
+    }
+
+    .cta h2{
+      font-size:clamp(28px,4vw,44px);
+      margin-bottom:12px;
+    }
+
+    .cta h2 span{
+      color:var(--gold);
+    }
+
+    .cta p{
+      max-width:700px;
+      margin:auto;
+      color:var(--gray);
+      margin-bottom:24px;
+    }
+
+    footer{
+      text-align:center;
+      padding:22px;
+      border-top:1px solid var(--border);
+      color:var(--gray);
+      font-size:14px;
+    }
+
+    footer span{
+      color:var(--gold);
+      font-weight:700;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:950px){
+      .course-grid,
+      .process,
+      .info-strip{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .documents{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media(max-width:600px){
+      .nav{
+        flex-direction:column;
+      }
+
+      .hero{
+        padding-top:45px;
+      }
+
+      .course-grid,
+      .process,
+      .info-strip,
+      .doc-list{
+        grid-template-columns:1fr;
+      }
+
+      .course-card,
+      .documents{
+        padding:20px;
+      }
+
+      .brand{
+        font-size:22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav">
+      <a href="#" class="brand">
+        <img src="images/logo.png" alt="SAFA TECH Logo" onerror="this.style.display='none'">
+        SAFA <span>TECH</span>
+      </a>
+      
+      
+      <a href="index.html" class="btn-small">Home</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="tag">Admission Guidance + Career Support</span>
+
+        <h1>Choose Your Best <span>Career Course</span></h1>
+
+        <p>
+          Along with digital services, SAFA TECH also provides guidance for students
+          who want admission in technical and professional courses. Get support for
+          course selection, entrance exam, required qualification, counselling and documents.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#courses" class="btn btn-gold">View Courses</a>
+          <a href="#documents" class="btn btn-border">Required Documents</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFO -->
+    <div class="container">
+      <div class="info-strip">
+        <div class="info-box">
+          <h3>7+</h3>
+          <p>Course Guidance</p>
+        </div>
+        <div class="info-box">
+          <h3>1:1</h3>
+          <p>Career Counselling</p>
+        </div>
+        <div class="info-box">
+          <h3>Exam</h3>
+          <p>Entrance Support</p>
+        </div>
+        <div class="info-box">
+          <h3>Full</h3>
+          <p>Admission Help</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- COURSES -->
+    <section id="courses">
+      <div class="container">
+        <div class="section-title">
+          <h2>Admission <span>Courses</span></h2>
+          <p>All important details in short: qualification, entrance exam and guidance support.</p>
+        </div>
+
+        <div class="course-grid">
+
+          <article class="course-card">
+            <div class="icon">🎓</div>
+            <h3>Polytechnic Admission</h3>
+            <p class="short">Best for students after 10th who want technical diploma education.</p>
+
+            <div class="detail">
+              <strong>Required Qualification</strong>
+              <span>10th pass with Science / Maths. For lateral entry, 12th Science or ITI may be required.</span>
+            </div>
+
+            <div class="detail">
+              <strong>Entrance Exam</strong>
+              <span>State Polytechnic Entrance  JEECUP , Exam form coming Every Year January , Exam conduct on May and  Counselling Process Start on June </span>
+            </div>
+
+            <a class="card-btn" href="https://wa.me/918090365014?text=I%20want%20Polytechnic%20Admission%20Guidance">
+              Get Guidance
+            </a>
+          </article>
+
+          <article class="course-card">
+            <div class="icon">💻</div>
+            <h3>B.Tech Admission</h3>
+            <p class="short">For students who want Engineering career in CS, IT, Civil, Electrical, Mechanical etc.</p>
+
+            <div class="detail">
+              <strong>Required Qualification</strong>
+              <span>12th with required subjects, minimum 45% marks; 40% for SC/ST or Diploma for lateral entry admission.</span>
+            </div>
+
+            <div class="detail">
+              <strong>Entrance Exam</strong>
+              <span>JEE Main for main UPTAC counselling. In special counselling, CUET UG may also be considered if seats remain, Direct admission as per rules.</span>
+            </div>
+
+            <a class="card-btn" href="https://wa.me/918090365014?text=I%20want%20B.Tech%20Admission%20Guidance">
+              Get Guidance
+            </a>
+          </article>
+          <article class="course-card">
+            <div class="icon">💻</div>
+            <h3>M.Tech Admission</h3>
+            <p class="short">For students who want Engineering career in CS, IT, Civil, Electrical, Mechanical etc.</p>
+
+            <div class="detail">
+              <strong>Required Qualification</strong>
+              <span>B.E. / B.Tech / MCA or related degree as per branch requirement</span>
+            </div>
+
+            <div class="detail">
+              <strong>Entrance Exam</strong>
+              <span>CUET PG paper depends on branch. Example: CSE / IT / AI / Cyber Security mapping uses CUET PG paper codes like SCQP09.</span>
+            </div>
+
+            <a class="card-btn" href="https://wa.me/918090365014?text=I%20want%20B.Tech%20Admission%20Guidance">
+              Get Guidance
+            </a>
+          </article>
+
+          <article class="course-card">
+            <div class="icon">🖥️</div>
+            <h3>BCA Guidance</h3>
+            <p class="short">Best course for students interested in computer, coding and software field.</p>
+
+            <div class="detail">
+              <strong>Required Qualification</strong>
+              <span>Passed 10+2.</span>
+            </div>
+
+            <div class="detail">
+              <strong>Entrance Exam</strong>
+              <span>CUET UG — General Aptitude Test + English.</span>
+            </div>
+
+            <a class="card-btn" href="https://wa.me/918090365014?text=I%20want%20BCA%20Admission%20Guidance">
+              Get Guidance
+            </a>
+          </article>
+
+          <article class="course-card">
+            <div class="icon">🚀</div>
+            <h3>MCA Guidance</h3>
+            <p class="short">For students who want advanced career in software development and IT industry.</p>
+
+            <div class="detail">
+              <strong>Required Qualification</strong>
+              <span>BCA / B.Sc CS / B.Sc IT / B.Tech CSE/IT, or graduation with Mathematics at 10+2 or graduation level, minimum 50%, 45% for SC/ST.</span>
+            </div>
+
+            <div class="detail">
+              <strong>Entrance Exam</strong>
+              <span>CUET PG — SCQP09.</span>
+            </div>
+
+            <a class="card-btn" href="https://wa.me/918090365014?text=I%20want%20MCA%20Admission%20Guidance">
+              Get Guidance
+            </a>
+          </article>
+
+          <article class="course-card">
+            <div class="icon">📊</div>
+            <h3>BBA  Guidance</h3>
+            <p class="short">For students interested in business, management, marketing and professional career.</p>
+
+            <div class="detail">
+              <strong>Required Qualification</strong>
+              <span>Passed 10+2.</span>
+            </div>
+
+            <div class="detail">
+              <strong>Entrance Exam</strong>
+              <span>CUET UG — General Aptitude Test + English.</span>
+            </div>
+
+            <a class="card-btn" href="https://wa.me/918090365014?text=I%20want%20BBA%20or%20MBA%20Guidance">
+              Get Guidance
+            </a>
+          </article>
+          <article class="course-card">
+            <div class="icon">📊</div>
+            <h3>MBA Guidance</h3>
+            <p class="short">For students interested in business, management, marketing and professional career.</p>
+
+            <div class="detail">
+              <strong>Required Qualification</strong>
+              <span>Bachelor’s degree of minimum 3 years, minimum 50%, 45% for SC/ST.</span>
+            </div>
+
+            <div class="detail">
+              <strong>Entrance Exam</strong>
+              <span>CUET PG — COQP12.</span>
+            </div>
+
+            <a class="card-btn" href="https://wa.me/918090365014?text=I%20want%20BBA%20or%20MBA%20Guidance">
+              Get Guidance
+            </a>
+          </article>
+
+          
+
+          <article class="course-card">
+            <div class="icon">🧭</div>
+            <h3>Career Counselling</h3>
+            <p class="short">Confused after 10th, 12th, Diploma or Graduation? Get proper career direction.</p>
+
+            <div class="detail">
+              <strong>Support Includes</strong>
+              <span>Course selection, college selection, career path, branch selection and future planning.</span>
+            </div>
+
+            <div class="detail">
+              <strong>Best For</strong>
+              <span>10th, 12th, Diploma, BCA, B.Tech and Graduation students.</span>
+            </div>
+
+            <a class="card-btn" href="https://wa.me/918090365014?text=I%20want%20Career%20Counselling">
+              Get Guidance
+            </a>
+          </article>
+
+          <article class="course-card">
+            <div class="icon">🤝</div>
+            <h3>Student Mentorship</h3>
+            <p class="short">Personal support for study planning, project guidance and skill development.</p>
+
+            <div class="detail">
+              <strong>Support Includes</strong>
+              <span>Study roadmap, project ideas, exam tips, practical skills and interview preparation.</span>
+            </div>
+
+            <div class="detail">
+              <strong>Entrance Exam</strong>
+              <span>No entrance exam required. Mentorship is based on student need.</span>
+            </div>
+
+            <a class="card-btn" href="https://wa.me/918090365014?text=I%20want%20Student%20Mentorship">
+              Get Guidance
+            </a>
+          </article>
+
+          <article class="course-card">
+            <div class="icon">⭐</div>
+            <h3>Many More Courses</h3>
+            <p class="short">SAFA TECH helps students choose suitable technical and professional courses.</p>
+
+            <div class="detail">
+              <strong>Courses</strong>
+              <span>Diploma, B.Tech, BCA, MCA, BBA, MBA, IT, CS and professional education guidance.</span>
+            </div>
+
+            <div class="detail">
+              <strong>Admission Help</strong>
+              <span>Form filling, counselling, documents, college selection and complete admission support.</span>
+            </div>
+
+            <a class="card-btn" href="https://wa.me/918090365014?text=I%20want%20complete%20admission%20guidance">
+              Contact Now
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section>
+      <div class="container">
+        <div class="section-title">
+          <h2>Admission <span>Process</span></h2>
+          <p>Simple steps to start your admission guidance with SAFA TECH.</p>
+        </div>
+
+        <div class="process">
+          <div class="step">
+            <span>1</span>
+            <h3>Choose Course</h3>
+            <p>Select your course according to your qualification and career goal.</p>
+          </div>
+
+          <div class="step">
+            <span>2</span>
+            <h3>Check Eligibility</h3>
+            <p>We guide you about qualification, entrance exam and admission options.</p>
+          </div>
+
+          <div class="step">
+            <span>3</span>
+            <h3>Prepare Documents</h3>
+            <p>Keep all important documents ready for form filling and counselling.</p>
+          </div>
+
+          <div class="step">
+            <span>4</span>
+            <h3>Apply & Counselling</h3>
+            <p>Get help in application, counselling, college selection and final admission.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOCUMENTS -->
+    <section id="documents">
+      <div class="container">
+        <div class="documents">
+          <div>
+            <h2>Required <span>Documents</span></h2>
+            <p>
+              Documents may change according to college, course and university rules.
+              These are common documents required for admission.
+            </p>
+            <a class="btn btn-gold" href="https://wa.me/918090365014?text=I%20want%20document%20list%20for%20admission">
+              Ask Document List
+            </a>
+          </div>
+
+          <ul class="doc-list">
+            <li>10th Marksheet</li>
+            <li>12th Marksheet</li>
+            <li>Diploma / Graduation Marksheet</li>
+            <li>Aadhaar Card</li>
+            <li>Passport Size Photo</li>
+            <li>Transfer Certificate</li>
+            <li>Category Certificate</li>
+            <li>Income Certificate</li>
+            <li>Domicile Certificate</li>
+            <li>Entrance Exam Result</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="container">
+      <div class="cta">
+        <h2>Need Admission Help? <span>Contact SAFA TECH</span></h2>
+        <p>
+          Send your name, qualification, interested course, city and contact number.
+          Our team will guide you with the best admission and career option.
+        </p>
+
+        <a class="btn btn-gold" href="https://wa.me/918090365014?text=Hello%20SAFA%20TECH%2C%20I%20want%20admission%20guidance.%20My%20details%20are%3A%20Name%2C%20Qualification%2C%20Course%2C%20City">
+          Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 <span>SAFA TECH</span> | Admission Guidance | Digital Services | Career Support
+  </footer>
+
+</body>
+</html>

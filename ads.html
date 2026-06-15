@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="images/logos.jpeg">
+  <title>SAFA TECH | Video Ads Making</title>
+
+  <!-- CSS File -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    :root {
+      --black: #050505;
+      --dark-black: #0b0b0b;
+      --card-black: #111111;
+      --gold: #d4af37;
+      --light-gold: #ffd700;
+      --soft-gold: #f5d76e;
+      --white: #ffffff;
+      --gray: #cfcfcf;
+      --light-gray: #eeeeee;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .ads-details-page {
+      padding: 120px 8% 60px;
+      min-height: 100vh;
+    }
+
+    .ads-hero {
+      text-align: center;
+      max-width: 950px;
+      margin: 0 auto 50px;
+      background: linear-gradient(145deg, var(--card-black), var(--dark-black));
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      border-radius: 25px;
+      padding: 45px 30px;
+      box-shadow: 0 0 30px rgba(212, 175, 55, 0.18);
+    }
+
+    .ads-hero i {
+      font-size: 55px;
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+
+    .ads-hero h1 {
+      font-size: 42px;
+      color: var(--gold);
+      margin-bottom: 15px;
+    }
+
+    .ads-hero h2 {
+      font-size: 24px;
+      color: var(--light-gold);
+      margin-bottom: 20px;
+    }
+
+    .ads-hero p {
+      color: var(--gray);
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .details-card {
+      background: linear-gradient(145deg, var(--card-black), var(--dark-black));
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: 0 0 22px rgba(212, 175, 55, 0.12);
+      transition: 0.3s ease;
+    }
+
+    .details-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 30px rgba(212, 175, 55, 0.28);
+    }
+
+    .details-card h3 {
+      color: var(--gold);
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .details-card p {
+      color: var(--gray);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .details-card ul {
+      margin-left: 20px;
+    }
+
+    .details-card ul li {
+      color: var(--light-gray);
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .price-box {
+      max-width: 1100px;
+      margin: 45px auto;
+      background: linear-gradient(145deg, var(--card-black), var(--dark-black));
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      border-radius: 25px;
+      padding: 30px;
+      box-shadow: 0 0 28px rgba(212, 175, 55, 0.16);
+    }
+
+    .price-box h2 {
+      text-align: center;
+      color: var(--gold);
+      font-size: 32px;
+      margin-bottom: 25px;
+    }
+
+    .price-table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 15px;
+    }
+
+    .price-table th,
+    .price-table td {
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      padding: 16px;
+      text-align: left;
+      color: var(--light-gray);
+    }
+
+    .price-table th {
+      background: var(--gold);
+      color: var(--black);
+      font-weight: 800;
+    }
+
+    .price-table td strong {
+      color: var(--gold);
+      font-size: 18px;
+    }
+
+    .highlight-note {
+      max-width: 1100px;
+      margin: 35px auto;
+      padding: 25px;
+      border-radius: 20px;
+      background: rgba(212, 175, 55, 0.08);
+      border-left: 5px solid var(--gold);
+    }
+
+    .highlight-note h3 {
+      color: var(--gold);
+      margin-bottom: 12px;
+      font-size: 24px;
+    }
+
+    .highlight-note p {
+      color: var(--light-gray);
+      line-height: 1.8;
+    }
+
+    .order-section {
+      max-width: 1100px;
+      margin: 45px auto 0;
+      text-align: center;
+      background: linear-gradient(145deg, var(--card-black), var(--dark-black));
+      border-radius: 25px;
+      padding: 35px;
+      border: 1px solid rgba(212, 175, 55, 0.45);
+    }
+
+    .order-section h2 {
+      color: var(--gold);
+      font-size: 32px;
+      margin-bottom: 18px;
+    }
+
+    .order-section p {
+      color: var(--gray);
+      line-height: 1.8;
+      margin-bottom: 25px;
+    }
+
+    .order-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+
+    }
+
+    .back-btn {
+      display: inline-block;
+      padding: 12px 26px;
+      border-radius: 30px;
+      border: 2px solid var(--gold);
+      color: var(--gold);
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .back-btn:hover {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    @media (max-width: 850px) {
+      .details-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ads-hero h1 {
+        font-size: 32px;
+      }
+
+      .ads-hero h2 {
+        font-size: 20px;
+      }
+
+      .price-table {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .ads-details-page {
+        padding: 100px 5% 45px;
+      }
+
+      .ads-hero,
+      .details-card,
+      .price-box,
+      .order-section {
+        padding: 22px;
+      }
+
+      .price-table th,
+      .price-table td {
+        padding: 10px;
+      }
+    }
+
+    .header {
+      width: 100%;
+      height: 10%;
+      padding: 20px 8%;
+      background: rgba(5, 5, 5, 0.95);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 200;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
+    }
+
+    .logo {
+      font-size: 25px;
+      height: 20%;
+      font-weight: 50;
+      color: var(--light-gold);
+      text-decoration: none;
+      letter-spacing: 1px;
+      text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+    }
+
+    .logo-img {
+      width: 45px;
+      height: 45px;
+      object-fit: contain;
+    }
+
+    .navbar a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      margin-left: 28px;
+      transition: 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: var(--light-gold);
+      text-shadow: 0 0 10px var(--gold);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" class="logo-img">
+      <span>SAFA TECH</span>
+    </a>
+
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+
+    </nav>
+  </header>
+
+  <!-- Video Ads Details Page -->
+  <section class="ads-details-page">
+
+    <div class="ads-hero">
+      <i class="fa-solid fa-video"></i>
+      <h1>Video Ads Making Service</h1>
+      <h2>Make Your Business Ads Very Fast With SAFA TECH</h2>
+      <p>
+        Promote your business, institute, coaching, shop, service, admission campaign,
+        product, or personal brand with attractive short video ads. SAFA TECH creates
+        professional video ads for WhatsApp, Instagram, Facebook, YouTube Shorts,
+        and other social media platforms.
+      </p>
+
+      <div class="home-buttons" style="justify-content:center; margin-top:25px;">
+        <a href="#price" class="back-btn">View Price</a>
+        <a href="#order" class="back-btn">Order Now</a>
+      </div>
+    </div>
+
+    <!-- Price Section -->
+    <div class="price-box" id="price">
+      <h2>Video Ads Price & Charges</h2>
+
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th>Ad Package</th>
+            <th>Price</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td><strong>30 Second Ad</strong></td>
+            <td><strong>₹499</strong></td>
+            <td>Best for quick business promotion, admission post, offer, product, or service ad.</td>
+          </tr>
+
+          <tr>
+            <td><strong>60 Second Ad</strong></td>
+            <td><strong>₹699</strong></td>
+            <td>Best for complete business details, more images, more text, and strong promotion.</td>
+          </tr>
+
+          <tr>
+            <td><strong>Male / Female Avatar</strong></td>
+            <td>Included </td>
+            <td>You can choose male or female avatar for your ad. Normal avatar is included if available.</td>
+          </tr>
+
+          <tr>
+            <td><strong>Ad With Your Face</strong></td>
+            <td>Extra Charge</td>
+            <td>If you want your own face/avatar in the ad, extra charges will be added to the present ad price.</td>
+          </tr>
+
+
+
+          <tr>
+            <td><strong>Extra Changes</strong></td>
+            <td>As per changes</td>
+            <td>After final design approval, extra changes may be chargeable.</td>
+          </tr>
+          <tr>
+            <td><strong> Delivery</strong></td>
+            <td> 24H </td>
+            <td>Ad deliverd very fast </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Required Details -->
+    <div class="details-grid">
+
+      <div class="details-card">
+        <h3><i class="fa-solid fa-list-check"></i> What Details You Need To Send</h3>
+        <ul>
+          <li>Your business / shop / institute / company name</li>
+          <li>Your logo in clear quality</li>
+          <li>Your contact number and WhatsApp number</li>
+          <li>Your business address</li>
+          <li>Your service, product, course, or offer details</li>
+          <li>Your website link, if available</li>
+          <li>Your email ID, if available</li>
+          <li>Your name or owner/director name</li>
+          <li>Photos or videos related to your business</li>
+          <li>Any special line, slogan, offer, or message</li>
+        </ul>
+      </div>
+
+      <div class="details-card">
+        <h3><i class="fa-solid fa-globe"></i> If You Want Website Ad</h3>
+        <ul>
+          <li>Send your website name</li>
+          <li>Send website link / URL</li>
+          <li>Send email ID</li>
+          <li>Send business address</li>
+          <li>Send your name or brand name</li>
+          <li>Send logo and website screenshot, if available</li>
+          <li>Send important services or website features</li>
+        </ul>
+      </div>
+
+      <div class="details-card">
+        <h3><i class="fa-solid fa-user-tie"></i> Avatar Option</h3>
+        <p>
+          You can choose an avatar for your video ad. Avatar helps your ad look more
+          attractive and professional.
+        </p>
+
+        <ul>
+          <li>Male avatar available</li>
+          <li>Female avatar available</li>
+          <li>Business style avatar</li>
+          <li>Teacher / education style avatar</li>
+          <li>Professional presenter style avatar</li>
+        </ul>
+      </div>
+
+      <div class="details-card">
+        <h3><i class="fa-solid fa-face-smile"></i> Ad With Your Face</h3>
+        <p>
+          If you want an ad with your own face or personal avatar, you need to send
+          a clear photo or video. This service has extra charges added to the normal
+          ad price.
+        </p>
+
+        <ul>
+          <li>Send clear front face photo</li>
+          <li>Send good lighting image</li>
+          <li>Send your short introduction, if needed</li>
+          <li>Extra charges depend on face/avatar work quality</li>
+        </ul>
+      </div>
+
+      <div class="details-card">
+        <h3><i class="fa-solid fa-bolt"></i> Fast Ad Making Process</h3>
+        <ul>
+          <li>Send your complete business details</li>
+          <li>Choose 30 sec or 60 sec ad package</li>
+          <li>Choose male or female avatar</li>
+          <li>Send logo, images, contact number, and address</li>
+          <li>We create your video ad fast</li>
+          <li>You get final video for WhatsApp, Instagram, Facebook, and promotion</li>
+        </ul>
+      </div>
+
+      <div class="details-card">
+        <h3><i class="fa-solid fa-circle-info"></i> Important Notes</h3>
+        <ul>
+          <li>Price may increase for advanced animation or extra effects.</li>
+          <li>Voiceover, premium music, and special editing may have extra charges.</li>
+          <li>Client must send correct spelling, contact number, logo, and details.</li>
+          <li>SAFA TECH is not responsible for wrong details provided by client.</li>
+          <li>Final video will be delivered after details confirmation.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Highlight Note -->
+    <div class="highlight-note">
+      <h3>Make Your Ads Very Fast</h3>
+      <p>
+        To make your video ad quickly, send all details in one message:
+        business name, logo, contact number, address, website link, email ID,
+        your name, service details, offer details, photos, and avatar choice.
+        Complete details help us create your ad faster and better.
+      </p>
+    </div>
+
+    <!-- Order Section -->
+    <div class="order-section" id="order">
+      <h2>Order Your Video Ad Now</h2>
+
+      <p>
+        Click below and send your complete business details on WhatsApp.
+        Our team will create your attractive promotional video ad.
+      </p>
+
+      <div class="order-buttons">
+        <a href="https://wa.me/918090365014?text=Hello%20SAFA%20TECH%2C%20I%20want%20to%20make%20a%20video%20ad.%0A%0APackage%3A%2030%20sec%20%2F%2060%20sec%0ABusiness%20Name%3A%0ALogo%3A%20I%20will%20send%0AContact%20Number%3A%0AAddress%3A%0AWebsite%20Link%3A%0AEmail%20ID%3A%0AOwner%20Name%3A%0AService%20Details%3A%0AAvatar%20Choice%3A%20Male%20%2F%20Female%0AAd%20with%20my%20face%3A%20Yes%20%2F%20No"
+          target="_blank" class="back-btn">
+          Send Details on WhatsApp
+        </a>
+
+        <a href="tel:8090365014" class="back-btn">
+          Call Now
+        </a>
+
+        <a href="index.html#services" class="back-btn">
+          Back to Services
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+</body>
+
+</html>

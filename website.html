@@ -1,0 +1,2399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="images/logos.jpeg">
+    <title>SAFA TECH | Modern Responsive Website Development</title>
+    <meta name="description"
+        content="SAFA TECH creates modern, responsive, professional and mobile-friendly websites for businesses, personal brands, colleges, coaching institutes, service providers and educational purposes." />
+
+    <style>
+        /* =====================================================
+       SAFA TECH - SINGLE PAGE WEBSITE
+       Complete HTML + CSS + JavaScript in one file
+       Theme: Premium Black + Gold
+    ====================================================== */
+
+        :root {
+            --black: #050505;
+            --dark: #0b0b0b;
+            --card: #111111;
+            --card-2: #171717;
+            --gold: #d4af37;
+            --light-gold: #ffd700;
+            --soft-gold: #f5d76e;
+            --white: #ffffff;
+            --gray: #cfcfcf;
+            --muted: #9e9e9e;
+            --border: rgba(212, 175, 55, .28);
+            --shadow: 0 24px 80px rgba(0, 0, 0, .55);
+            --radius: 24px;
+            --max: 1180px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+            font-family: Inter, Poppins, Segoe UI, Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background:
+                radial-gradient(circle at 10% 10%, rgba(255, 215, 0, .16), transparent 26%),
+                radial-gradient(circle at 90% 8%, rgba(212, 175, 55, .12), transparent 22%),
+                linear-gradient(180deg, #000 0%, #070707 42%, #0b0b0b 100%);
+            color: var(--white);
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            opacity: .25;
+            background-image:
+                linear-gradient(rgba(212, 175, 55, .08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(212, 175, 55, .08) 1px, transparent 1px);
+            background-size: 48px 48px;
+            mask-image: radial-gradient(circle at center, black, transparent 75%);
+            z-index: -2;
+        }
+
+        .container {
+            width: min(var(--max), calc(100% - 34px));
+            margin: auto;
+        }
+
+        .gold-text {
+            color: var(--gold);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, var(--soft-gold), var(--light-gold), #fff4b1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 22px;
+            border-radius: 999px;
+            font-weight: 800;
+            color: #070707;
+            background: linear-gradient(135deg, var(--gold), var(--light-gold), var(--soft-gold));
+            border: 1px solid rgba(255, 255, 255, .16);
+            box-shadow: 0 14px 35px rgba(212, 175, 55, .22);
+            cursor: pointer;
+            transition: .28s ease;
+            white-space: nowrap;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 22px 45px rgba(212, 175, 55, .34);
+        }
+
+        .btn-outline {
+            color: var(--white);
+            background: rgba(255, 255, 255, .03);
+            border: 1px solid var(--border);
+            box-shadow: none;
+        }
+
+        .btn-outline:hover {
+            background: rgba(212, 175, 55, .1);
+            color: var(--light-gold);
+        }
+
+        .section {
+            padding: 86px 0;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 44px;
+        }
+
+        .section-title .eyebrow {
+            display: inline-flex;
+            padding: 8px 15px;
+            margin-bottom: 16px;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            background: rgba(212, 175, 55, .08);
+            color: var(--soft-gold);
+            font-weight: 800;
+            font-size: 13px;
+            letter-spacing: .7px;
+            text-transform: uppercase;
+        }
+
+        .section-title h2 {
+            font-size: clamp(32px, 4vw, 54px);
+            line-height: 1.05;
+            margin-bottom: 16px;
+        }
+
+        .section-title p {
+            color: var(--gray);
+            line-height: 1.75;
+            font-size: 16px;
+        }
+
+        /* ================= HEADER ================= */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(5, 5, 5, .82);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(212, 175, 55, .18);
+        }
+
+        .navbar {
+            height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 22px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--white);
+            min-width: max-content;
+        }
+
+        .logo-mark {
+            width: 52px;
+            height: 52px;
+            border-radius: 16px;
+            display: grid;
+            place-items: center;
+            position: relative;
+            isolation: isolate;
+            background: linear-gradient(135deg, #0d0d0d, #191919);
+            border: 1px solid var(--border);
+            box-shadow: inset 0 0 28px rgba(212, 175, 55, .14), 0 10px 28px rgba(212, 175, 55, .14);
+            overflow: hidden;
+        }
+
+        .logo-mark::before {
+            content: "";
+            position: absolute;
+            inset: -35%;
+            background: conic-gradient(from 160deg, transparent, rgba(255, 215, 0, .5), transparent 34%);
+            animation: spin 5s linear infinite;
+            z-index: -2;
+        }
+
+        .logo-mark::after {
+            content: "";
+            position: absolute;
+            inset: 2px;
+            background: #0b0b0b;
+            border-radius: 14px;
+            z-index: -1;
+        }
+
+        .logo-mark span {
+            font-size: 23px;
+            font-weight: 1000;
+            letter-spacing: -2px;
+            color: var(--light-gold);
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .brand-text strong {
+            display: block;
+            letter-spacing: 3px;
+            font-size: 20px;
+            line-height: 1;
+        }
+
+        .brand-text small {
+            color: var(--soft-gold);
+            font-size: 11px;
+            letter-spacing: 2.2px;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-links a {
+            color: var(--gray);
+            font-weight: 700;
+            font-size: 14px;
+            padding: 11px 12px;
+            border-radius: 999px;
+            transition: .25s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--light-gold);
+            background: rgba(212, 175, 55, .08);
+        }
+
+        .menu-btn {
+            display: none;
+            width: 44px;
+            height: 44px;
+            border-radius: 13px;
+            border: 1px solid var(--border);
+            background: rgba(255, 255, 255, .04);
+            color: var(--light-gold);
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* ================= HERO ================= */
+        .hero {
+            min-height: calc(100vh - 78px);
+            display: flex;
+            align-items: center;
+            padding: 92px 0 66px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 680px;
+            height: 680px;
+            right: -220px;
+            top: 50px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 215, 0, .18), rgba(212, 175, 55, .06) 42%, transparent 68%);
+            filter: blur(2px);
+            z-index: -1;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.08fr .92fr;
+            align-items: center;
+            gap: 48px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 16px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            color: var(--soft-gold);
+            background: rgba(212, 175, 55, .08);
+            font-weight: 800;
+            margin-bottom: 24px;
+        }
+
+        .pulse-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--light-gold);
+            box-shadow: 0 0 0 8px rgba(255, 215, 0, .12), 0 0 25px rgba(255, 215, 0, .75);
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 6.4vw, 86px);
+            line-height: .95;
+            letter-spacing: -2.8px;
+            margin-bottom: 22px;
+        }
+
+        .hero p {
+            color: var(--gray);
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 675px;
+            margin-bottom: 30px;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 30px;
+        }
+
+        .trust-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            margin-top: 32px;
+            max-width: 720px;
+        }
+
+        .trust-card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, .055), rgba(255, 255, 255, .025));
+            border: 1px solid rgba(212, 175, 55, .18);
+            border-radius: 18px;
+            padding: 16px 14px;
+            text-align: center;
+        }
+
+        .trust-card strong {
+            display: block;
+            color: var(--light-gold);
+            font-size: 22px;
+            margin-bottom: 4px;
+        }
+
+        .trust-card span {
+            color: var(--muted);
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .hero-visual {
+            position: relative;
+            min-height: 570px;
+        }
+
+        .phone-card,
+        .dashboard-card,
+        .floating-card {
+            position: absolute;
+            background: linear-gradient(145deg, rgba(22, 22, 22, .92), rgba(6, 6, 6, .92));
+            border: 1px solid rgba(212, 175, 55, .28);
+            box-shadow: var(--shadow), inset 0 0 40px rgba(212, 175, 55, .05);
+            backdrop-filter: blur(14px);
+        }
+
+        .dashboard-card {
+            width: 92%;
+            right: 0;
+            top: 42px;
+            border-radius: 28px;
+            padding: 22px;
+            transform: rotate(-2deg);
+        }
+
+        .browser-top {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            margin-bottom: 16px;
+        }
+
+        .browser-top span {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--gold);
+            opacity: .7;
+        }
+
+        .mock-nav {
+            margin-left: auto;
+            display: flex;
+            gap: 8px;
+        }
+
+        .mock-nav i {
+            width: 42px;
+            height: 8px;
+            border-radius: 99px;
+            background: rgba(255, 255, 255, .15);
+        }
+
+        .mock-hero {
+            border-radius: 22px;
+            padding: 28px;
+            background:
+                radial-gradient(circle at 88% 18%, rgba(255, 215, 0, .24), transparent 32%),
+                linear-gradient(135deg, #151515, #050505);
+            border: 1px solid rgba(212, 175, 55, .18);
+            min-height: 255px;
+        }
+
+        .mock-hero h3 {
+            font-size: 30px;
+            line-height: 1.05;
+            margin-bottom: 12px;
+        }
+
+        .mock-hero p {
+            color: var(--gray);
+            font-size: 14px;
+            line-height: 1.65;
+            margin-bottom: 18px;
+        }
+
+        .mock-btn {
+            display: inline-flex;
+            padding: 10px 16px;
+            border-radius: 999px;
+            background: var(--light-gold);
+            color: #050505;
+            font-weight: 900;
+            font-size: 13px;
+        }
+
+        .mock-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 14px;
+        }
+
+        .mock-grid div {
+            min-height: 90px;
+            border-radius: 18px;
+            border: 1px solid rgba(212, 175, 55, .16);
+            background: rgba(255, 255, 255, .04);
+            padding: 14px;
+            color: var(--gray);
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .mock-grid b {
+            display: block;
+            color: var(--light-gold);
+            font-size: 22px;
+            margin-bottom: 6px;
+        }
+
+        .phone-card {
+            width: 205px;
+            height: 390px;
+            right: 22px;
+            bottom: 8px;
+            border-radius: 34px;
+            padding: 16px;
+            transform: rotate(7deg);
+        }
+
+        .phone-notch {
+            width: 76px;
+            height: 18px;
+            border-radius: 0 0 12px 12px;
+            background: #000;
+            margin: 0 auto 16px;
+        }
+
+        .phone-screen {
+            height: 310px;
+            border-radius: 24px;
+            background: linear-gradient(180deg, #151515, #050505);
+            border: 1px solid rgba(212, 175, 55, .17);
+            padding: 18px;
+            overflow: hidden;
+        }
+
+        .phone-screen h4 {
+            color: var(--light-gold);
+            font-size: 22px;
+            line-height: 1.1;
+            margin-bottom: 12px;
+        }
+
+        .phone-line {
+            height: 8px;
+            border-radius: 99px;
+            background: rgba(255, 255, 255, .16);
+            margin: 10px 0;
+        }
+
+        .phone-feature {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            margin-top: 18px;
+            color: var(--gray);
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .check-icon {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            color: #070707;
+            background: var(--light-gold);
+            font-size: 12px;
+            font-weight: 1000;
+            flex: 0 0 auto;
+        }
+
+        .floating-card {
+            left: 0;
+            bottom: 90px;
+            border-radius: 22px;
+            padding: 18px;
+            width: 245px;
+        }
+
+        .floating-card strong {
+            display: block;
+            color: var(--light-gold);
+            font-size: 28px;
+            margin-bottom: 4px;
+        }
+
+        .floating-card span {
+            color: var(--gray);
+            font-weight: 700;
+        }
+
+        .glow-ring {
+            position: absolute;
+            width: 210px;
+            height: 210px;
+            right: 130px;
+            bottom: 115px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 215, 0, .32);
+            box-shadow: 0 0 80px rgba(255, 215, 0, .13), inset 0 0 70px rgba(255, 215, 0, .08);
+            z-index: -1;
+        }
+
+        /* ================= NOTICE ================= */
+        .notice {
+            margin-top: -20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .notice-box {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 20px;
+            align-items: center;
+            border: 1px solid rgba(212, 175, 55, .33);
+            background: linear-gradient(135deg, rgba(212, 175, 55, .14), rgba(255, 255, 255, .035));
+            border-radius: var(--radius);
+            padding: 22px;
+            box-shadow: 0 18px 58px rgba(0, 0, 0, .35);
+        }
+
+        .notice-icon {
+            width: 58px;
+            height: 58px;
+            border-radius: 18px;
+            display: grid;
+            place-items: center;
+            font-size: 26px;
+            background: rgba(255, 215, 0, .14);
+            border: 1px solid rgba(255, 215, 0, .25);
+        }
+
+        .notice-box h3 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .notice-box p {
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        /* ================= CARDS ================= */
+        .grid {
+            display: grid;
+            gap: 22px;
+        }
+
+        .services-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .service-card,
+        .price-card,
+        .extra-card,
+        .process-card,
+        .faq-item,
+        .quote-card {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(212, 175, 55, .2);
+            background: linear-gradient(180deg, rgba(255, 255, 255, .055), rgba(255, 255, 255, .025));
+            border-radius: var(--radius);
+            box-shadow: 0 16px 55px rgba(0, 0, 0, .28);
+            transition: .28s ease;
+        }
+
+        .service-card::before,
+        .price-card::before,
+        .extra-card::before,
+        .process-card::before,
+        .quote-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 80% 0%, rgba(255, 215, 0, .16), transparent 32%);
+            pointer-events: none;
+        }
+
+        .service-card:hover,
+        .price-card:hover,
+        .extra-card:hover,
+        .process-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(255, 215, 0, .42);
+            box-shadow: 0 28px 70px rgba(0, 0, 0, .45), 0 0 35px rgba(212, 175, 55, .09);
+        }
+
+        .service-card {
+            padding: 28px;
+        }
+
+        .icon-box {
+            width: 62px;
+            height: 62px;
+            border-radius: 20px;
+            display: grid;
+            place-items: center;
+            font-size: 28px;
+            color: var(--light-gold);
+            background: rgba(212, 175, 55, .08);
+            border: 1px solid rgba(212, 175, 55, .25);
+            margin-bottom: 22px;
+        }
+
+        .service-card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: var(--gray);
+            line-height: 1.72;
+            margin-bottom: 18px;
+        }
+
+        .mini-list {
+            display: grid;
+            gap: 10px;
+            position: relative;
+        }
+
+        .mini-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            color: var(--gray);
+            line-height: 1.5;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .mini-list li::before {
+            content: "✓";
+            color: #060606;
+            background: var(--light-gold);
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: inline-grid;
+            place-items: center;
+            font-size: 12px;
+            font-weight: 1000;
+            flex: 0 0 auto;
+            margin-top: 2px;
+        }
+
+        /* ================= PRICING ================= */
+        .pricing-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: -16px 0 34px;
+        }
+
+        .tab-btn {
+            border: none;
+            outline: none;
+            padding: 12px 18px;
+            border-radius: 999px;
+            color: var(--gray);
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(212, 175, 55, .18);
+            cursor: pointer;
+            font-weight: 900;
+            transition: .25s ease;
+        }
+
+        .tab-btn.active,
+        .tab-btn:hover {
+            color: #050505;
+            background: linear-gradient(135deg, var(--gold), var(--light-gold));
+        }
+
+        .pricing-grid {
+            grid-template-columns: repeat(3, 1fr);
+            align-items: stretch;
+        }
+
+        .price-card {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .price-card.featured {
+            border-color: rgba(255, 215, 0, .58);
+            background: linear-gradient(180deg, rgba(212, 175, 55, .14), rgba(255, 255, 255, .035));
+            transform: translateY(-8px);
+        }
+
+        .popular {
+            position: absolute;
+            right: 22px;
+            top: 18px;
+            padding: 7px 12px;
+            border-radius: 999px;
+            background: var(--light-gold);
+            color: #060606;
+            font-weight: 1000;
+            font-size: 12px;
+            letter-spacing: .4px;
+        }
+
+        .price-card h3 {
+            font-size: 25px;
+            margin-bottom: 10px;
+            max-width: 70%;
+        }
+
+        .plan-sub {
+            color: var(--muted);
+            line-height: 1.6;
+            min-height: 52px;
+            margin-bottom: 22px;
+        }
+
+        .price {
+            display: flex;
+            align-items: flex-end;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+
+        .price strong {
+            font-size: 42px;
+            line-height: 1;
+            color: var(--light-gold);
+            letter-spacing: -1.5px;
+        }
+
+        .price span {
+            color: var(--gray);
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .delivery {
+            display: inline-flex;
+            width: max-content;
+            color: var(--soft-gold);
+            background: rgba(212, 175, 55, .09);
+            border: 1px solid rgba(212, 175, 55, .22);
+            border-radius: 999px;
+            padding: 8px 12px;
+            font-weight: 800;
+            font-size: 13px;
+            margin: 10px 0 22px;
+        }
+
+        .price-card .mini-list {
+            margin-bottom: 26px;
+        }
+
+        .price-card .btn {
+            margin-top: auto;
+            width: 100%;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .pricing-note {
+            margin-top: 26px;
+            padding: 20px;
+            border: 1px dashed rgba(255, 215, 0, .38);
+            border-radius: 22px;
+            background: rgba(255, 215, 0, .055);
+            color: var(--gray);
+            line-height: 1.75;
+            text-align: center;
+        }
+
+        .pricing-note strong {
+            color: var(--light-gold);
+        }
+
+        /* ================= HOSTING DOMAIN ================= */
+        .extras-grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .extra-card {
+            padding: 24px;
+            min-height: 205px;
+        }
+
+        .extra-card h3 {
+            font-size: 20px;
+            margin: 14px 0 10px;
+        }
+
+        .extra-card .big {
+            color: var(--light-gold);
+            font-size: 28px;
+            font-weight: 1000;
+            margin-bottom: 8px;
+        }
+
+        .extra-card p {
+            color: var(--gray);
+            line-height: 1.62;
+            font-size: 14px;
+        }
+
+        /* ================= COMPARISON ================= */
+        .compare-box {
+            overflow: hidden;
+            border-radius: var(--radius);
+            border: 1px solid rgba(212, 175, 55, .2);
+            background: rgba(255, 255, 255, .035);
+            box-shadow: 0 18px 58px rgba(0, 0, 0, .28);
+        }
+
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 760px;
+        }
+
+        .compare-scroll {
+            overflow-x: auto;
+        }
+
+        .compare-table th,
+        .compare-table td {
+            padding: 18px;
+            text-align: left;
+            border-bottom: 1px solid rgba(212, 175, 55, .12);
+            color: var(--gray);
+            line-height: 1.5;
+        }
+
+        .compare-table th {
+            color: var(--light-gold);
+            background: rgba(212, 175, 55, .08);
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+        }
+
+        .compare-table td:first-child {
+            color: var(--white);
+            font-weight: 900;
+        }
+
+        /* ================= PROCESS ================= */
+        .process-grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .process-card {
+            padding: 26px;
+            text-align: center;
+        }
+
+        .step-number {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            color: #070707;
+            background: linear-gradient(135deg, var(--gold), var(--light-gold));
+            font-weight: 1000;
+            font-size: 22px;
+            margin: 0 auto 18px;
+            box-shadow: 0 12px 28px rgba(212, 175, 55, .22);
+        }
+
+        .process-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .process-card p {
+            color: var(--gray);
+            line-height: 1.65;
+            font-size: 14px;
+        }
+
+        /* ================= ADDONS ================= */
+        .addons-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+        }
+
+        .addons-list {
+            border: 1px solid rgba(212, 175, 55, .2);
+            border-radius: var(--radius);
+            background: rgba(255, 255, 255, .035);
+            overflow: hidden;
+        }
+
+        .addon-row {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 16px;
+            padding: 18px 20px;
+            border-bottom: 1px solid rgba(212, 175, 55, .12);
+            align-items: center;
+        }
+
+        .addon-row:last-child {
+            border-bottom: 0;
+        }
+
+        .addon-row h4 {
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+
+        .addon-row p {
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .addon-row strong {
+            color: var(--light-gold);
+            white-space: nowrap;
+        }
+
+        /* ================= QUOTE ================= */
+        .quote-layout {
+            display: grid;
+            grid-template-columns: .9fr 1.1fr;
+            gap: 26px;
+            align-items: start;
+        }
+
+        .quote-card {
+            padding: 30px;
+        }
+
+        .quote-card h3 {
+            font-size: 28px;
+            margin-bottom: 14px;
+        }
+
+        .quote-card p {
+            color: var(--gray);
+            line-height: 1.7;
+            margin-bottom: 18px;
+        }
+
+        .quote-form {
+            display: grid;
+            gap: 14px;
+        }
+
+        .form-group {
+            display: grid;
+            gap: 7px;
+        }
+
+        .form-group label {
+            color: var(--soft-gold);
+            font-weight: 800;
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 15px;
+            border-radius: 15px;
+            background: rgba(0, 0, 0, .34);
+            border: 1px solid rgba(212, 175, 55, .22);
+            color: var(--white);
+            outline: none;
+            transition: .22s ease;
+        }
+
+        .form-group textarea {
+            min-height: 110px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--light-gold);
+            box-shadow: 0 0 0 4px rgba(255, 215, 0, .08);
+        }
+
+        .checkbox-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .check-card {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px;
+            border: 1px solid rgba(212, 175, 55, .18);
+            border-radius: 15px;
+            color: var(--gray);
+            background: rgba(255, 255, 255, .025);
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .check-card input {
+            width: 17px;
+            height: 17px;
+            accent-color: var(--light-gold);
+        }
+
+        .total-box {
+            border-radius: 24px;
+            padding: 30px;
+            background:
+                radial-gradient(circle at 80% 10%, rgba(255, 215, 0, .18), transparent 30%),
+                linear-gradient(135deg, rgba(212, 175, 55, .11), rgba(255, 255, 255, .035));
+            border: 1px solid rgba(255, 215, 0, .28);
+            position: sticky;
+            top: 98px;
+            box-shadow: 0 22px 65px rgba(0, 0, 0, .36);
+        }
+
+        .total-box h3 {
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        .total-price {
+            font-size: 54px;
+            line-height: 1;
+            color: var(--light-gold);
+            font-weight: 1000;
+            margin: 18px 0 10px;
+            letter-spacing: -2px;
+        }
+
+        .total-box .small {
+            color: var(--muted);
+            line-height: 1.65;
+            margin-bottom: 22px;
+        }
+
+        .summary-list {
+            display: grid;
+            gap: 12px;
+            margin: 22px 0;
+        }
+
+        .summary-list div {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 12px;
+            border-radius: 14px;
+            background: rgba(0, 0, 0, .28);
+            color: var(--gray);
+            border: 1px solid rgba(212, 175, 55, .12);
+        }
+
+        .summary-list strong {
+            color: var(--soft-gold);
+            text-align: right;
+        }
+
+        /* ================= FAQ ================= */
+        .faq-wrap {
+            max-width: 900px;
+            margin: auto;
+            display: grid;
+            gap: 14px;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, .035);
+        }
+
+        .faq-question {
+            width: 100%;
+            border: 0;
+            background: transparent;
+            color: var(--white);
+            padding: 21px 22px;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            gap: 18px;
+            font-size: 17px;
+            font-weight: 900;
+            cursor: pointer;
+        }
+
+        .faq-question span:last-child {
+            color: var(--light-gold);
+            font-size: 22px;
+            flex: 0 0 auto;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .3s ease;
+        }
+
+        .faq-answer p {
+            padding: 0 22px 22px;
+            color: var(--gray);
+            line-height: 1.75;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 260px;
+        }
+
+        .faq-item.open .faq-question span:last-child {
+            transform: rotate(45deg);
+        }
+
+        /* ================= CTA ================= */
+        .cta-box {
+            text-align: center;
+            border: 1px solid rgba(255, 215, 0, .3);
+            border-radius: 34px;
+            padding: 54px 28px;
+            background:
+                radial-gradient(circle at 50% 0%, rgba(255, 215, 0, .18), transparent 32%),
+                linear-gradient(135deg, rgba(212, 175, 55, .11), rgba(255, 255, 255, .035));
+            box-shadow: 0 24px 80px rgba(0, 0, 0, .44);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .cta-box::before {
+            content: "</>";
+            position: absolute;
+            font-size: 210px;
+            font-weight: 1000;
+            color: rgba(255, 215, 0, .04);
+            left: 24px;
+            bottom: -60px;
+            letter-spacing: -20px;
+        }
+
+        .cta-box h2 {
+            font-size: clamp(34px, 5vw, 64px);
+            line-height: 1.04;
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .cta-box p {
+            color: var(--gray);
+            max-width: 760px;
+            margin: 0 auto 28px;
+            line-height: 1.75;
+            position: relative;
+        }
+
+        .cta-actions {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 14px;
+            position: relative;
+        }
+
+        /* ================= FOOTER ================= */
+        footer {
+            border-top: 1px solid rgba(212, 175, 55, .18);
+            background: #030303;
+            padding: 34px 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.2fr .8fr .8fr;
+            gap: 24px;
+            align-items: start;
+        }
+
+        footer p,
+        footer a {
+            color: var(--gray);
+            line-height: 1.75;
+            font-size: 14px;
+        }
+
+        footer a:hover {
+            color: var(--light-gold);
+        }
+
+        footer h3 {
+            color: var(--light-gold);
+            margin-bottom: 12px;
+            font-size: 17px;
+        }
+
+        .footer-brand {
+            margin-bottom: 14px;
+        }
+
+        .copyright {
+            margin-top: 26px;
+            padding-top: 22px;
+            border-top: 1px solid rgba(212, 175, 55, .12);
+            display: flex;
+            justify-content: space-between;
+            gap: 18px;
+            flex-wrap: wrap;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* ================= FLOAT WHATSAPP ================= */
+        .float-whatsapp {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            z-index: 999;
+            background: #25d366;
+            color: #fff;
+            font-size: 28px;
+            box-shadow: 0 18px 40px rgba(37, 211, 102, .34);
+            border: 3px solid rgba(255, 255, 255, .22);
+            animation: bounce 2.2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media(max-width:1024px) {
+
+            .hero-grid,
+            .quote-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-visual {
+                min-height: 520px;
+                max-width: 650px;
+                width: 100%;
+                margin: auto;
+            }
+
+            .trust-row,
+            .extras-grid,
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .services-grid,
+            .pricing-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .total-box {
+                position: relative;
+                top: auto;
+            }
+        }
+
+        @media(max-width:850px) {
+            .menu-btn {
+                display: grid;
+                place-items: center;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 78px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 4px;
+                padding: 18px;
+                background: rgba(5, 5, 5, .97);
+                border-bottom: 1px solid rgba(212, 175, 55, .18);
+                transform: translateY(-120%);
+                opacity: 0;
+                pointer-events: none;
+                transition: .28s ease;
+            }
+
+            .nav-links.show {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+            .nav-links a {
+                padding: 15px;
+                text-align: center;
+            }
+
+            .desktop-cta {
+                display: none;
+            }
+
+            .notice-box {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .notice-icon {
+                margin: auto;
+            }
+
+            .addons-wrap {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media(max-width:680px) {
+            .container {
+                width: min(100% - 24px, var(--max));
+            }
+
+            .section {
+                padding: 68px 0;
+            }
+
+            .hero {
+                padding: 58px 0 48px;
+            }
+
+            .hero h1 {
+                letter-spacing: -1.4px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .trust-row,
+            .services-grid,
+            .pricing-grid,
+            .extras-grid,
+            .process-grid,
+            .checkbox-row,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-actions .btn {
+                width: 100%;
+            }
+
+            .hero-visual {
+                min-height: 430px;
+            }
+
+            .dashboard-card {
+                width: 100%;
+                transform: none;
+                top: 10px;
+                padding: 14px;
+            }
+
+            .mock-hero {
+                padding: 20px;
+                min-height: auto;
+            }
+
+            .mock-hero h3 {
+                font-size: 24px;
+            }
+
+            .mock-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .phone-card {
+                width: 165px;
+                height: 315px;
+                right: 8px;
+                bottom: 0;
+                padding: 12px;
+            }
+
+            .phone-screen {
+                height: 245px;
+                padding: 14px;
+            }
+
+            .phone-screen h4 {
+                font-size: 18px;
+            }
+
+            .floating-card {
+                width: 190px;
+                bottom: 34px;
+                padding: 15px;
+            }
+
+            .floating-card strong {
+                font-size: 23px;
+            }
+
+            .glow-ring {
+                width: 160px;
+                height: 160px;
+                right: 80px;
+            }
+
+            .price-card.featured {
+                transform: none;
+            }
+
+            .price strong,
+            .total-price {
+                font-size: 40px;
+            }
+
+            .addon-row {
+                grid-template-columns: 1fr;
+            }
+
+            .brand-text strong {
+                font-size: 17px;
+            }
+
+            .brand-text small {
+                font-size: 9px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a class="float-whatsapp"
+        href="https://wa.me/918090365014?text=Hello%20SAFA%20TECH%2C%20I%20want%20a%20website.%20Please%20share%20details."
+        target="_blank" aria-label="Chat on WhatsApp">💬</a>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container navbar">
+            <a href="#home" class="brand" aria-label="SAFA TECH Home">
+                <div class="logo-mark"><span>ST</span></div>
+                <div class="brand-text">
+                    <strong>SAFA TECH</strong>
+                    <small>Digital Solutions</small>
+                </div>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="#services">Services</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#hosting">Hosting</a>
+                <a href="#quote">Estimate</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <a class="btn desktop-cta"
+                href="https://wa.me/918090365014?text=Hello%20SAFA%20TECH%2C%20I%20want%20a%20professional%20website."
+                target="_blank">Get Website</a>
+            <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <main id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge"><span class="pulse-dot"></span> Modern • Responsive • Professional</div>
+                <h1>Build Your <span class="gradient-text">Business Website</span> With SAFA TECH</h1>
+                <p>
+                    SAFA TECH creates modern, responsive, professional, and mobile-friendly websites for businesses,
+                    personal brands, colleges, coaching institutes, service providers, and educational purposes. We
+                    design
+                    websites that look premium, load fast, and help customers contact you quickly.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn" href="#pricing">View Website Charges</a>
+                    <a class="btn btn-outline" href="#quote">Calculate Estimate</a>
+                </div>
+
+                <div class="trust-row">
+                    <div class="trust-card"><strong>100%</strong><span>Mobile Friendly</span></div>
+                    <div class="trust-card"><strong>Fast</strong><span>Delivery</span></div>
+                    <div class="trust-card"><strong>SEO</strong><span>Basic Setup</span></div>
+                    <div class="trust-card"><strong>24/7</strong><span>Support Guidance</span></div>
+                </div>
+            </div>
+
+            <div class="hero-visual" aria-hidden="true">
+                <div class="dashboard-card">
+                    <div class="browser-top">
+                        <span></span><span></span><span></span>
+                        <div class="mock-nav"><i></i><i></i><i></i></div>
+                    </div>
+                    <div class="mock-hero">
+                        <h3>Premium Websites<br><span class="gold-text">That Grow Your Brand</span></h3>
+                        <p>Landing pages, business websites, education websites, portfolio websites, and custom designs.
+                        </p>
+                        <span class="mock-btn">Start Now</span>
+                    </div>
+                    <div class="mock-grid">
+                        <div><b>01</b>Modern UI</div>
+                        <div><b>02</b>Responsive</div>
+                        <div><b>03</b>SEO Ready</div>
+                    </div>
+                </div>
+
+                <div class="phone-card">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <h4>Mobile First Design</h4>
+                        <div class="phone-line" style="width:92%"></div>
+                        <div class="phone-line" style="width:70%"></div>
+                        <div class="phone-line" style="width:84%"></div>
+                        <div class="phone-feature"><span class="check-icon">✓</span> WhatsApp Button</div>
+                        <div class="phone-feature"><span class="check-icon">✓</span> Contact Form</div>
+                        <div class="phone-feature"><span class="check-icon">✓</span> Fast Layout</div>
+                    </div>
+                </div>
+
+                <div class="floating-card">
+                    <strong>₹2,999</strong>
+                    <span>Website making charges start from</span>
+                </div>
+                <div class="glow-ring"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- IMPORTANT NOTICE -->
+    <section class="notice">
+        <div class="container">
+            <div class="notice-box">
+                <div class="notice-icon">⚡</div>
+                <div>
+                    <h3>Clear Pricing Policy</h3>
+                    <p>
+                        First price is only for <strong class="gold-text">website making / website design & development
+                            charges</strong>.
+                        Domain, hosting, paid plugins, premium theme, business email, maintenance, content writing, logo
+                        design and extra work are different charges.
+                    </p>
+                </div>
+                <a class="btn" href="#hosting">See Extra Charges</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-title">
+                <span class="eyebrow">What We Create</span>
+                <h2>Websites For Every <span class="gradient-text">Business Need</span></h2>
+                <p>From simple static websites to premium responsive websites, SAFA TECH provides clean design, mobile
+                    layout, contact buttons and professional presentation.</p>
+            </div>
+
+            <div class="grid services-grid">
+                <article class="service-card">
+                    <div class="icon-box">🏢</div>
+                    <h3>Business Website</h3>
+                    <p>Professional website for shops, startups, services, agencies, local businesses and companies.</p>
+                    <ul class="mini-list">
+                        <li>Home, About, Services, Gallery, Contact</li>
+                        <li>WhatsApp and call button integration</li>
+                        <li>Premium black/gold or brand color UI</li>
+                    </ul>
+                </article>
+
+                <article class="service-card">
+                    <div class="icon-box">🎓</div>
+                    <h3>College & Coaching Website</h3>
+                    <p>Educational websites for colleges, coaching institutes, schools, admission campaigns and course
+                        information.</p>
+                    <ul class="mini-list">
+                        <li>Courses, admission details and notice section</li>
+                        <li>Student enquiry form design</li>
+                        <li>Faculty, gallery and contact information</li>
+                    </ul>
+                </article>
+
+                <article class="service-card">
+                    <div class="icon-box">👤</div>
+                    <h3>Portfolio & Personal Brand</h3>
+                    <p>Personal website for teachers, developers, freelancers, influencers, counsellors and service
+                        providers.</p>
+                    <ul class="mini-list">
+                        <li>About, skills, projects and experience</li>
+                        <li>Resume/download button section</li>
+                        <li>Professional social media links</li>
+                    </ul>
+                </article>
+
+                <article class="service-card">
+                    <div class="icon-box">🚀</div>
+                    <h3>Landing Page</h3>
+                    <p>One-page high-converting website for ads, offers, product launch, admission campaign or service
+                        promotion.</p>
+                    <ul class="mini-list">
+                        <li>Strong hero section and CTA buttons</li>
+                        <li>Pricing, benefits and contact section</li>
+                        <li>Perfect for Facebook/Instagram ads</li>
+                    </ul>
+                </article>
+
+                <article class="service-card">
+                    <div class="icon-box">🛒</div>
+                    <h3>E-Commerce Website</h3>
+                    <p>Basic online store layout with product sections, enquiry option, cart/payment guidance and
+                        business setup.</p>
+                    <ul class="mini-list">
+                        <li>Product listing and category section</li>
+                        <li>Order enquiry through WhatsApp/form</li>
+                        <li>Payment gateway guidance if required</li>
+                    </ul>
+                </article>
+
+                <article class="service-card">
+                    <div class="icon-box">⚙️</div>
+                    <h3>Custom Website</h3>
+                    <p>Custom UI and features according to your requirement, business workflow and future growth plan.
+                    </p>
+                    <ul class="mini-list">
+                        <li>Custom sections and advanced design</li>
+                        <li>Admin panel / database optional</li>
+                        <li>Requirement-based final quotation</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="section">
+        <div class="container">
+            <div class="section-title">
+                <span class="eyebrow">Website Making Charges</span>
+                <h2>Affordable Pricing With <span class="gradient-text">Premium Quality</span></h2>
+                <p>Choose your website type. These charges are for website design/development only. Hosting and domain
+                    are separate.</p>
+            </div>
+
+            <div class="pricing-tabs" role="tablist" aria-label="Pricing category tabs">
+                <button class="tab-btn active" data-filter="all">All Plans</button>
+                <button class="tab-btn" data-filter="static">Static Website</button>
+                <button class="tab-btn" data-filter="responsive">Responsive Website</button>
+                <button class="tab-btn" data-filter="advanced">Advanced</button>
+            </div>
+
+            <div class="grid pricing-grid" id="pricingGrid">
+                <article class="price-card" data-category="static">
+                    <h3>Porfoilo website </h3>
+                    <p class="plan-sub">Best for a simple online presence, personal details, basic service information
+                        or small shop.</p>
+                    <div class="price"><strong>₹2,999</strong><span>one-time</span></div>
+                    <span class="delivery">Delivery: 3-5 Days</span>
+                    <ul class="mini-list">
+                        <li>1 to 3 static pages</li>
+                        <li>Clean modern UI design</li>
+                        <li>Mobile-friendly layout</li>
+                        <li>Call + WhatsApp button</li>
+
+                    </ul>
+                    <a class="btn"
+                        href="https://wa.me/918090365014?text=I%20want%20Static%20Starter%20Website%20plan%20of%20%E2%82%B92999"
+                        target="_blank">Choose Plan</a>
+                </article>
+
+                <article class="price-card featured" data-category="static responsive">
+                    <span class="popular">Most Popular</span>
+                    <h3>Business Website</h3>
+                    <p class="plan-sub">Best for business, services, coaching, college admission pages and professional
+                        brand identity.</p>
+                    <div class="price"><strong>₹4,999</strong><span>one-time</span></div>
+                    <span class="delivery">Delivery: 5-7 Days</span>
+                    <ul class="mini-list">
+                        <li>Up to 5 pages / sections</li>
+                        <li>Fully responsive design</li>
+                        <li>Home, About, Services, Pricing, Contact</li>
+                        <li>WhatsApp, call, social media links</li>
+                        <li>Gallery/testimonial section</li>
+                        <li>Basic animation and premium layout</li>
+                    </ul>
+                    <a class="btn"
+                        href="https://wa.me/918090365014?text=I%20want%20Business%20Website%20plan%20of%20%E2%82%B94999"
+                        target="_blank">Choose Plan</a>
+                </article>
+
+                <article class="price-card" data-category="responsive">
+                    <h3>Responsive Pro</h3>
+                    <p class="plan-sub">Best for a high-quality website that looks perfect on mobile, tablet, laptop and
+                        desktop.</p>
+                    <div class="price"><strong>₹7,999</strong><span>one-time</span></div>
+                    <span class="delivery">Delivery: 7-10 Days</span>
+                    <ul class="mini-list">
+                        <li>Up to 8 pages / sections</li>
+                        <li>Premium responsive UI</li>
+                        <li>Enquiry/contact form design</li>
+                        <li>Google Map section</li>
+                        <li>SEO-friendly structure</li>
+                        <li>Speed optimized front-end</li>
+                    </ul>
+                    <a class="btn"
+                        href="https://wa.me/918090365014?text=I%20want%20Responsive%20Pro%20Website%20plan%20of%20%E2%82%B97999"
+                        target="_blank">Choose Plan</a>
+                </article>
+
+                <article class="price-card" data-category="responsive">
+                    <h3>Education Website</h3>
+                    <p class="plan-sub">For coaching institutes, schools, colleges, admission guidance, courses and
+                        student enquiry.</p>
+                    <div class="price"><strong>₹8,999</strong><span>one-time</span></div>
+                    <span class="delivery">Delivery: 7-12 Days</span>
+                    <ul class="mini-list">
+                        <li>Courses and admission section</li>
+                        <li>Faculty / department section</li>
+                        <li>Notice and important update area</li>
+                        <li>Student enquiry form design</li>
+                        <li>Gallery and contact details</li>
+                        <li>Mobile-first professional layout</li>
+                    </ul>
+                    <a class="btn"
+                        href="https://wa.me/918090365014?text=I%20want%20Education%20Website%20plan%20of%20%E2%82%B98999"
+                        target="_blank">Choose Plan</a>
+                </article>
+
+                <article class="price-card" data-category="responsive advanced">
+                    <h3>Premium Business</h3>
+                    <p class="plan-sub">For businesses that need a gorgeous premium brand website with more sections and
+                        powerful UI.</p>
+                    <div class="price"><strong>₹12,999</strong><span>one-time</span></div>
+                    <span class="delivery">Delivery: 10-15 Days</span>
+                    <ul class="mini-list">
+                        <li>Up to 12 pages / sections</li>
+                        <li>Premium animations and custom UI</li>
+                        <li>Service details and pricing structure</li>
+                        <li>Lead generation contact design</li>
+                        <li>Advanced SEO structure</li>
+                        <li>One-time launch support</li>
+                    </ul>
+                    <a class="btn"
+                        href="https://wa.me/918090365014?text=I%20want%20Premium%20Business%20Website%20plan%20of%20%E2%82%B912999"
+                        target="_blank">Choose Plan</a>
+                </article>
+
+                <article class="price-card" data-category="advanced">
+                    <h3>Custom / E-Commerce</h3>
+                    <p class="plan-sub">For advanced features, online store, product listing, database, admin panel or
+                        special requirement.</p>
+                    <div class="price"><strong>₹15,999+</strong><span>starting</span></div>
+                    <span class="delivery">Delivery: Requirement Based</span>
+                    <ul class="mini-list">
+                        <li>E-commerce basic setup</li>
+                        <li>Product and category pages</li>
+                        <li>Admin panel / database optional</li>
+                        <li>Payment gateway guidance</li>
+                        <li>Custom features quotation</li>
+                        <li>Final price after discussion</li>
+                    </ul>
+                    <a class="btn"
+                        href="https://wa.me/918090365014?text=I%20want%20Custom%20or%20E-commerce%20Website%20quotation"
+                        target="_blank">Get Quote</a>
+                </article>
+            </div>
+
+            <p class="pricing-note">
+                <strong>Note:</strong> Price can change according to number of pages, design complexity, content
+                availability, special animation, backend/database, admin panel, payment gateway, extra revisions and
+                urgent delivery.
+            </p>
+        </div>
+    </section>
+
+    <!-- HOSTING / DOMAIN -->
+    <section id="hosting" class="section">
+        <div class="container">
+            <div class="section-title">
+                <span class="eyebrow">Different Charges</span>
+                <h2>Domain, Hosting & Extra <span class="gradient-text">Service Charges</span></h2>
+                <p>These are common market-range charges. Final rate depends on domain extension, hosting company,
+                    storage, traffic and selected features.</p>
+            </div>
+
+            <div class="grid extras-grid">
+                <article class="extra-card">
+                    <div class="icon-box">🌐</div>
+                    <h3>Domain Name</h3>
+                    <div class="big">₹699 - ₹1,499/yr</div>
+                    <p>.in, .com, .co.in, .org etc. Final price depends on domain extension and availability.</p>
+                </article>
+
+                <article class="extra-card">
+                    <div class="icon-box">☁️</div>
+                    <h3>Web Hosting</h3>
+                    <div class="big">₹1,499 - ₹5,999/yr</div>
+                    <p>Shared hosting/basic business hosting according to website storage, speed and traffic
+                        requirement.</p>
+                </article>
+
+                <article class="extra-card">
+                    <div class="icon-box">🔒</div>
+                    <h3>SSL Certificate</h3>
+                    <div class="big">Free - ₹999/yr</div>
+                    <p>SSL makes website secure with https. Many hosting plans provide free SSL.</p>
+                </article>
+
+                <article class="extra-card">
+                    <div class="icon-box">✉️</div>
+                    <h3>Business Email</h3>
+                    <div class="big">₹499 - ₹1,999/yr</div>
+                    <p>Professional email like info@yourdomain.com. Price depends on provider and storage.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPARISON -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <span class="eyebrow">Understand Website Type</span>
+                <h2>Static vs Responsive vs <span class="gradient-text">Advanced Website</span></h2>
+                <p>Choose the best website according to your purpose, budget and business growth plan.</p>
+            </div>
+
+            <div class="compare-box">
+                <div class="compare-scroll">
+                    <table class="compare-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Static Website</th>
+                                <th>Responsive Website</th>
+                                <th>Advanced Website</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Best For</td>
+                                <td>Basic business/personal information</td>
+                                <td>Professional brand and mobile users</td>
+                                <td>E-commerce, admin panel, database, custom features</td>
+                            </tr>
+                            <tr>
+                                <td>Mobile Layout</td>
+                                <td>Basic mobile-friendly design</td>
+                                <td>Fully optimized for all screen sizes</td>
+                                <td>Fully optimized with advanced features</td>
+                            </tr>
+                            <tr>
+                                <td>Page Update</td>
+                                <td>Developer updates manually</td>
+                                <td>Developer updates manually / CMS optional</td>
+                                <td>Admin panel or database possible</td>
+                            </tr>
+                            <tr>
+                                <td>Speed</td>
+                                <td>Very fast</td>
+                                <td>Fast and optimized</td>
+                                <td>Depends on features and hosting</td>
+                            </tr>
+                            <tr>
+                                <td>Budget</td>
+                                <td>Low budget</td>
+                                <td>Best value for most businesses</td>
+                                <td>Requirement-based premium budget</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ADDONS -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <span class="eyebrow">Optional Add-ons</span>
+                <h2>Extra Features & <span class="gradient-text">Service Rates</span></h2>
+                <p>Add these services only if you need them. This makes pricing clear and easy for customers.</p>
+            </div>
+
+            <div class="addons-wrap">
+                <div class="addons-list">
+                    <div class="addon-row">
+                        <div>
+                            <h4>Logo Design</h4>
+                            <p>Simple professional logo for business identity.</p>
+                        </div>
+                        <strong>₹499 - ₹1,499</strong>
+                    </div>
+                    <div class="addon-row">
+                        <div>
+                            <h4>Content Writing</h4>
+                            <p>Website text for About, Services, Course details etc.</p>
+                        </div>
+                        <strong>₹500/page</strong>
+                    </div>
+                    <div class="addon-row">
+                        <div>
+                            <h4>Poster / Banner Design</h4>
+                            <p>Website banner, offer image or social media creative.</p>
+                        </div>
+                        <strong>₹299 - ₹999</strong>
+                    </div>
+                    <div class="addon-row">
+                        <div>
+                            <h4>Extra Page</h4>
+                            <p>Additional website page after selected plan limit.</p>
+                        </div>
+                        <strong>₹700/page</strong>
+                    </div>
+                </div>
+
+                <div class="addons-list">
+                    <div class="addon-row">
+                        <div>
+                            <h4>Google Map Integration</h4>
+                            <p>Add location map in contact section.</p>
+                        </div>
+                        <strong>₹299</strong>
+                    </div>
+                    <div class="addon-row">
+                        <div>
+                            <h4>Enquiry Form Setup</h4>
+                            <p>Contact form design and basic setup guidance.</p>
+                        </div>
+                        <strong>₹699+</strong>
+                    </div>
+                    <div class="addon-row">
+                        <div>
+                            <h4>Website Maintenance</h4>
+                            <p>Small updates, backup guidance and support.</p>
+                        </div>
+                        <strong>₹1,999/yr+</strong>
+                    </div>
+                    <div class="addon-row">
+                        <div>
+                            <h4>Urgent Delivery</h4>
+                            <p>Priority work within short timeline if possible.</p>
+                        </div>
+                        <strong>Extra 20%</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <span class="eyebrow">Work Process</span>
+                <h2>Simple Process To Launch <span class="gradient-text">Your Website</span></h2>
+                <p>We keep the process clear so your website can be completed quickly and professionally.</p>
+            </div>
+
+            <div class="grid process-grid">
+                <article class="process-card">
+                    <div class="step-number">1</div>
+                    <h3>Send Details</h3>
+                    <p>Send business name, logo, services, photos, address, mobile number and social links.</p>
+                </article>
+                <article class="process-card">
+                    <div class="step-number">2</div>
+                    <h3>Choose Plan</h3>
+                    <p>Select static, responsive, education, business, landing page or custom website plan.</p>
+                </article>
+                <article class="process-card">
+                    <div class="step-number">3</div>
+                    <h3>Design & Review</h3>
+                    <p>We create the website UI and share for review. Basic corrections are included.</p>
+                </article>
+                <article class="process-card">
+                    <div class="step-number">4</div>
+                    <h3>Launch Online</h3>
+                    <p>After final approval, domain and hosting setup guidance is provided and website goes live.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUOTE CALCULATOR -->
+    <section id="quote" class="section">
+        <div class="container">
+            <div class="section-title">
+                <span class="eyebrow">Quick Estimate</span>
+                <h2>Calculate Your <span class="gradient-text">Website Budget</span></h2>
+                <p>This calculator gives an approximate idea. Final quotation will be confirmed after discussion.</p>
+            </div>
+
+            <div class="quote-layout">
+                <div class="quote-card">
+                    <h3>Tell Us Your Requirement</h3>
+                    <p>Select your website type and optional services. You can send the same details directly on
+                        WhatsApp.</p>
+
+                    <form class="quote-form" id="quoteForm">
+                        <div class="form-group">
+                            <label for="clientName">Your Name</label>
+                            <input id="clientName" type="text" placeholder="Enter your name" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="businessName">Business / Brand Name</label>
+                            <input id="businessName" type="text" placeholder="Example: SAFA TECH" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="websiteType">Website Type</label>
+                            <select id="websiteType">
+                                <option value="2999">Static Starter - ₹2,999</option>
+                                <option value="4999" selected>Business Website - ₹4,999</option>
+                                <option value="7999">Responsive Pro - ₹7,999</option>
+                                <option value="8999">Education Website - ₹8,999</option>
+                                <option value="12999">Premium Business - ₹12,999</option>
+                                <option value="15999">Custom/E-Commerce Starting - ₹15,999</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="extraPages">Extra Pages</label>
+                            <select id="extraPages">
+                                <option value="0">No extra page</option>
+                                <option value="700">1 extra page + ₹700</option>
+                                <option value="1400">2 extra pages + ₹1,400</option>
+                                <option value="2100">3 extra pages + ₹2,100</option>
+                                <option value="3500">5 extra pages + ₹3,500</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Optional Add-ons</label>
+                            <div class="checkbox-row">
+                                <label class="check-card"><input type="checkbox" class="addon" value="499"
+                                        data-label="Logo Design" /> Logo Design</label>
+                                <label class="check-card"><input type="checkbox" class="addon" value="500"
+                                        data-label="Content Writing" /> Content Writing</label>
+                                <label class="check-card"><input type="checkbox" class="addon" value="299"
+                                        data-label="Google Map" /> Google Map</label>
+                                <label class="check-card"><input type="checkbox" class="addon" value="699"
+                                        data-label="Enquiry Form" /> Enquiry Form</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Extra Requirement</label>
+                            <textarea id="message"
+                                placeholder="Write your website details, pages, features, business type, etc."></textarea>
+                        </div>
+                    </form>
+                </div>
+
+                <aside class="total-box">
+                    <h3>Approximate Estimate</h3>
+                    <p class="small">Website making estimate only. Domain, hosting and maintenance are not included in
+                        this total.</p>
+                    <div class="total-price" id="totalPrice">₹4,999</div>
+                    <div class="summary-list">
+                        <div><span>Website Plan</span><strong id="planSummary">Business Website</strong></div>
+                        <div><span>Extra Pages</span><strong id="pageSummary">₹0</strong></div>
+                        <div><span>Add-ons</span><strong id="addonSummary">₹0</strong></div>
+                    </div>
+                    <a class="btn" id="sendQuote" href="#" target="_blank">Send Estimate on WhatsApp</a>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <span class="eyebrow">Questions</span>
+                <h2>Website Service <span class="gradient-text">FAQ</span></h2>
+                <p>These answers help customers understand the pricing and website development process clearly.</p>
+            </div>
+
+            <div class="faq-wrap">
+                <div class="faq-item open">
+                    <button class="faq-question"><span>Is domain and hosting included in website making
+                            charges?</span><span>+</span></button>
+                    <div class="faq-answer">
+                        <p>No. Website making charge is for design and development work only. Domain name, hosting, SSL,
+                            business email and paid tools are different charges.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"><span>What details are required to start a
+                            website?</span><span>+</span></button>
+                    <div class="faq-answer">
+                        <p>Business name, logo, contact number, WhatsApp number, services list, photos, address, social
+                            media links, website pages and content are required. If content is not ready, content
+                            writing can be added separately.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"><span>Can SAFA TECH make a website for college or
+                            coaching?</span><span>+</span></button>
+                    <div class="faq-answer">
+                        <p>Yes. SAFA TECH creates websites for colleges, coaching institutes, schools, admission
+                            campaigns, course promotion and education-related services.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"><span>Will the website work on mobile?</span><span>+</span></button>
+                    <div class="faq-answer">
+                        <p>Yes. SAFA TECH focuses on mobile-friendly and responsive designs so the website looks good on
+                            mobile, tablet, laptop and desktop.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"><span>Do you provide future updates or
+                            maintenance?</span><span>+</span></button>
+                    <div class="faq-answer">
+                        <p>Yes. Future updates, maintenance, content changes, new pages, bug fixes and support can be
+                            provided with separate maintenance charges.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA CONTACT -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Ready To Launch Your <span class="gradient-text">Professional Website?</span></h2>
+                <p>
+                    Send your business details, logo, photos, services, address and contact information. SAFA TECH will
+                    create a clean,
+                    modern, responsive and premium website that helps your business grow online.
+                </p>
+                <div class="cta-actions">
+                    <a class="btn"
+                        href="https://wa.me/918090365014?text=Hello%20SAFA%20TECH%2C%20I%20want%20to%20make%20a%20website.%20Please%20send%20complete%20details."
+                        target="_blank">WhatsApp Now</a>
+                    <a class="btn btn-outline" href="tel:+918090365014">Call: 8090365014</a>
+                    <a class="btn btn-outline" href="mailto:safatechinfo@gmail.com">Email Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="#home" class="brand footer-brand">
+                        <div class="logo-mark"><span>ST</span></div>
+                        <div class="brand-text">
+                            <strong>SAFA TECH</strong>
+                            <small>Digital Solutions</small>
+                        </div>
+                    </a>
+                    <p>SAFA TECH creates modern, responsive, professional and mobile-friendly websites for businesses,
+                        personal brands, colleges, coaching institutes, service providers and educational purposes.</p>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <p><a href="#services">Services</a></p>
+                    <p><a href="#pricing">Pricing</a></p>
+                    <p><a href="#hosting">Domain & Hosting</a></p>
+                    <p><a href="#quote">Estimate Calculator</a></p>
+                </div>
+                <div>
+                    <h3>Contact</h3>
+                    <p>WhatsApp / Call: <a href="tel:+918090365014">8090365014</a></p>
+                    <p>Email: <a href="mailto:safatechinfo@gmail.com">safatechinfo@gmail.com</a></p>
+                    <p>Service: Website Development, Website Design, Digital Solutions</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <span>© 2026 SAFA TECH. All Rights Reserved.</span>
+                <span>Designed for powerful online business growth.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu
+        const menuBtn = document.getElementById('menuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+            menuBtn.textContent = navLinks.classList.contains('show') ? '×' : '☰';
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('show');
+                menuBtn.textContent = '☰';
+            });
+        });
+
+        // Pricing Filter Tabs
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const priceCards = document.querySelectorAll('.price-card');
+
+        tabButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.dataset.filter;
+                priceCards.forEach(card => {
+                    const category = card.dataset.category;
+                    if (filter === 'all' || category.includes(filter)) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('open');
+            });
+        });
+
+        // Quote Calculator
+        const websiteType = document.getElementById('websiteType');
+        const extraPages = document.getElementById('extraPages');
+        const addons = document.querySelectorAll('.addon');
+        const totalPrice = document.getElementById('totalPrice');
+        const planSummary = document.getElementById('planSummary');
+        const pageSummary = document.getElementById('pageSummary');
+        const addonSummary = document.getElementById('addonSummary');
+        const sendQuote = document.getElementById('sendQuote');
+        const clientName = document.getElementById('clientName');
+        const businessName = document.getElementById('businessName');
+        const message = document.getElementById('message');
+
+        function formatINR(num) {
+            return '₹' + Number(num).toLocaleString('en-IN');
+        }
+
+        function selectedPlanName() {
+            return websiteType.options[websiteType.selectedIndex].text.split(' - ')[0];
+        }
+
+        function calculateTotal() {
+            const base = Number(websiteType.value);
+            const pages = Number(extraPages.value);
+            let addonTotal = 0;
+            let addonNames = [];
+
+            addons.forEach(addon => {
+                if (addon.checked) {
+                    addonTotal += Number(addon.value);
+                    addonNames.push(addon.dataset.label);
+                }
+            });
+
+            const total = base + pages + addonTotal;
+            totalPrice.textContent = formatINR(total);
+            planSummary.textContent = selectedPlanName();
+            pageSummary.textContent = formatINR(pages);
+            addonSummary.textContent = formatINR(addonTotal);
+
+            const whatsappText = `Hello SAFA TECH, I want a website.%0A%0AName: ${encodeURIComponent(clientName.value || 'Not filled')}%0ABusiness/Brand: ${encodeURIComponent(businessName.value || 'Not filled')}%0AWebsite Plan: ${encodeURIComponent(selectedPlanName())}%0AExtra Pages: ${formatINR(pages)}%0AAdd-ons: ${encodeURIComponent(addonNames.length ? addonNames.join(', ') : 'No add-ons')}%0AApprox Website Making Estimate: ${formatINR(total)}%0A%0AExtra Requirement: ${encodeURIComponent(message.value || 'Not filled')}%0A%0ANote: Domain and hosting separate.`;
+
+            sendQuote.href = `https://wa.me/918090365014?text=${whatsappText}`;
+        }
+
+        websiteType.addEventListener('change', calculateTotal);
+        extraPages.addEventListener('change', calculateTotal);
+        addons.forEach(addon => addon.addEventListener('change', calculateTotal));
+        [clientName, businessName, message].forEach(input => input.addEventListener('input', calculateTotal));
+        calculateTotal();
+
+        // Active nav link while scrolling
+        const sections = document.querySelectorAll('main[id], section[id]');
+        const navItems = document.querySelectorAll('.nav-links a');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const top = section.offsetTop - 120;
+                if (scrollY >= top) { current = section.getAttribute('id'); }
+            });
+            navItems.forEach(a => {
+                a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+            });
+        });
+    </script>
+</body>
+
+</html>

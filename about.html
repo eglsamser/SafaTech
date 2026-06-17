@@ -331,80 +331,7 @@
             transform: translateY(-4px);
         }
 
-        /* ================= OWNER CARD ================= */
-        .owner-card {
-            position: relative;
-            padding: 30px;
-            border-radius: 30px;
-            background: linear-gradient(180deg, rgba(17, 17, 17, 0.96), rgba(5, 5, 5, 0.96));
-            border: 1px solid rgba(212, 175, 55, 0.28);
-            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.48);
-            overflow: hidden;
-            animation: fadeRight 1s ease forwards;
-        }
-
-        .owner-card::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(120deg, transparent, rgba(212, 175, 55, 0.13), transparent);
-            transform: translateX(-100%);
-            animation: shine 4s ease-in-out infinite;
-        }
-
-        .owner-card-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .owner-logo {
-            width: 96px;
-            height: 96px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--gold);
-            box-shadow: 0 0 35px rgba(212, 175, 55, 0.28);
-            margin-bottom: 18px;
-        }
-
-        .owner-card h2 {
-            color: var(--gold);
-            font-size: 1.55rem;
-            margin-bottom: 6px;
-        }
-
-        .owner-card .role {
-            color: var(--white);
-            font-weight: 600;
-            margin-bottom: 18px;
-        }
-
-        .owner-info {
-            display: grid;
-            gap: 12px;
-            margin-top: 18px;
-        }
-
-        .info-box {
-            padding: 14px 16px;
-            border-radius: 16px;
-            background: rgba(255, 255, 255, 0.035);
-            border: 1px solid rgba(212, 175, 55, 0.14);
-        }
-
-        .info-box span {
-            display: block;
-            color: var(--gold);
-            font-size: 0.82rem;
-            font-weight: 700;
-            margin-bottom: 3px;
-        }
-
-        .info-box p {
-            color: var(--light-gray);
-            font-size: 0.94rem;
-            line-height: 1.6;
-        }
+        
 
         /* ================= ANIMATIONS ================= */
         @keyframes fadeUp {
@@ -601,36 +528,7 @@
                     </div>
                 </div>
 
-                <aside class="owner-card">
-                    <div class="owner-card-content">
-                        <img class="owner-logo" src="images/logos.jpeg" alt="SAFA TECH Owner and Company Logo">
-
-                        <h2>MD Shamsher Ahamed</h2>
-                        <p class="role">Owner of SAFA TECH</p>
-
-                        <div class="owner-info">
-                            <div class="info-box">
-                                <span>Qualification</span>
-                                <p>Diploma in Computer Science with 8.0 CGPA and pursuing B.Tech in Computer Science.</p>
-                            </div>
-
-                            <div class="info-box">
-                                <span>Professional Background</span>
-                                <p>Computer Science educator, front-end developer and digital service provider.</p>
-                            </div>
-
-                            <div class="info-box">
-                                <span>Expertise</span>
-                                <p>Website design, front-end development, digital branding, student guidance and technical education.</p>
-                            </div>
-
-                            <div class="info-box">
-                                <span>Company Goal</span>
-                                <p>To provide professional, affordable and trustworthy digital solutions for clients worldwide.</p>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
+                       
 
             </div>
         </section>

@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/png" href="images/logos.jpeg">
+
+  <title>SAFA TECH Blog | Website, Admission & Career Guidance</title>
+
+  <meta name="description"
+    content="Read SAFA TECH blogs about website design, portfolio website, admission guidance, B.Tech after diploma, AKTU admission, Polytechnic admission, BCA vs B.Tech and career guidance.">
+
+  <meta name="keywords"
+    content="SAFA TECH blog, website cost in India, B.Tech after Diploma, AKTU admission process, Polytechnic admission guide, BCA vs B.Tech, portfolio website">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #07111f;
+      color: #ffffff;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* ================= HEADER ================= */
+    .header {
+      width: 100%;
+      padding: 18px 8%;
+      background: rgba(2, 6, 23, 0.96);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(12px);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .logo-img {
+      width: 48px;
+      height: 48px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #facc15;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .navbar a {
+      color: #cbd5e1;
+      font-size: 15px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+      color: #facc15;
+    }
+
+    /* ================= BLOG PAGE ================= */
+    .blog-page {
+      padding: 90px 8% 70px;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top left, rgba(250, 204, 21, 0.12), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.14), transparent 30%),
+        #07111f;
+    }
+
+    .blog-page-header {
+      max-width: 900px;
+      margin: 0 auto 45px;
+      text-align: center;
+    }
+
+    .blog-page-header .small-title {
+      display: inline-block;
+      color: #facc15;
+      background: rgba(250, 204, 21, 0.12);
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .blog-page-header h1 {
+      font-size: 44px;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      color: #ffffff;
+    }
+
+    .blog-page-header p {
+      color: #cbd5e1;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .all-blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .all-blog-card {
+      position: relative;
+      background: linear-gradient(145deg, #0f172a, #111827);
+      padding: 28px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+      overflow: hidden;
+      transition: 0.4s ease;
+    }
+
+    .all-blog-card::before {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      background: rgba(250, 204, 21, 0.08);
+      border-radius: 50%;
+      top: -45px;
+      right: -45px;
+    }
+
+    .all-blog-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(250, 204, 21, 0.8);
+    }
+
+    .blog-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 16px;
+      background: #facc15;
+      color: #111827;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 18px;
+    }
+
+    .all-blog-card span {
+      display: inline-block;
+      background: rgba(250, 204, 21, 0.12);
+      color: #facc15;
+      padding: 7px 13px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .all-blog-card h3 {
+      color: #ffffff;
+      font-size: 21px;
+      line-height: 1.35;
+      margin-bottom: 12px;
+    }
+
+    .all-blog-card p {
+      color: #cbd5e1;
+      line-height: 1.7;
+      font-size: 15px;
+      margin-bottom: 22px;
+    }
+
+    .card-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 20px;
+      background: #facc15;
+      color: #111827;
+      border: none;
+      border-radius: 30px;
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .card-btn:hover {
+      background: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    /* ================= POPUP MODAL ================= */
+    .popup-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(2, 6, 23, 0.82);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 3000;
+      backdrop-filter: blur(8px);
+    }
+
+    .popup-overlay.active {
+      display: flex;
+    }
+
+    .popup-card {
+      width: 100%;
+      max-width: 980px;
+      max-height: 90vh;
+      overflow-y: auto;
+      background: linear-gradient(145deg, #0f172a, #111827);
+      border: 1px solid rgba(250, 204, 21, 0.4);
+      border-radius: 24px;
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+      animation: popupZoom 0.3s ease;
+      position: relative;
+    }
+
+    @keyframes popupZoom {
+      from {
+        opacity: 0;
+        transform: scale(0.92);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .popup-header {
+      padding: 28px 30px;
+      background:
+        linear-gradient(135deg, rgba(250, 204, 21, 0.18), rgba(59, 130, 246, 0.12)),
+        #0f172a;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+
+    .popup-category {
+      display: inline-block;
+      background: rgba(250, 204, 21, 0.15);
+      color: #facc15;
+      padding: 7px 14px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .popup-header h2 {
+      font-size: 30px;
+      color: #ffffff;
+      line-height: 1.3;
+      padding-right: 45px;
+    }
+
+    .close-popup {
+      position: absolute;
+      top: 22px;
+      right: 24px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      background: #facc15;
+      color: #111827;
+      font-size: 22px;
+      cursor: pointer;
+      font-weight: 900;
+      transition: 0.3s;
+    }
+
+    .close-popup:hover {
+      background: #ffffff;
+      transform: rotate(90deg);
+    }
+
+    .popup-body {
+      padding: 30px;
+    }
+
+    .popup-intro {
+      color: #dbeafe;
+      line-height: 1.8;
+      font-size: 16px;
+      margin-bottom: 25px;
+      background: rgba(255, 255, 255, 0.04);
+      padding: 18px;
+      border-radius: 16px;
+      border-left: 4px solid #facc15;
+    }
+
+    .popup-section-title {
+      color: #ffffff;
+      font-size: 22px;
+      margin: 25px 0 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .popup-section-title i {
+      color: #facc15;
+    }
+
+    .step-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .step-item {
+      display: grid;
+      grid-template-columns: 46px 1fr;
+      gap: 14px;
+      background: rgba(255, 255, 255, 0.04);
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .step-number {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #facc15;
+      color: #111827;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+    }
+
+    .step-text h4 {
+      color: #ffffff;
+      font-size: 17px;
+      margin-bottom: 6px;
+    }
+
+    .step-text p {
+      color: #cbd5e1;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .point-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .point-list li {
+      color: #cbd5e1;
+      line-height: 1.7;
+      background: rgba(255, 255, 255, 0.04);
+      padding: 13px 15px;
+      border-radius: 12px;
+    }
+
+    .point-list li i {
+      color: #facc15;
+      margin-right: 8px;
+    }
+
+    /* ================= COMPARISON TABLE ================= */
+    .comparison-block {
+      display: none;
+      margin: 25px 0;
+    }
+
+    .comparison-table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      border-radius: 18px;
+      border: 1px solid rgba(250, 204, 21, 0.25);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .comparison-table {
+      width: 100%;
+      min-width: 720px;
+      border-collapse: collapse;
+    }
+
+    .comparison-table th {
+      background: linear-gradient(135deg, #facc15, #f59e0b);
+      color: #111827;
+      padding: 16px;
+      font-size: 16px;
+      text-align: left;
+      font-weight: 900;
+      border-right: 1px solid rgba(17, 24, 39, 0.18);
+    }
+
+    .comparison-table th:last-child {
+      border-right: none;
+    }
+
+    .comparison-table td {
+      padding: 15px 16px;
+      color: #dbeafe;
+      line-height: 1.7;
+      vertical-align: top;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 15px;
+    }
+
+    .comparison-table td:last-child {
+      border-right: none;
+    }
+
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .comparison-table td:first-child {
+      color: #facc15;
+      font-weight: 800;
+      width: 26%;
+    }
+
+    .comparison-note {
+      color: #cbd5e1;
+      font-size: 14px;
+      line-height: 1.7;
+      margin-top: 14px;
+      background: rgba(250, 204, 21, 0.08);
+      padding: 13px 15px;
+      border-radius: 12px;
+      border-left: 4px solid #facc15;
+    }
+
+    .popup-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .whatsapp-btn,
+    .close-btn-bottom {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 22px;
+      border-radius: 30px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: 0.3s;
+      border: none;
+      font-size: 15px;
+    }
+
+    .whatsapp-btn {
+      background: #22c55e;
+      color: #ffffff;
+    }
+
+    .close-btn-bottom {
+      background: transparent;
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .whatsapp-btn:hover,
+    .close-btn-bottom:hover {
+      transform: translateY(-2px);
+    }
+
+    /* ================= FOOTER ================= */
+    .footer {
+      background: #020617;
+      padding: 22px 8%;
+      text-align: center;
+      color: #cbd5e1;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    /* ================= MOBILE RESPONSIVE ================= */
+    @media (max-width: 1050px) {
+      .all-blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .header {
+        padding: 16px 5%;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 13px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .blog-page {
+        padding: 65px 5% 55px;
+      }
+
+      .blog-page-header h1 {
+        font-size: 32px;
+      }
+
+      .blog-page-header p {
+        font-size: 15px;
+      }
+
+      .all-blog-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .popup-card {
+        max-height: 88vh;
+        border-radius: 18px;
+      }
+
+      .popup-header {
+        padding: 24px 20px;
+      }
+
+      .popup-header h2 {
+        font-size: 23px;
+      }
+
+      .popup-body {
+        padding: 22px;
+      }
+
+      .step-item {
+        grid-template-columns: 1fr;
+      }
+
+      .step-number {
+        width: 38px;
+        height: 38px;
+      }
+
+      .comparison-table {
+        min-width: 650px;
+      }
+
+      .comparison-table th,
+      .comparison-table td {
+        padding: 13px;
+        font-size: 14px;
+      }
+
+      .popup-actions {
+        flex-direction: column;
+      }
+
+      .whatsapp-btn,
+      .close-btn-bottom {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        font-size: 20px;
+      }
+
+      .logo-img {
+        width: 42px;
+        height: 42px;
+      }
+
+      .navbar a {
+        font-size: 13px;
+      }
+
+      .blog-page-header h1 {
+        font-size: 27px;
+      }
+
+      .all-blog-card {
+        padding: 22px;
+      }
+
+      .all-blog-card h3 {
+        font-size: 19px;
+      }
+
+      .popup-header h2 {
+        font-size: 21px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="SAFA TECH Logo" class="logo-img">
+      <span>SAFA TECH</span>
+    </a>
+
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="website.html">Website</a>
+      <a href="poster.html">Poster</a>
+      <a href="ads.html">Ads</a>
+      <a href="admission.html">Admission</a>
+      <a href="work.html">Work</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Blog Page -->
+  <section class="blog-page">
+    <div class="blog-page-header">
+      <span class="small-title">SAFA TECH Knowledge Hub</span>
+      <h1>SAFA TECH Blog & Guidance</h1>
+      <p>
+        Read useful blogs related to website design, digital services, admission guidance,
+        computer courses and career planning. Click on Read More to see full details,
+        process, comparison, steps and important points in a popup card on the same page.
+      </p>
+    </div>
+
+    <div class="all-blog-grid">
+
+      <div class="all-blog-card">
+        <div class="blog-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <span>Admission Guidance</span>
+        <h3>How to Get Admission in B.Tech After Diploma</h3>
+        <p>
+          Diploma students can continue their technical career through B.Tech lateral entry.
+          This blog explains admission process, eligibility, documents and career scope.
+        </p>
+        <button class="card-btn read-more-btn" data-blog="btech-diploma">
+          Read More <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <div class="all-blog-card">
+        <div class="blog-icon"><i class="fa-solid fa-building-columns"></i></div>
+        <span>AKTU Admission</span>
+        <h3>AKTU Admission Process</h3>
+        <p>
+          Understand AKTU admission process, course options, counselling, documents,
+          eligibility and important guidance for technical education admission.
+        </p>
+        <button class="card-btn read-more-btn" data-blog="aktu">
+          Read More <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <div class="all-blog-card">
+        <div class="blog-icon"><i class="fa-solid fa-laptop-code"></i></div>
+        <span>Career Guide</span>
+        <h3>BCA vs B.Tech: Which is Better?</h3>
+        <p>
+          BCA and B.Tech both are popular computer field courses. Learn the difference,
+          career scope, job options and best choice according to your goal.
+        </p>
+        <button class="card-btn read-more-btn" data-blog="bca-btech">
+          Read More <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <div class="all-blog-card">
+        <div class="blog-icon"><i class="fa-solid fa-school"></i></div>
+        <span>Polytechnic</span>
+        <h3>Polytechnic Admission Guide</h3>
+        <p>
+          Learn about Polytechnic admission, branches, eligibility, entrance exam,
+          counselling process and career options after diploma courses.
+        </p>
+        <button class="card-btn read-more-btn" data-blog="polytechnic">
+          Read More <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <div class="all-blog-card">
+        <div class="blog-icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+        <span>Website Design</span>
+        <h3>How Much Does a Website Cost in India?</h3>
+        <p>
+          Website cost depends on pages, design, domain, hosting, features and business
+          needs. This guide explains basic website making charges in simple words.
+        </p>
+        <button class="card-btn read-more-btn" data-blog="website-cost">
+          Read More <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <div class="all-blog-card">
+        <div class="blog-icon"><i class="fa-solid fa-user-tie"></i></div>
+        <span>Portfolio Website</span>
+        <h3>What and why important Portfolio Website</h3>
+        <p>
+          A portfolio website helps students, teachers, freelancers and professionals
+          show their skills, projects, services and contact details online.
+        </p>
+        <button class="card-btn read-more-btn" data-blog="portfolio">
+          Read More <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <div class="all-blog-card">
+        <div class="blog-icon"><i class="fa-solid fa-computer"></i></div>
+        <span>Computer Course</span>
+        <h3>Best Computer Course After 12th</h3>
+        <p>
+          Learn about popular computer courses after 12th like BCA, B.Tech CS,
+          Diploma, web development, programming and career-focused IT courses.
+        </p>
+        <button class="card-btn read-more-btn" data-blog="computer-course">
+          Read More <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <div class="all-blog-card">
+        <div class="blog-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <span>Career Scope</span>
+        <h3>MBA vs MCA Career Scope</h3>
+        <p>
+          MBA and MCA both provide different career opportunities. Understand which
+          course is better according to your interest, skills and future goals.
+        </p>
+        <button class="card-btn read-more-btn" data-blog="mba-mca">
+          Read More <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <div class="all-blog-card">
+        <div class="blog-icon"><i class="fa-solid fa-globe"></i></div>
+        <span>Digital Service</span>
+        <h3>Why Every Business Needs a Website</h3>
+        <p>
+          A website builds trust, shows services, improves online presence and helps
+          customers contact your business easily from mobile and Google search.
+        </p>
+        <button class="card-btn read-more-btn" data-blog="business-website">
+          Read More <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Popup Modal -->
+  <div class="popup-overlay" id="popupOverlay">
+    <div class="popup-card">
+      <div class="popup-header">
+        <span class="popup-category" id="popupCategory">Category</span>
+        <h2 id="popupTitle">Blog Title</h2>
+        <button class="close-popup" id="closePopup">&times;</button>
+      </div>
+
+      <div class="popup-body">
+        <p class="popup-intro" id="popupIntro"></p>
+
+        <!-- Comparison Table Block -->
+        <div class="comparison-block" id="comparisonBlock">
+          <h3 class="popup-section-title">
+            <i class="fa-solid fa-table-columns"></i>
+            Course Comparison
+          </h3>
+
+          <div class="comparison-table-wrapper">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Comparison Type</th>
+                  <th id="comparisonColOne">Column One</th>
+                  <th id="comparisonColTwo">Column Two</th>
+                </tr>
+              </thead>
+              <tbody id="comparisonBody"></tbody>
+            </table>
+          </div>
+
+          <p class="comparison-note" id="comparisonNote"></p>
+        </div>
+
+        <h3 class="popup-section-title">
+          <i class="fa-solid fa-list-check"></i>
+          Complete Process Step by Step
+        </h3>
+
+        <div class="step-list" id="popupSteps"></div>
+
+        <h3 class="popup-section-title">
+          <i class="fa-solid fa-circle-info"></i>
+          Important Points
+        </h3>
+
+        <ul class="point-list" id="popupPoints"></ul>
+
+        <div class="popup-actions">
+          <button class="whatsapp-btn" id="popupWhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+            Ask on WhatsApp
+          </button>
+
+          <button class="close-btn-bottom" id="closeBottom">
+            Close Details
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 SAFA TECH | Digital Marketing & Web Services | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    const blogDetails = {
+      "btech-diploma": {
+        category: "Admission Guidance",
+        title: "How to Get Admission in B.Tech After Diploma",
+        intro: "B.Tech is normally a 4-year engineering course after 12th. But diploma students can take admission directly in 2nd year through lateral entry, so after diploma the B.Tech duration becomes 3 years.",
+
+        steps: [
+          {
+            head: "Understand B.Tech Duration",
+            text: "If you take admission after 12th, B.Tech is a mandatory 4-year course from 1st year. If you have completed diploma, then you can take direct admission in 2nd year through lateral entry, and you do not need to study or give 1st year exams."
+          },
+          {
+            head: "Check Diploma Eligibility",
+            text: "Diploma students should complete or appear in final year of diploma in a suitable engineering branch. Final year appearing students can also fill many university entrance forms, but final result and documents are required during counselling or admission."
+          },
+          {
+            head: "Choose Admission Mode",
+            text: "Different universities have different admission processes. Some universities conduct their own entrance exam, some take admission through JEE Main, CUET or UPTAC counselling, and some universities also allow direct admission."
+          },
+          {
+            head: "Avoid Blind Direct Admission",
+            text: "Some universities provide direct admission without entrance or counselling, but in direct admission scholarship chances may be very low or not available for some categories. So entrance or counselling-based admission is usually a better option."
+          },
+          {
+            head: "Fill Entrance Form in Final Year",
+            text: "When your diploma final year starts, regularly check university admission notifications. Most entrance forms are released between January to March, but dates change every year according to university rules."
+          },
+          {
+            head: "Prepare for Entrance Exam",
+            text: "After filling the form, start preparation according to the university entrance syllabus. Focus on diploma-level technical subjects, basic mathematics, reasoning and general aptitude if included in the exam pattern."
+          },
+          {
+            head: "Appear in Entrance Exam",
+            text: "Give the entrance exam on the scheduled date. After the exam, the university or counselling authority declares the result or merit list."
+          },
+          {
+            head: "Attend Counselling Process",
+            text: "After result, counselling process starts similar to Polytechnic counselling. During counselling, choose your preferred university, college and branch carefully."
+          },
+          {
+            head: "Seat Allotment",
+            text: "If your rank and choice are suitable, you will get seat allotment. After seat allotment, pay the required counselling or seat confirmation fee."
+          },
+          {
+            head: "Document Verification",
+            text: "Complete document verification with your diploma marksheets, 10th marksheet, Aadhaar card, caste certificate if applicable, photos, transfer certificate and other required documents."
+          },
+          {
+            head: "Complete Final Admission",
+            text: "After document verification, report to the allotted college or university, submit documents, pay college fee and collect admission confirmation."
+          },
+          {
+            head: "Start B.Tech from 2nd Year",
+            text: "After lateral entry admission, you directly join B.Tech 2nd year. Attend classes regularly and focus on technical skills, projects, coding, internships and placement preparation."
+          }
+        ],
+
+        points: [
+          "B.Tech after 12th is a 4-year course from 1st year.",
+          "B.Tech after diploma is direct admission in 2nd year through lateral entry.",
+          "Diploma students do not need to give 1st year B.Tech exams.",
+          "After diploma, B.Tech duration is usually 3 years.",
+          "Every university has a different admission process and entrance form date.",
+          "Many universities release entrance forms between January to March.",
+          "Some admissions happen through university entrance exam, JEE Main, CUET or UPTAC counselling.",
+          "Final year diploma students should check admission notifications regularly.",
+          "Direct admission is possible in some universities, but scholarship chances may be low.",
+          "Counselling-based admission is usually better for seat confirmation, fee benefits and scholarship chances.",
+          "Keep diploma marksheets, 10th marksheet, Aadhaar card, photos, caste certificate and other documents ready.",
+          "Choose college and branch carefully according to placement, faculty, lab and career goal."
+        ]
+      },
+
+      "aktu": {
+        category: "AKTU Admission",
+        title: "AKTU Admission Process Through UPTAC",
+        intro: "AKTU admission is mainly completed through Uttar Pradesh Technical Admission Counselling (UPTAC). For most courses, AKTU does not conduct a separate university-level entrance exam like old UPSEE/UPCET. Admission is generally based on national-level entrance exam scores like JEE Main, CUET UG, CUET PG and NATA, followed by UPTAC counselling.",
+
+        steps: [
+          {
+            head: "Select Your Course",
+            text: "First decide your course such as B.Tech, B.Arch, BBA, BCA, B.Pharm, MBA, MCA or any other professional course according to your qualification and career goal."
+          },
+          {
+            head: "Check Required Entrance Exam",
+            text: "Check which entrance exam is required for your selected course. B.Tech admission is generally through JEE Main or CUET, BBA/BCA/B.Pharm and other UG courses through CUET UG, MBA/MCA through CUET PG, and B.Arch through NATA."
+          },
+          {
+            head: "Fill Entrance Exam Form according to course required subject ",
+            text: "Before AKTU counselling, students must fill the required entrance exam form with required subject . Entrance exam forms generally come before the counselling process, so students should check official exam websites regularly."
+          },
+          {
+            head: "Appear in Entrance Exam",
+            text: "After filling the entrance form, appear in the required exam such as JEE Main, CUET UG, CUET PG or NATA. Your admission chance depends on your entrance exam score, rank and counselling choices."
+          },
+          {
+            head: "Check UPTAC Registration",
+            text: "After entrance exam result, UPTAC registration usually starts around May to June. Students must register on the official UPTAC portal to participate in AKTU counselling."
+          },
+          {
+            head: "Complete One-Time Registration",
+            text: "UPTAC registration is usually a one-time process. If you miss the registration window, you may not be allowed to participate in later counselling rounds, so do not wait for the last date."
+          },
+          {
+            head: "Pay Counselling Fee",
+            text: "During registration, students have to pay the counselling registration fee. The fee amount may change, so always check the official notification before payment."
+          },
+          {
+            head: "Upload Documents",
+            text: "Upload required documents like marksheets, photo, signature, entrance exam scorecard, category certificate if applicable, domicile certificate if required and other documents carefully."
+          },
+          {
+            head: "Document Verification",
+            text: "After uploading documents, the counselling authority verifies your documents. If any mismatch or error appears, correct it within the given time."
+          },
+          {
+            head: "Choice Filling and Locking",
+            text: "After document verification, fill your preferred colleges and courses. Arrange choices carefully according to branch, college ranking, location, fee, placement and your career goal."
+          },
+          {
+            head: "Seat Allotment",
+            text: "Seats are allotted in counselling rounds according to entrance exam rank, category, seat availability and the choices filled by the student."
+          },
+          {
+            head: "Accept Seat",
+            text: "If a seat is allotted, pay the seat acceptance fee and choose your willingness option such as Freeze, Float or Withdraw according to your decision."
+          },
+          {
+            head: "Report to Allotted College",
+            text: "After seat confirmation, report to the allotted college with original documents, allotment letter and required college fee to complete final admission."
+          },
+          {
+            head: "Start Your Classes",
+            text: "After completing admission, attend classes regularly, focus on academics, practical skills, projects, internships and placement preparation."
+          }
+        ],
+
+        points: [
+          "AKTU admission is mainly done through UPTAC counselling.",
+          "Old UPSEE/UPCET separate entrance exam is generally not conducted for most courses.",
+          "B.Tech admission is generally based on JEE Main or CUET score.",
+          "BBA, BCA, B.Pharm and other UG courses are generally based on CUET UG.",
+          "MBA and MCA admission is generally based on CUET PG.",
+          "B.Arch admission is generally based on NATA.",
+          "UPTAC registration usually starts after entrance exam result, mostly around May to June.",
+          "Registration is very important because it is usually a one-time process.",
+          "Choice filling must be done carefully because seat allotment depends on your filled choices.",
+          "Document mismatch can create admission problems, so upload correct documents only.",
+          "Always check college details like branch, fee, placement, location and facilities before locking choices.",
+          "Do not wait for the last date of registration, document upload or choice locking.",
+          "This information is prepared according to the current 2026 admission process. In future, dates, fees, eligibility, exam rules or counselling process may change, so students must always visit the official UPTAC/AKTU website for the latest update before applying."
+        ]
+      },
+
+      "bca-btech": {
+        category: "Career Guide",
+        title: "BCA vs B.Tech: Which is Better?",
+        intro: "BCA and B.Tech both are good options for computer field students. The best course depends on your interest, budget, time, technical goal and future career plan.",
+        comparison: {
+          colOne: "BCA",
+          colTwo: "B.Tech",
+          note: "Simple suggestion: Choose BCA if you want a computer application course with lower cost and shorter duration. Choose B.Tech if you want an engineering degree with deeper technical study.",
+          rows: [
+            {
+              type: "Full Form",
+              one: "Bachelor of Computer Applications",
+              two: "Bachelor of Technology"
+            },
+            {
+              type: "Course Type",
+              one: "Computer application-based course",
+              two: "Engineering and technology-based course"
+            },
+            {
+              type: "Duration",
+              one: "Usually 3 years",
+              two: "Usually 4 years"
+            },
+            {
+              type: "Best For",
+              one: "Students interested in software, web development, basic programming and IT jobs",
+              two: "Students interested in engineering, software development, technical depth and core CS concepts"
+            },
+            {
+              type: "Subjects",
+              one: "Programming, database, web development, computer applications, software basics",
+              two: "Programming, data structures, operating system, DBMS, networking, engineering mathematics, AI, software engineering"
+            },
+            {
+              type: "Technical Depth",
+              one: "Medium technical depth",
+              two: "High technical depth"
+            },
+            {
+              type: "Fee",
+              one: "Generally lower than B.Tech",
+              two: "Generally higher than BCA"
+            },
+            {
+              type: "Career Options",
+              one: "Web developer, software trainee, IT support, app developer, MCA student",
+              two: "Software engineer, developer, system engineer, data analyst, M.Tech/MBA student"
+            },
+            {
+              type: "Higher Study",
+              one: "MCA, MBA, certification courses",
+              two: "M.Tech, MBA, certification courses"
+            },
+            {
+              type: "Best Choice",
+              one: "Good for affordable computer career start",
+              two: "Good for strong engineering and software career"
+            }
+          ]
+        },
+        steps: [
+          {
+            head: "Check Your Interest",
+            text: "Choose BCA if you are interested in computer applications and software basics. Choose B.Tech if you want deeper technical and engineering study."
+          },
+          {
+            head: "Compare Duration and Fee",
+            text: "BCA is usually shorter and more affordable. B.Tech usually takes more time and may have higher fees."
+          },
+          {
+            head: "Check Career Goal",
+            text: "For software jobs, both courses can help, but B.Tech may provide more engineering-level opportunities."
+          },
+          {
+            head: "Focus on Skills",
+            text: "Whatever course you choose, learn coding, web development, database, GitHub and communication skills."
+          }
+        ],
+        points: [
+          "BCA is good for computer application and affordable IT career.",
+          "B.Tech is good for engineering and deeper technical career.",
+          "Skills and projects matter a lot in IT field.",
+          "Choose course according to interest, budget and future goal.",
+          "A strong portfolio website can improve job and internship chances."
+        ]
+      },
+
+      "polytechnic": {
+        category: "Polytechnic",
+        title: "Polytechnic Admission Guide",
+        intro: "Polytechnic is a diploma-level technical course for students who want practical technical education in engineering fields. Students can take admission after 10th for a 3-year diploma course, or after 12th through lateral entry directly in the 2nd year.",
+
+        steps: [
+          {
+            head: "Understand Course Duration",
+            text: "If you take admission after 10th, then Polytechnic is a mandatory 3-year diploma course. If you take admission after 12th, then you can get direct admission in 2nd year through lateral entry."
+          },
+          {
+            head: "Check Eligibility",
+            text: "For 1st year admission, students must pass 10th class. For lateral entry admission, students must pass 12th or equivalent qualification as per JEECUP rules."
+          },
+          {
+            head: "Fill JEECUP Entrance Form",
+            text: "Every year, the JEECUP entrance form is generally available between January to March. Students should fill the form carefully with correct personal, academic and category details."
+          },
+          {
+            head: "Start Entrance Exam Preparation",
+            text: "After filling the form, start preparation according to the JEECUP syllabus. Focus mainly on Physics, Chemistry and Mathematics for entrance exam preparation."
+          },
+          {
+            head: "Appear in JEECUP Exam",
+            text: "The JEECUP entrance exam is usually conducted around the second week of May. Students must download admit card and appear in the exam on the given date."
+          },
+          {
+            head: "Check Result",
+            text: "JEECUP result is generally declared in June. After result, students can check their rank and eligibility for the counselling process."
+          },
+          {
+            head: "Attend Counselling Process",
+            text: "The counselling process usually starts in the last week of June. JEECUP conducts multiple rounds of counselling, usually 5 rounds, where students choose their preferred college and branch."
+          },
+          {
+            head: "Seat Allotment & Counselling Fee",
+            text: "During counselling, if a seat is allotted, the student must pay the counselling fee to confirm the allotted seat."
+          },
+          {
+            head: "Document Verification",
+            text: "After seat allotment, students must complete document verification at the allotted government Polytechnic verification center or district government Polytechnic as per JEECUP instructions."
+          },
+          {
+            head: "Report to Allotted College",
+            text: "After document verification, visit the allotted college, submit all required documents, pay the college fee and complete the final admission process."
+          },
+          {
+            head: "Start Regular Classes",
+            text: "After admission confirmation, students should attend classes regularly, focus on practical learning and build strong technical skills."
+          }
+        ],
+
+        points: [
+          "After 10th, Polytechnic is a 3-year diploma course.",
+          "After 12th, students can take lateral entry admission directly in 2nd year.",
+          "JEECUP entrance form usually opens between January to March every year.",
+          "Entrance exam preparation should be done according to JEECUP syllabus, mainly Physics, Chemistry and Mathematics.",
+          "JEECUP exam is generally conducted in the second week of May.",
+          "Result usually comes in June and counselling starts around the last week of June.",
+          "JEECUP counselling is conducted in multiple rounds, usually 5 rounds.",
+          "After seat allotment, counselling fee payment and document verification are compulsory.",
+          "Final admission is completed after submitting documents and college fee in the allotted college.",
+          "Choose branch and college carefully according to your career goal, lab facilities and placement support."
+        ]
+      },
+
+      "website-cost": {
+        category: "Website Design",
+        title: "How Much Does a Website Cost in India?",
+        intro: "Website cost depends on design, pages, domain, hosting, features and type of business. A simple website costs less, while advanced websites cost more.",
+        steps: [
+          {
+            head: "Decide Website Type",
+            text: "First decide whether you need a portfolio website, business website, college website, restaurant website, hospital website or e-commerce website."
+          },
+          {
+            head: "Count Website Pages",
+            text: "Website cost depends on number of pages like Home, About, Services, Gallery, Blog and Contact."
+          },
+          {
+            head: "Select Features",
+            text: "Features like WhatsApp button, contact form, gallery, blog, animation, video section and SEO setup affect the price."
+          },
+          {
+            head: "Domain and Hosting",
+            text: "Domain is your website name and hosting is where your website files are stored. These may be yearly charges."
+          },
+          {
+            head: "Design and Mobile Friendly Layout",
+            text: "Professional design, mobile-friendly layout and fast loading improve user experience and website quality."
+          },
+          {
+            head: "SEO Setup",
+            text: "Basic SEO includes title, description, keywords, sitemap, robots file and proper content structure."
+          },
+          {
+            head: "Final Price Discussion",
+            text: "After understanding full requirement, final website price can be decided according to work and features."
+          }
+        ],
+        points: [
+          "Static websites are usually affordable.",
+          "More pages and features increase cost.",
+          "A website should be mobile-friendly.",
+          "A professional website builds trust for business.",
+          "SAFA TECH creates affordable websites for students, businesses and institutes."
+        ]
+      },
+
+      "portfolio": {
+        category: "Portfolio Website",
+        title: "What and why important  Portfolio Website",
+        intro: "A portfolio website is useful for students, teachers, freelancers, developers and professionals to show skills, projects and contact information online.",
+        steps: [
+          {
+            head: "Choose Your Purpose",
+            text: "Decide whether your portfolio is for job, freelancing, teaching, business, personal branding or professional identity."
+          },
+          {
+            head: "Add Personal Details",
+            text: "Add your name, photo, short introduction, education, experience and professional goal."
+          },
+          {
+            head: "Show Skills",
+            text: "Mention your skills like HTML, CSS, JavaScript, Java, teaching, design, marketing or other professional skills."
+          },
+          {
+            head: "Add Projects or Work",
+            text: "Show your best projects, designs, websites, certificates, posters or sample work in cards."
+          },
+          {
+            head: "Add Contact Section",
+            text: "Add phone, email, WhatsApp, location and social media links so people can contact you easily."
+          },
+          
+          {
+            head: "Publish Online",
+            text: "Publish your website using domain and hosting or free platforms like GitHub Pages for static websites."
+          }
+        ],
+        points: [
+          "Portfolio website increases professional trust.",
+          "It helps in interviews and freelancing.",
+          "Projects should be real and clearly explained.",
+          "Use simple design and readable text.",
+          "Keep your website updated with new skills and work."
+        ]
+      },
+
+      "computer-course": {
+        category: "Computer Course",
+        title: "Best Computer Course After 12th",
+        intro: "After 12th, students can choose many computer-related courses according to their interest in software, hardware, business, design or IT field.",
+        steps: [
+          {
+            head: "Check Your Interest",
+            text: "First decide whether you like coding, designing, networking, hardware, business management or data-related work."
+          },
+          {
+            head: "Choose Degree or Diploma",
+            text: "Students can choose B.Tech CS, BCA, Diploma, certificate courses or skill-based computer training."
+          },
+          {
+            head: "Learn Programming Basics",
+            text: "Start with computer basics, C language, HTML, CSS, JavaScript, Python or Java according to your goal."
+          },
+          {
+            head: "Build Practical Projects",
+            text: "Only theory is not enough. Make small projects like portfolio website, calculator, form page or management system."
+          },
+          {
+            head: "Improve Communication",
+            text: "English communication, presentation and interview skills are also important for good career growth."
+          },
+          {
+            head: "Take Career Guidance",
+            text: "Take guidance from teachers, seniors or professionals before selecting a long-term course."
+          }
+        ],
+        points: [
+          "BCA is good for computer application field.",
+          "B.Tech CS is good for engineering and software development.",
+          "Diploma is useful for practical technical education.",
+          "Short courses help in quick skill development.",
+          "Projects and practice are very important."
+        ]
+      },
+
+      "mba-mca": {
+        category: "Career Scope",
+        title: "MBA vs MCA Career Scope",
+        intro: "MBA and MCA are different career paths. MBA is management-focused, while MCA is computer and software-focused. Choose according to your interest and career goal.",
+        comparison: {
+          colOne: "MBA",
+          colTwo: "MCA",
+          note: "Simple suggestion: Choose MBA if you like business, management, marketing and leadership. Choose MCA if you like coding, software, database, web development and IT career.",
+          rows: [
+            {
+              type: "Full Form",
+              one: "Master of Business Administration",
+              two: "Master of Computer Applications"
+            },
+            {
+              type: "Course Type",
+              one: "Management and business course",
+              two: "Computer application and software course"
+            },
+            {
+              type: "Best For",
+              one: "Students interested in business, management, finance, HR, marketing and leadership",
+              two: "Students interested in programming, software development, web development, database and IT"
+            },
+            {
+              type: "Main Focus",
+              one: "Business planning, management, communication, marketing and leadership",
+              two: "Programming, software development, database, web apps and IT systems"
+            },
+            {
+              type: "Required Interest",
+              one: "Business, people management, sales, marketing and decision making",
+              two: "Coding, logic building, technology, software and problem solving"
+            },
+            {
+              type: "Career Options",
+              one: "Manager, HR executive, marketing executive, business analyst, sales manager",
+              two: "Software developer, web developer, app developer, database developer, IT analyst"
+            },
+            {
+              type: "Skill Requirement",
+              one: "Communication, leadership, presentation, management and business strategy",
+              two: "Programming, data structures, DBMS, web technologies and project development"
+            },
+            {
+              type: "Best Background",
+              one: "Any graduate with interest in business and management",
+              two: "Computer background students like BCA, B.Sc CS, B.Tech CS or similar"
+            },
+            {
+              type: "Job Field",
+              one: "Corporate, business, banking, marketing, HR, management",
+              two: "IT companies, software companies, startups, web/app development"
+            },
+            {
+              type: "Best Choice",
+              one: "Good for management and business career",
+              two: "Good for software and IT career"
+            }
+          ]
+        },
+        steps: [
+          {
+            head: "Check Your Interest",
+            text: "Choose MBA if you are interested in management and business. Choose MCA if you are interested in coding and software development."
+          },
+          {
+            head: "Check Your Background",
+            text: "Students from computer background often choose MCA. Students from any stream with business interest can choose MBA."
+          },
+          {
+            head: "Compare Career Goal",
+            text: "MBA is better for management roles. MCA is better for software and IT roles."
+          },
+          {
+            head: "Build Required Skills",
+            text: "For MBA, improve communication and leadership. For MCA, improve programming and project development."
+          }
+        ],
+        points: [
+          "MBA is best for management and business roles.",
+          "MCA is best for software and IT roles.",
+          "Both courses have good scope with the right skills.",
+          "Choose according to interest, not only trend.",
+          "Career guidance can help before final decision."
+        ]
+      },
+
+      "business-website": {
+        category: "Digital Service",
+        title: "Why Every Business Needs a Website",
+        intro: "Today, every small or big business needs a website. Whether your business is in a village, town or city, a website helps customers know your services, trust your work and contact you easily online.",
+
+        steps: [
+          {
+            head: "Create Your Online Identity",
+            text: "A website works like your digital shop or online office. Customers can see your business name, services, photos, location and contact details anytime."
+          },
+          {
+            head: "Build Customer Trust",
+            text: "When people search your business online and find a professional website, they feel more confident and trust your service easily."
+          },
+          {
+            head: "Show Services Clearly",
+            text: "You can show your services, products, price idea, offers, work samples, customer reviews and important details in a clean and simple way."
+          },
+          {
+            head: "Easy Contact Through WhatsApp",
+            text: "A website can include WhatsApp, call and contact buttons, so customers can directly message or call you without any confusion."
+          },
+          {
+            head: "Help Rural and Urban Customers",
+            text: "Customers from both village and city areas can understand your business through a website. It gives clear information even before they visit your shop or office."
+          },
+          {
+            head: "Improve Google Search Presence",
+            text: "With proper SEO, title, description, keywords and useful content, your business can become more visible on Google when people search related services."
+          },
+          {
+            head: "Promote Business Easily",
+            text: "You can share your website link on WhatsApp, Facebook, Instagram, business cards, posters and banners to reach more customers."
+          },
+          {
+            head: "Show Professional Brand Image",
+            text: "A well-designed website makes your business look modern, serious and professional in front of customers."
+          },
+          {
+            head: "Available 24/7",
+            text: "Your website remains open all day and night. Even when your shop or office is closed, customers can still check your services and contact details."
+          },
+          {
+            head: "Update Offers and Work Samples",
+            text: "You can regularly update your website with new offers, latest work, photos, service updates and customer feedback."
+          }
+        ],
+
+        points: [
+          "A website makes your business look professional and trusted.",
+          "Customers can check your services anytime from mobile or computer.",
+          "Useful for shops, coaching centers, schools, colleges, hospitals, restaurants, agencies and service providers.",
+          "Helpful for both rural and urban customers.",
+          "Website link is easy to share on WhatsApp, Facebook, Instagram and business cards.",
+          "Google presence helps more people discover your business online.",
+          "WhatsApp and call buttons help customers contact you quickly.",
+          "Good design improves your brand image and customer confidence.",
+          "A website works like your online shop, office and portfolio.",
+          "SAFA TECH creates modern, mobile-friendly and professional websites for businesses, shops, colleges, institutes and personal brands."
+        ]
+      }
+    };
+
+    const popupOverlay = document.getElementById("popupOverlay");
+    const closePopup = document.getElementById("closePopup");
+    const closeBottom = document.getElementById("closeBottom");
+    const popupCategory = document.getElementById("popupCategory");
+    const popupTitle = document.getElementById("popupTitle");
+    const popupIntro = document.getElementById("popupIntro");
+    const popupSteps = document.getElementById("popupSteps");
+    const popupPoints = document.getElementById("popupPoints");
+    const popupWhatsApp = document.getElementById("popupWhatsApp");
+
+    const comparisonBlock = document.getElementById("comparisonBlock");
+    const comparisonColOne = document.getElementById("comparisonColOne");
+    const comparisonColTwo = document.getElementById("comparisonColTwo");
+    const comparisonBody = document.getElementById("comparisonBody");
+    const comparisonNote = document.getElementById("comparisonNote");
+
+    let currentBlogTitle = "";
+
+    document.querySelectorAll(".read-more-btn").forEach(button => {
+      button.addEventListener("click", () => {
+        const blogId = button.getAttribute("data-blog");
+        openBlogPopup(blogId);
+      });
+    });
+
+    function openBlogPopup(blogId) {
+      const blog = blogDetails[blogId];
+
+      if (!blog) {
+        return;
+      }
+
+      currentBlogTitle = blog.title;
+
+      popupCategory.textContent = blog.category;
+      popupTitle.textContent = blog.title;
+      popupIntro.textContent = blog.intro;
+
+      if (blog.comparison) {
+        comparisonBlock.style.display = "block";
+        comparisonColOne.textContent = blog.comparison.colOne;
+        comparisonColTwo.textContent = blog.comparison.colTwo;
+        comparisonNote.textContent = blog.comparison.note;
+
+        comparisonBody.innerHTML = "";
+
+        blog.comparison.rows.forEach(row => {
+          const tr = document.createElement("tr");
+
+          tr.innerHTML = `
+            <td>${row.type}</td>
+            <td>${row.one}</td>
+            <td>${row.two}</td>
+          `;
+
+          comparisonBody.appendChild(tr);
+        });
+      } else {
+        comparisonBlock.style.display = "none";
+        comparisonBody.innerHTML = "";
+        comparisonNote.textContent = "";
+      }
+
+      popupSteps.innerHTML = "";
+      blog.steps.forEach((step, index) => {
+        const stepDiv = document.createElement("div");
+        stepDiv.className = "step-item";
+        stepDiv.innerHTML = `
+          <div class="step-number">${index + 1}</div>
+          <div class="step-text">
+            <h4>${step.head}</h4>
+            <p>${step.text}</p>
+          </div>
+        `;
+        popupSteps.appendChild(stepDiv);
+      });
+
+      popupPoints.innerHTML = "";
+      blog.points.forEach(point => {
+        const li = document.createElement("li");
+        li.innerHTML = `<i class="fa-solid fa-check"></i> ${point}`;
+        popupPoints.appendChild(li);
+      });
+
+      popupOverlay.classList.add("active");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeBlogPopup() {
+      popupOverlay.classList.remove("active");
+      document.body.style.overflow = "auto";
+    }
+
+    closePopup.addEventListener("click", closeBlogPopup);
+    closeBottom.addEventListener("click", closeBlogPopup);
+
+    popupOverlay.addEventListener("click", function (e) {
+      if (e.target === popupOverlay) {
+        closeBlogPopup();
+      }
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        closeBlogPopup();
+      }
+    });
+
+    popupWhatsApp.addEventListener("click", function () {
+      const phoneNumber = "918090365014";
+      const message = `Hello SAFA TECH, I want more details about: ${currentBlogTitle}`;
+      const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+      window.open(url, "_blank");
+    });
+  </script>
+
+</body>
+
+</html>

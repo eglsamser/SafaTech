@@ -159,7 +159,7 @@ const footerText = document.querySelector(".footer p");
 
 if (footerText) {
   const currentYear = new Date().getFullYear();
-  footerText.innerHTML = `© ${currentYear} Er. MD SHAMSHER AHAMED | All Rights Reserved`;
+  footerText.innerHTML = `© ${currentYear}  SAFA TECH | Digital Marketing & Web Services | All Rights Reserved`;
 }
 
 
@@ -234,3 +234,32 @@ document.head.appendChild(style);
 
 // ---------- Welcome Console Message ----------
 console.log("Welcome to Er. MD SHAMSHER AHAMED Portfolio Website");
+
+// ================= WHATSAPP CONTACT FORM =================
+const whatsappForm = document.getElementById("whatsappForm");
+
+if (whatsappForm) {
+  whatsappForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const address = document.getElementById("address").value.trim();
+    const requirement = document.getElementById("requirement").value;
+    const message = document.getElementById("message").value.trim();
+
+    const phoneNumber = "918090365014";
+
+    const whatsappMessage =
+      `Hello SAFA TECH,%0A%0A` +
+      `I want to contact you for service.%0A%0A` +
+      `Name: ${encodeURIComponent(name)}%0A` +
+      `Address: ${encodeURIComponent(address)}%0A` +
+      `Requirement: ${encodeURIComponent(requirement)}%0A` +
+      `Message: ${encodeURIComponent(message || "No extra message")}%0A%0A` +
+      `Please contact me.`;
+
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+
+    window.open(whatsappURL, "_blank");
+  });
+}

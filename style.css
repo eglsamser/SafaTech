@@ -477,16 +477,219 @@ section {
 }
 
 /* Footer */
-.footer {
-  background: #020202;
-  padding: 25px 8%;
-  text-align: center;
-  border-top: 1px solid rgba(212, 175, 55, 0.3);
+/* ================= FOOTER CSS - SAFA TECH ================= */
+
+footer {
+  background:
+    radial-gradient(circle at top left, rgba(245, 197, 66, 0.13), transparent 35%),
+    linear-gradient(135deg, #050505, #101010);
+  color: #ffffff;
+  padding: 65px 0 22px;
+  border-top: 1px solid rgba(245, 197, 66, 0.35);
+  position: relative;
+  overflow: hidden;
 }
 
-.footer p {
-  color: var(--gray);
+footer::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  background: rgba(245, 197, 66, 0.08);
+  border-radius: 50%;
+  top: -120px;
+  right: -90px;
+  filter: blur(4px);
+}
+
+footer .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr 1.2fr;
+  gap: 35px;
+  align-items: flex-start;
+}
+
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  margin-bottom: 18px;
+}
+
+.logo-mark {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #f5c542, #b88908);
+  color: #050505;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  box-shadow: 0 8px 25px rgba(245, 197, 66, 0.25);
+}
+
+.logo-mark span {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.brand-text strong {
+  color: #f5c542;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+}
+
+.brand-text small {
+  color: #d8d8d8;
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+.footer-grid p {
+  color: #d5d5d5;
   font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 9px;
+}
+
+.footer-grid h3 {
+  color: #f5c542;
+  font-size: 21px;
+  margin-bottom: 18px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-grid h3::after {
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 3px;
+  background: #f5c542;
+  left: 0;
+  bottom: 0;
+  border-radius: 20px;
+}
+
+.footer-grid a {
+  color: #e8e8e8;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.footer-grid a:hover {
+  color: #f5c542;
+  padding-left: 5px;
+}
+
+.footer-grid div:nth-child(2) p {
+  margin-bottom: 10px;
+}
+
+.footer-grid div:nth-child(2) a::before {
+  content: "›";
+  color: #f5c542;
+  margin-right: 8px;
+  font-weight: 900;
+}
+
+.footer-grid div:nth-child(3) a {
+  color: #f5c542;
+  font-weight: 700;
+}
+
+.footer-grid div:nth-child(3) a:hover {
+  color: #ffffff;
+  padding-left: 0;
+}
+
+.copyright {
+  margin-top: 45px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+  color: #bbbbbb;
+  font-size: 14px;
+}
+
+.copyright span:last-child {
+  color: #f5c542;
+}
+
+/* User Friendly Focus */
+.footer-grid a:focus,
+.footer-brand:focus {
+  outline: 2px solid #f5c542;
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+/* ================= FOOTER RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-grid div:first-child {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    padding: 50px 0 20px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .footer-grid div:first-child {
+    grid-column: span 1;
+  }
+
+  .footer-brand {
+    align-items: center;
+  }
+
+  .brand-text strong {
+    font-size: 20px;
+  }
+
+  .footer-grid h3 {
+    font-size: 19px;
+  }
+
+  .footer-grid p {
+    font-size: 14px;
+  }
+
+  .copyright {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
 }
 
 /* Responsive Design */
@@ -608,6 +811,7 @@ section {
     padding: 28px 20px;
   }
 }
+
 .logo {
   display: flex;
   align-items: center;
@@ -619,6 +823,7 @@ section {
   height: 45px;
   object-fit: contain;
 }
+
 .card-btn {
   display: inline-block;
   margin-top: 18px;
@@ -834,6 +1039,7 @@ section {
     text-align: center;
   }
 }
+
 /* ================= BLOG HOME SECTION ================= */
 .blog-home {
   padding: 80px 8%;
@@ -1053,6 +1259,7 @@ section {
 
 /* ================= MOBILE RESPONSIVE ================= */
 @media (max-width: 992px) {
+
   .blog-container,
   .all-blog-grid,
   .contact-main {
@@ -1111,6 +1318,7 @@ section {
 }
 
 @media (max-width: 480px) {
+
   .blog-card,
   .all-blog-card,
   .contact-info-card,

@@ -6,17 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="icon" type="image/png" href="images/logos.jpeg">
+  
 
-  <title>SAFA TECH HUB Blog | Website, Admission & Career Guidance</title>
+  <title>SAFA TECH HUB Blog | Website Design, Admission, Resume & Career Guidance</title>
 
   <meta name="description"
-    content="Read SAFA TECH HUB blogs about website design, portfolio website, admission guidance, B.Tech after diploma, AKTU admission, Polytechnic admission, BCA vs B.Tech and career guidance.">
+    content="Read SAFA TECH HUB blogs about website design, resume making, portfolio websites, admission guidance, B.Tech after diploma, AKTU admission, Polytechnic admission, BCA vs B.Tech, MBA vs MCA and career guidance.">
 
   <meta name="keywords"
-    content="SAFA TECH HUB  blog, website cost in India, B.Tech after Diploma, AKTU admission process, Polytechnic admission guide, BCA vs B.Tech, best courses after class 12 , best courses after class 10 , best course in engineering , CSE vs EE , Can computer science branch is best , Diploma vs Btech , 4year Btech vs 3year Btech , Lateral Entry Or Fress admission in btech , Best btech college in india , best btech college in up , best btech college in noada , best private college in india , best placement college in india , best placement private college of engineering  in up ">
+    content="SAFA TECH HUB blog, safatechhub blog, website design blog, resume making guide, portfolio website, B.Tech after Diploma, AKTU admission, Polytechnic admission, BCA vs B.Tech, MBA vs MCA, best computer course after 12th, career guidance">
 
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="SAFA TECH HUB">
+
+  <link rel="canonical" href="https://safatechhub.in/blog.html">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
   <style>
     * {
       margin: 0;
@@ -219,6 +223,11 @@
     }
 
     /* ================= POPUP MODAL ================= */
+    [hidden] {
+      display: none !important;
+    }
+
+    /* ================= POPUP MODAL - SEO SAFE ================= */
     .popup-overlay {
       position: fixed;
       inset: 0;
@@ -233,6 +242,11 @@
 
     .popup-overlay.active {
       display: flex;
+    }
+
+    /* Prevent Google search snippet from using popup content */
+    .popup-overlay[data-nosnippet] {
+      user-select: text;
     }
 
     .popup-card {
@@ -512,13 +526,8 @@
       color: #cbd5e1;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
-    .blog-modal {
-  display: none;
-        }
 
-.blog-modal.active {
-  display: flex;
-        }
+
 
     /* ================= MOBILE RESPONSIVE ================= */
     @media (max-width: 1050px) {
@@ -633,6 +642,24 @@
       }
     }
   </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "SAFA TECH HUB Blog",
+  "url": "https://safatechhub.in/blog.html",
+  "description": "SAFA TECH HUB blog provides useful guidance about website design, resume making, admission guidance, computer courses and career planning.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "SAFA TECH HUB",
+    "url": "https://safatechhub.in/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://safatechhub.in/images/logo.png"
+    }
+  }
+}
+</script>
 </head>
 
 <body>
@@ -640,8 +667,8 @@
   <!-- Header -->
   <header class="header">
     <a href="index.html" class="logo">
-      <img src="images/logo.png" alt="SAFA TECH Logo" class="logo-img">
-      <span>SAFA TECH HUB </span>
+      <img src="images/logo.png" alt="SAFA TECH HUB Logo" class="logo-img">
+      <span>SAFA TECH HUB</span>
     </a>
 
     <nav class="navbar">
@@ -660,8 +687,8 @@
   <!-- Blog Page -->
   <section class="blog-page">
     <div class="blog-page-header">
-      <span class="small-title">SAFA TECH Knowledge Hub</span>
-      <h1>SAFA TECH HUB  Blog & Guidance</h1>
+      <span class="small-title">SAFA TECH HUB Knowledge Hub</span>
+      <h1>SAFA TECH HUB Blog & Guidance</h1>
       <p>
         Read useful blogs related to website design, digital services, admission guidance,
         computer courses and career planning. Click on Read More to see full details,
@@ -739,7 +766,7 @@
       <div class="all-blog-card">
         <div class="blog-icon"><i class="fa-solid fa-user-tie"></i></div>
         <span>Portfolio Website</span>
-        <h3>What and why important Portfolio Website</h3>
+        <h3>What Is a Portfolio Website and Why Is It Important?</h3>
         <p>
           A portfolio website helps students, teachers, freelancers and professionals
           show their skills, projects, services and contact details online.
@@ -791,13 +818,18 @@
     </div>
   </section>
 
-  <!-- Popup Modal -->
-  <div class="popup-overlay" id="popupOverlay">
-    <div class="popup-card">
+  
+  <!-- Popup Modal - SEO Safe -->
+  <div class="popup-overlay" id="popupOverlay" hidden aria-hidden="true" data-nosnippet>
+    <div class="popup-card" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+
       <div class="popup-header">
-        <span class="popup-category" id="popupCategory">Category</span>
-        <h2 id="popupTitle">Blog Title</h2>
-        <button class="close-popup" id="closePopup">&times;</button>
+        <span class="popup-category" id="popupCategory"></span>
+        <h2 id="popupTitle"></h2>
+
+        <button class="close-popup" id="closePopup" type="button" aria-label="Close blog details">
+          &times;
+        </button>
       </div>
 
       <div class="popup-body">
@@ -815,8 +847,8 @@
               <thead>
                 <tr>
                   <th>Comparison Type</th>
-                  <th id="comparisonColOne">Column One</th>
-                  <th id="comparisonColTwo">Column Two</th>
+                  <th id="comparisonColOne"></th>
+                  <th id="comparisonColTwo"></th>
                 </tr>
               </thead>
               <tbody id="comparisonBody"></tbody>
@@ -841,22 +873,23 @@
         <ul class="point-list" id="popupPoints"></ul>
 
         <div class="popup-actions">
-          <button class="whatsapp-btn" id="popupWhatsApp">
+          <button class="whatsapp-btn" id="popupWhatsApp" type="button">
             <i class="fa-brands fa-whatsapp"></i>
             Ask on WhatsApp
           </button>
 
-          <button class="close-btn-bottom" id="closeBottom">
+          <button class="close-btn-bottom" id="closeBottom" type="button">
             Close Details
           </button>
         </div>
       </div>
+
     </div>
   </div>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>© 2026 SAFA TECH  HUB | Digital Marketing & Web Services | All Rights Reserved</p>
+    <p>© 2026 SAFA TECH HUB | Digital Marketing & Web Services | All Rights Reserved</p>
   </footer>
 
   <script>
@@ -1207,13 +1240,13 @@
           "More pages and features increase cost.",
           "A website should be mobile-friendly.",
           "A professional website builds trust for business.",
-          "SAFA TECH creates affordable websites for students, businesses and institutes."
+          "SAFA TECH HUB creates affordable websites for students, businesses and institutes."
         ]
       },
 
       "portfolio": {
         category: "Portfolio Website",
-        title: "What and why important  Portfolio Website",
+        title: "What Is a Portfolio Website and Why Is It Important?",
         intro: "A portfolio website is useful for students, teachers, freelancers, developers and professionals to show skills, projects and contact information online.",
         steps: [
           {
@@ -1236,7 +1269,7 @@
             head: "Add Contact Section",
             text: "Add phone, email, WhatsApp, location and social media links so people can contact you easily."
           },
-          
+
           {
             head: "Publish Online",
             text: "Publish your website using domain and hosting or free platforms like GitHub Pages for static websites."
@@ -1436,125 +1469,168 @@
           "WhatsApp and call buttons help customers contact you quickly.",
           "Good design improves your brand image and customer confidence.",
           "A website works like your online shop, office and portfolio.",
-          "SAFA TECH creates modern, mobile-friendly and professional websites for businesses, shops, colleges, institutes and personal brands."
+          "SAFA TECH HUB creates modern, mobile-friendly and professional websites for businesses, shops, colleges, institutes and personal brands."
         ]
       }
     };
 
-    const popupOverlay = document.getElementById("popupOverlay");
-    const closePopup = document.getElementById("closePopup");
-    const closeBottom = document.getElementById("closeBottom");
-    const popupCategory = document.getElementById("popupCategory");
-    const popupTitle = document.getElementById("popupTitle");
-    const popupIntro = document.getElementById("popupIntro");
-    const popupSteps = document.getElementById("popupSteps");
-    const popupPoints = document.getElementById("popupPoints");
-    const popupWhatsApp = document.getElementById("popupWhatsApp");
+  
+  const popupOverlay = document.getElementById("popupOverlay");
+  const closePopup = document.getElementById("closePopup");
+  const closeBottom = document.getElementById("closeBottom");
+  const popupCategory = document.getElementById("popupCategory");
+  const popupTitle = document.getElementById("popupTitle");
+  const popupIntro = document.getElementById("popupIntro");
+  const popupSteps = document.getElementById("popupSteps");
+  const popupPoints = document.getElementById("popupPoints");
+  const popupWhatsApp = document.getElementById("popupWhatsApp");
 
-    const comparisonBlock = document.getElementById("comparisonBlock");
-    const comparisonColOne = document.getElementById("comparisonColOne");
-    const comparisonColTwo = document.getElementById("comparisonColTwo");
-    const comparisonBody = document.getElementById("comparisonBody");
-    const comparisonNote = document.getElementById("comparisonNote");
+  const comparisonBlock = document.getElementById("comparisonBlock");
+  const comparisonColOne = document.getElementById("comparisonColOne");
+  const comparisonColTwo = document.getElementById("comparisonColTwo");
+  const comparisonBody = document.getElementById("comparisonBody");
+  const comparisonNote = document.getElementById("comparisonNote");
 
-    let currentBlogTitle = "";
+  let currentBlogTitle = "";
 
-    document.querySelectorAll(".read-more-btn").forEach(button => {
-      button.addEventListener("click", () => {
-        const blogId = button.getAttribute("data-blog");
-        openBlogPopup(blogId);
+  document.querySelectorAll(".read-more-btn").forEach(button => {
+    button.addEventListener("click", () => {
+      const blogId = button.getAttribute("data-blog");
+      openBlogPopup(blogId);
+    });
+  });
+
+  function openBlogPopup(blogId) {
+    const blog = blogDetails[blogId];
+
+    if (!blog) {
+      return;
+    }
+
+    currentBlogTitle = blog.title;
+
+    popupCategory.textContent = blog.category || "";
+    popupTitle.textContent = blog.title || "";
+    popupIntro.textContent = blog.intro || "";
+
+    if (blog.comparison) {
+      comparisonBlock.style.display = "block";
+      comparisonColOne.textContent = blog.comparison.colOne || "";
+      comparisonColTwo.textContent = blog.comparison.colTwo || "";
+      comparisonNote.textContent = blog.comparison.note || "";
+
+      comparisonBody.innerHTML = "";
+
+      blog.comparison.rows.forEach(row => {
+        const tr = document.createElement("tr");
+
+        const tdType = document.createElement("td");
+        tdType.textContent = row.type || "";
+
+        const tdOne = document.createElement("td");
+        tdOne.textContent = row.one || "";
+
+        const tdTwo = document.createElement("td");
+        tdTwo.textContent = row.two || "";
+
+        tr.appendChild(tdType);
+        tr.appendChild(tdOne);
+        tr.appendChild(tdTwo);
+
+        comparisonBody.appendChild(tr);
       });
+    } else {
+      comparisonBlock.style.display = "none";
+      comparisonColOne.textContent = "";
+      comparisonColTwo.textContent = "";
+      comparisonBody.innerHTML = "";
+      comparisonNote.textContent = "";
+    }
+
+    popupSteps.innerHTML = "";
+
+    blog.steps.forEach((step, index) => {
+      const stepDiv = document.createElement("div");
+      stepDiv.className = "step-item";
+
+      const numberDiv = document.createElement("div");
+      numberDiv.className = "step-number";
+      numberDiv.textContent = index + 1;
+
+      const textDiv = document.createElement("div");
+      textDiv.className = "step-text";
+
+      const heading = document.createElement("h4");
+      heading.textContent = step.head || "";
+
+      const para = document.createElement("p");
+      para.textContent = step.text || "";
+
+      textDiv.appendChild(heading);
+      textDiv.appendChild(para);
+
+      stepDiv.appendChild(numberDiv);
+      stepDiv.appendChild(textDiv);
+
+      popupSteps.appendChild(stepDiv);
     });
 
-    function openBlogPopup(blogId) {
-      const blog = blogDetails[blogId];
+    popupPoints.innerHTML = "";
 
-      if (!blog) {
-        return;
-      }
+    blog.points.forEach(point => {
+      const li = document.createElement("li");
 
-      currentBlogTitle = blog.title;
+      const icon = document.createElement("i");
+      icon.className = "fa-solid fa-check";
 
-      popupCategory.textContent = blog.category;
-      popupTitle.textContent = blog.title;
-      popupIntro.textContent = blog.intro;
+      li.appendChild(icon);
+      li.appendChild(document.createTextNode(" " + point));
 
-      if (blog.comparison) {
-        comparisonBlock.style.display = "block";
-        comparisonColOne.textContent = blog.comparison.colOne;
-        comparisonColTwo.textContent = blog.comparison.colTwo;
-        comparisonNote.textContent = blog.comparison.note;
+      popupPoints.appendChild(li);
+    });
 
-        comparisonBody.innerHTML = "";
+    popupOverlay.hidden = false;
+    popupOverlay.setAttribute("aria-hidden", "false");
 
-        blog.comparison.rows.forEach(row => {
-          const tr = document.createElement("tr");
-
-          tr.innerHTML = `
-            <td>${row.type}</td>
-            <td>${row.one}</td>
-            <td>${row.two}</td>
-          `;
-
-          comparisonBody.appendChild(tr);
-        });
-      } else {
-        comparisonBlock.style.display = "none";
-        comparisonBody.innerHTML = "";
-        comparisonNote.textContent = "";
-      }
-
-      popupSteps.innerHTML = "";
-      blog.steps.forEach((step, index) => {
-        const stepDiv = document.createElement("div");
-        stepDiv.className = "step-item";
-        stepDiv.innerHTML = `
-          <div class="step-number">${index + 1}</div>
-          <div class="step-text">
-            <h4>${step.head}</h4>
-            <p>${step.text}</p>
-          </div>
-        `;
-        popupSteps.appendChild(stepDiv);
-      });
-
-      popupPoints.innerHTML = "";
-      blog.points.forEach(point => {
-        const li = document.createElement("li");
-        li.innerHTML = `<i class="fa-solid fa-check"></i> ${point}`;
-        popupPoints.appendChild(li);
-      });
-
+    setTimeout(() => {
       popupOverlay.classList.add("active");
-      document.body.style.overflow = "hidden";
+    }, 10);
+
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeBlogPopup() {
+    popupOverlay.classList.remove("active");
+    popupOverlay.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "auto";
+
+    setTimeout(() => {
+      popupOverlay.hidden = true;
+    }, 200);
+  }
+
+  closePopup.addEventListener("click", closeBlogPopup);
+  closeBottom.addEventListener("click", closeBlogPopup);
+
+  popupOverlay.addEventListener("click", function (e) {
+    if (e.target === popupOverlay) {
+      closeBlogPopup();
     }
+  });
 
-    function closeBlogPopup() {
-      popupOverlay.classList.remove("active");
-      document.body.style.overflow = "auto";
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && !popupOverlay.hidden) {
+      closeBlogPopup();
     }
+  });
 
-    closePopup.addEventListener("click", closeBlogPopup);
-    closeBottom.addEventListener("click", closeBlogPopup);
+  popupWhatsApp.addEventListener("click", function () {
+    const phoneNumber = "918090365014";
+    const message = `Hello SAFA TECH HUB, I want more details about: ${currentBlogTitle}`;
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
+  });
 
-    popupOverlay.addEventListener("click", function (e) {
-      if (e.target === popupOverlay) {
-        closeBlogPopup();
-      }
-    });
-
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape") {
-        closeBlogPopup();
-      }
-    });
-
-    popupWhatsApp.addEventListener("click", function () {
-      const phoneNumber = "918090365014";
-      const message = `Hello SAFA TECH, I want more details about: ${currentBlogTitle}`;
-      const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-      window.open(url, "_blank");
-    });
   </script>
 
 </body>

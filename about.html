@@ -757,6 +757,55 @@
             flex-wrap: wrap;
         }
 
+
+
+        /* ================= OWNER / FOUNDER UPDATE ================= */
+        .owner-badge-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 14px 0 18px;
+        }
+
+        .owner-badge {
+            display: inline-block;
+            padding: 8px 13px;
+            border-radius: 30px;
+            background: rgba(212, 175, 55, 0.10);
+            border: 1px solid rgba(212, 175, 55, 0.24);
+            color: var(--soft-gold);
+            font-size: 0.82rem;
+            font-weight: 800;
+        }
+
+        .family-note {
+            margin-top: 16px;
+            padding: 16px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.10), rgba(255, 255, 255, 0.025));
+            border: 1px solid rgba(212, 175, 55, 0.22);
+        }
+
+        .family-note span {
+            display: block;
+            color: var(--gold);
+            font-size: 0.85rem;
+            font-weight: 900;
+            margin-bottom: 6px;
+        }
+
+        .family-note p {
+            color: var(--gray);
+            line-height: 1.75;
+            font-size: 0.94rem;
+        }
+
+        .info-box p strong {
+            color: var(--white);
+        }
+
+
+
         /* ================= FOOTER ================= */
         footer {
             padding: 34px 0 24px;
@@ -866,6 +915,7 @@
 
         /* ================= RESPONSIVE ================= */
         @media (max-width: 1050px) {
+
             .about-wrapper,
             .location-wrapper {
                 grid-template-columns: 1fr;
@@ -911,6 +961,7 @@
         }
 
         @media (max-width: 680px) {
+
             .trust-grid,
             .why-grid,
             .services-grid,
@@ -1033,13 +1084,36 @@
                     </div>
                 </div>
 
+
                 <aside class="owner-card">
                     <div class="owner-card-content">
-                        <img class="owner-logo" src="images/Owner.png" alt="MD Shamsher Ahamed Founder of SAFA TECH HUB">
+                        <img class="owner-logo" src="images/Owner.png"
+                            alt="MD Shamsher Ahamed Founder of SAFA TECH HUB">
 
                         <h2>MD Shamsher Ahamed</h2>
-                        <p class="role">Founder & Owner of SAFA TECH HUB</p>
-                       
+                        <p class="role">Founder & Digital Service Lead of SAFA TECH HUB</p>
+
+                        <div class="owner-badge-row">
+                            <span class="owner-badge">Founder</span>
+                            <span class="owner-badge">Front-End Developer</span>
+                            <span class="owner-badge">Computer Science Educator</span>
+                        </div>
+
+                        <p class="short-note">
+                            SAFA TECH HUB is founded by <strong>MD Shamsher Ahamed</strong> with the aim of providing
+                            professional, affordable and trustworthy digital services for students, businesses,
+                            institutes
+                            and personal brands.
+                        </p>
+
+                        <div class="family-note">
+                            <span>Family Support & Guidance</span>
+                            <p>
+                                Guided by <strong>Mr. Zuber </strong> and strong family values, SAFA TECH HUB works with
+                                honesty, responsibility and dedication to deliver trusted digital solutions.
+                            </p>
+                        </div>
+
                         <div class="owner-info">
                             <div class="info-box">
                                 <span>Qualification</span>
@@ -1053,16 +1127,20 @@
 
                             <div class="info-box">
                                 <span>Expertise</span>
-                                <p>Website design, front-end development, digital branding, student guidance and technical education.</p>
+                                <p>Website design, front-end development, digital branding, student guidance and
+                                    technical education.</p>
                             </div>
 
                             <div class="info-box">
                                 <span>Company Goal</span>
-                                <p>To provide professional, affordable and trustworthy digital solutions for clients in India and worldwide.</p>
+                                <p>To provide professional, affordable and trustworthy digital solutions for clients in
+                                    India and worldwide.</p>
                             </div>
                         </div>
                     </div>
                 </aside>
+
+
 
             </div>
         </section>
@@ -1148,7 +1226,8 @@
                     <div class="service-card">
                         <div class="icon-box">🌐</div>
                         <h3>Website Design & Development</h3>
-                        <p>Modern, responsive and professional websites for businesses, colleges, coaching centers, portfolios and service providers.</p>
+                        <p>Modern, responsive and professional websites for businesses, colleges, coaching centers,
+                            portfolios and service providers.</p>
                         <ul>
                             <li>Business website</li>
                             <li>Portfolio website</li>
@@ -1160,7 +1239,8 @@
                     <div class="service-card">
                         <div class="icon-box">🎨</div>
                         <h3>Poster & Logo Design</h3>
-                        <p>Attractive posters and clean logo designs for shops, institutes, admission campaigns, events and social media promotion.</p>
+                        <p>Attractive posters and clean logo designs for shops, institutes, admission campaigns, events
+                            and social media promotion.</p>
                         <ul>
                             <li>Business poster</li>
                             <li>Admission poster</li>
@@ -1172,7 +1252,8 @@
                     <div class="service-card">
                         <div class="icon-box">🎬</div>
                         <h3>Video Ads & Promotion</h3>
-                        <p>Short promotional video ads for businesses, institutes, admission campaigns, offers and social media marketing.</p>
+                        <p>Short promotional video ads for businesses, institutes, admission campaigns, offers and
+                            social media marketing.</p>
                         <ul>
                             <li>30 second video ads</li>
                             <li>60 second video ads</li>
@@ -1184,7 +1265,8 @@
                     <div class="service-card">
                         <div class="icon-box">📄</div>
                         <h3>Resume & Portfolio Support</h3>
-                        <p>Professional resume design, portfolio website support and personal branding guidance for students and job seekers.</p>
+                        <p>Professional resume design, portfolio website support and personal branding guidance for
+                            students and job seekers.</p>
                         <ul>
                             <li>ATS-friendly resume</li>
                             <li>Portfolio website</li>
@@ -1196,7 +1278,8 @@
                     <div class="service-card">
                         <div class="icon-box">🎓</div>
                         <h3>Admission & Career Guidance</h3>
-                        <p>Guidance for students related to Polytechnic, B.Tech, BCA, MCA, MBA, computer courses and technical career planning.</p>
+                        <p>Guidance for students related to Polytechnic, B.Tech, BCA, MCA, MBA, computer courses and
+                            technical career planning.</p>
                         <ul>
                             <li>Polytechnic guidance</li>
                             <li>B.Tech after diploma</li>
@@ -1208,7 +1291,8 @@
                     <div class="service-card">
                         <div class="icon-box">🚀</div>
                         <h3>Digital Branding Support</h3>
-                        <p>Digital identity support for businesses and personal brands using websites, posters, logos, online content and smart presentation.</p>
+                        <p>Digital identity support for businesses and personal brands using websites, posters, logos,
+                            online content and smart presentation.</p>
                         <ul>
                             <li>Brand presentation</li>
                             <li>WhatsApp lead support</li>
@@ -1236,7 +1320,8 @@
                     <div class="why-card">
                         <div class="icon-box">✓</div>
                         <h3>Clean Professional Design</h3>
-                        <p>We create designs that look modern, readable and suitable for business, education and personal brands.</p>
+                        <p>We create designs that look modern, readable and suitable for business, education and
+                            personal brands.</p>
                     </div>
 
                     <div class="why-card">
@@ -1248,13 +1333,15 @@
                     <div class="why-card">
                         <div class="icon-box">✓</div>
                         <h3>Affordable Pricing</h3>
-                        <p>We keep pricing simple and budget-friendly for small businesses, students and local clients.</p>
+                        <p>We keep pricing simple and budget-friendly for small businesses, students and local clients.
+                        </p>
                     </div>
 
                     <div class="why-card">
                         <div class="icon-box">✓</div>
                         <h3>WhatsApp Friendly Service</h3>
-                        <p>Customers can easily connect through WhatsApp for requirements, discussion and support guidance.</p>
+                        <p>Customers can easily connect through WhatsApp for requirements, discussion and support
+                            guidance.</p>
                     </div>
                 </div>
             </div>
@@ -1293,7 +1380,8 @@
 
                     <div class="contact-list">
                         <a href="tel:+918090365014"><strong>Call:</strong> +91 8090365014</a>
-                        <a href="https://wa.me/918090365014" target="_blank" rel="noopener"><strong>WhatsApp:</strong> +91 8090365014</a>
+                        <a href="https://wa.me/918090365014" target="_blank" rel="noopener"><strong>WhatsApp:</strong>
+                            +91 8090365014</a>
                         <a href="mailto:safatechhub@gmail.com"><strong>Email:</strong> safatechhub@gmail.com</a>
                         <p><strong>Website:</strong> safatechhub.in</p>
                     </div>

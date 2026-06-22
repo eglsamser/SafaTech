@@ -448,6 +448,7 @@ section {
 
 /* Contact */
 .contact {
+  align-items: center;
   background:
     radial-gradient(circle at top, rgba(212, 175, 55, 0.18), transparent 40%),
     var(--black);
@@ -1111,6 +1112,7 @@ footer .container {
 
 .contact-info-card,
 .enquiry-card {
+  align-items: center;
   background: linear-gradient(145deg, #0f172a, #111827);
   padding: 35px;
   border-radius: 20px;
@@ -1340,5 +1342,292 @@ footer .container {
   .input-box select,
   .input-box textarea {
     font-size: 14px;
+  }
+}
+
+
+
+/* ================= EVENT VIDEO INVITATION SECTION ================= */
+.event-invite-section {
+  padding: 85px 8%;
+  background:
+    radial-gradient(circle at top left, rgba(250, 204, 21, 0.13), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.12), transparent 35%),
+    #07111f;
+  overflow: hidden;
+}
+
+.event-invite-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.event-invite-heading {
+  max-width: 880px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.event-invite-heading span {
+  display: inline-block;
+  padding: 8px 16px;
+  background: rgba(250, 204, 21, 0.12);
+  color: #facc15;
+  border: 1px solid rgba(250, 204, 21, 0.25);
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.event-invite-heading h2 {
+  color: #ffffff;
+  font-size: 38px;
+  line-height: 1.25;
+  margin-bottom: 15px;
+}
+
+.event-invite-heading p {
+  color: #cbd5e1;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.event-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.event-mini-card {
+  position: relative;
+  display: block;
+  padding: 26px;
+  border-radius: 22px;
+  background: linear-gradient(145deg, #0f172a, #111827);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  min-height: 245px;
+  overflow: hidden;
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.35);
+  transition: 0.45s ease;
+  animation: eventFloat 4s ease-in-out infinite alternate;
+}
+
+.event-mini-card:nth-child(even) {
+  animation-delay: 0.7s;
+}
+
+.event-mini-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(250, 204, 21, 0.14), transparent);
+  transform: translateX(-120%);
+  transition: 0.6s ease;
+}
+
+.event-mini-card::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: rgba(250, 204, 21, 0.08);
+  border-radius: 50%;
+  top: -45px;
+  right: -45px;
+}
+
+.event-mini-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  border-color: rgba(250, 204, 21, 0.8);
+  box-shadow: 0 22px 50px rgba(250, 204, 21, 0.16);
+}
+
+.event-mini-card:hover::before {
+  transform: translateX(120%);
+}
+
+.event-mini-icon {
+  width: 62px;
+  height: 62px;
+  background: #facc15;
+  color: #111827;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  margin-bottom: 18px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 30px rgba(250, 204, 21, 0.25);
+}
+
+.event-mini-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
+}
+
+.event-mini-card p {
+  color: #cbd5e1;
+  font-size: 15px;
+  line-height: 1.7;
+  position: relative;
+  z-index: 2;
+}
+
+.event-invite-buttons {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.event-main-btn,
+.event-outline-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 24px;
+  border-radius: 35px;
+  font-weight: 800;
+  transition: 0.35s ease;
+}
+
+.event-main-btn {
+  background: #facc15;
+  color: #111827;
+  box-shadow: 0 14px 35px rgba(250, 204, 21, 0.25);
+}
+
+.event-outline-btn {
+  color: #ffffff;
+  border: 1px solid rgba(250, 204, 21, 0.45);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.event-main-btn:hover,
+.event-outline-btn:hover {
+  transform: translateY(-5px);
+}
+
+@keyframes eventFloat {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-7px);
+  }
+}
+
+/* ================= MOBILE SLIDE NAVBAR FIX ================= */
+
+@media (max-width: 768px) {
+
+  .header {
+    padding: 12px 4%;
+    gap: 10px;
+  }
+
+  .logo {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+
+  .navbar {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 10px;
+    padding: 8px 4px 10px;
+    justify-content: flex-start;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+  }
+
+  .navbar a {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 14px;
+    border-radius: 25px;
+    background: rgba(250, 204, 21, 0.10);
+    border: 1px solid rgba(250, 204, 21, 0.25);
+    color: #ffffff;
+    font-size: 0.82rem;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: 0.3s ease;
+  }
+
+  .navbar a:hover,
+  .navbar a.active {
+    background: linear-gradient(135deg, #facc15, #f59e0b);
+    color: #111827;
+  }
+
+  .navbar::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .navbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+  }
+
+  .navbar::-webkit-scrollbar-thumb {
+    background: #facc15;
+    border-radius: 20px;
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1050px) {
+  .event-mini-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .event-invite-section {
+    padding: 65px 5%;
+  }
+
+  .event-invite-heading h2 {
+    font-size: 30px;
+  }
+
+  .event-mini-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .event-invite-buttons {
+    flex-direction: column;
+  }
+
+  .event-main-btn,
+  .event-outline-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-invite-heading h2 {
+    font-size: 26px;
+  }
+
+  .event-mini-card {
+    padding: 23px;
   }
 }

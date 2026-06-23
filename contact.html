@@ -13,21 +13,46 @@
     content="Contact SAFA TECH HUB for website development, poster design, logo design, video ads, event video invitation, resume design and admission guidance services in Jaunpur and online across India.">
 
   <meta name="keywords"
-    content="contact SAFA TECH HUB, safatechhub contact, website designer Jaunpur contact, poster designer Jaunpur, logo design contact, video ads maker contact">
+    content="contact SAFA TECH HUB, safatechhub contact, website designer Jaunpur contact, poster designer Jaunpur, logo design contact, video ads maker contact, digital service contact Jaunpur">
+
   <meta name="author" content="SAFA TECH HUB">
   <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#050505">
 
   <link rel="canonical" href="https://safatechhub.in/contact.html">
+
+  <meta property="og:title" content="Contact SAFA TECH HUB | Digital Services">
+  <meta property="og:description"
+    content="Contact SAFA TECH HUB for website, poster, logo, video ads, resume and admission guidance services.">
+  <meta property="og:image" content="https://safatechhub.in/images/logos.jpeg">
+  <meta property="og:url" content="https://safatechhub.in/contact.html">
+  <meta property="og:type" content="website">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+    :root {
+      --black: #050505;
+      --dark: #0b0b0b;
+      --card: #111827;
+      --gold: #facc15;
+      --gold-dark: #f59e0b;
+      --white: #ffffff;
+      --gray: #cbd5e1;
+      --muted: #94a3b8;
+      --border: rgba(250, 204, 21, 0.22);
+      --green: #22c55e;
+    }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', Arial, sans-serif;
       text-decoration: none;
+      list-style: none;
       scroll-behavior: smooth;
     }
 
@@ -35,7 +60,15 @@
       background: #050505;
       color: #ffffff;
       line-height: 1.7;
+      overflow-x: hidden;
     }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* ================= HEADER ================= */
 
     header {
       background: rgba(5, 5, 5, 0.96);
@@ -48,7 +81,8 @@
       justify-content: space-between;
       align-items: center;
       gap: 20px;
-      flex-wrap: wrap;
+      backdrop-filter: blur(14px);
+      box-shadow: 0 0 25px rgba(250, 204, 21, 0.10);
     }
 
     .logo {
@@ -58,6 +92,8 @@
       color: #fff;
       font-weight: 800;
       font-size: 1.15rem;
+      flex-shrink: 0;
+      white-space: nowrap;
     }
 
     .logo img {
@@ -66,25 +102,40 @@
       border-radius: 50%;
       object-fit: cover;
       border: 2px solid #facc15;
+      box-shadow: 0 0 18px rgba(250, 204, 21, 0.25);
     }
 
-    nav {
+    .main-nav {
       display: flex;
+      align-items: center;
+      justify-content: flex-end;
       gap: 16px;
       flex-wrap: wrap;
     }
 
-    nav a {
+    .main-nav a {
       color: #cbd5e1;
       font-weight: 600;
       font-size: 0.92rem;
-      transition: 0.3s;
+      transition: 0.3s ease;
+      white-space: nowrap;
     }
 
-    nav a:hover,
-    nav a.active {
+    .main-nav a:hover,
+    .main-nav a.active {
       color: #facc15;
     }
+
+    .nav-cta {
+      padding: 9px 15px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #facc15, #f59e0b);
+      color: #111827 !important;
+      font-weight: 900 !important;
+      box-shadow: 0 0 18px rgba(250, 204, 21, 0.25);
+    }
+
+    /* ================= HERO ================= */
 
     .hero {
       padding: 95px 7% 65px;
@@ -109,6 +160,7 @@
     .hero h1 {
       font-size: clamp(2rem, 4vw, 3.5rem);
       margin-bottom: 15px;
+      line-height: 1.2;
     }
 
     .hero p {
@@ -118,8 +170,13 @@
       font-size: 1rem;
     }
 
+    /* ================= CONTACT SECTION ================= */
+
     .contact-section {
       padding: 70px 7%;
+      background:
+        radial-gradient(circle at top right, rgba(250, 204, 21, 0.08), transparent 35%),
+        #050505;
     }
 
     .contact-grid {
@@ -180,6 +237,7 @@
     .btn {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
       padding: 12px 20px;
       border-radius: 30px;
@@ -189,6 +247,7 @@
       transition: 0.3s;
       border: none;
       cursor: pointer;
+      text-align: center;
     }
 
     .btn:hover {
@@ -199,6 +258,15 @@
       background: transparent;
       color: #fff;
       border: 1px solid rgba(250, 204, 21, 0.5);
+    }
+
+    .btn-whatsapp {
+      background: #22c55e;
+      color: #fff;
+    }
+
+    .btn-whatsapp:hover {
+      background: #16a34a;
     }
 
     .input-box {
@@ -234,8 +302,11 @@
       color: #111827;
     }
 
+    /* ================= SERVICE SECTION ================= */
+
     .service-section {
       padding: 0 7% 70px;
+      background: #050505;
     }
 
     .service-box {
@@ -263,37 +334,258 @@
       margin-right: 8px;
     }
 
-    footer {
-      background: #020617;
-      border-top: 1px solid rgba(250, 204, 21, 0.18);
-      padding: 25px 7%;
-      text-align: center;
-      color: #cbd5e1;
+    /* ================= FOOTER ================= */
+
+    .footer {
+      background:
+        radial-gradient(circle at top left, rgba(250, 204, 21, 0.12), transparent 35%),
+        linear-gradient(135deg, #020617, #0f172a);
+      color: #ffffff;
+      padding: 65px 7% 22px;
+      border-top: 1px solid rgba(250, 204, 21, 0.22);
+      position: relative;
+      overflow: hidden;
     }
 
-    footer a {
+    .footer::before {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      background: rgba(250, 204, 21, 0.08);
+      border-radius: 50%;
+      top: -120px;
+      right: -90px;
+      filter: blur(4px);
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr 1fr;
+      gap: 35px;
+      align-items: flex-start;
+    }
+
+    .footer-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+      color: var(--white);
+    }
+
+    .footer-brand img {
+      width: 52px;
+      height: 52px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #facc15;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .brand-text strong {
       color: #facc15;
-      font-weight: 600;
+      font-size: 22px;
+      letter-spacing: .5px;
     }
 
-    @media (max-width: 900px) {
+    .brand-text small {
+      color: #d8d8d8;
+      font-size: 13px;
+      margin-top: 3px;
+    }
+
+    .footer-grid p {
+      color: #d5d5d5;
+      font-size: 15px;
+      line-height: 1.8;
+      margin-bottom: 9px;
+    }
+
+    .footer-grid h3 {
+      color: #facc15;
+      font-size: 21px;
+      margin-bottom: 18px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .footer-grid h3::after {
+      content: "";
+      position: absolute;
+      width: 45px;
+      height: 3px;
+      background: #facc15;
+      left: 0;
+      bottom: 0;
+      border-radius: 20px;
+    }
+
+    .footer-grid a {
+      color: #e8e8e8;
+      transition: 0.3s ease;
+    }
+
+    .footer-grid a:hover {
+      color: #facc15;
+      padding-left: 5px;
+    }
+
+    .footer-grid div:nth-child(2) a::before,
+    .footer-grid div:nth-child(3) a::before {
+      content: "›";
+      color: #facc15;
+      margin-right: 8px;
+      font-weight: 900;
+    }
+
+    .footer-contact {
+      margin-top: 18px;
+    }
+
+    .footer-contact a {
+      color: #facc15;
+      font-weight: 800;
+    }
+
+    .footer-contact a::before {
+      content: "";
+      margin: 0;
+    }
+
+    .footer-contact a:hover {
+      color: #fff;
+      padding-left: 0;
+    }
+
+    .footer-legal-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 35px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.10);
+    }
+
+    .footer-legal-row a {
+      color: #facc15;
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .footer-legal-row a:hover {
+      text-decoration: underline;
+    }
+
+    .copyright {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+      color: #bbbbbb;
+      font-size: 14px;
+    }
+
+    .copyright span:last-child {
+      color: #facc15;
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media (max-width: 1050px) {
+      header {
+        padding: 14px 5%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .logo {
+        justify-content: center;
+      }
+
+      .main-nav {
+        width: 100%;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        justify-content: flex-start;
+        gap: 10px;
+        padding: 8px 4px 10px;
+        white-space: nowrap;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .main-nav a {
+        flex: 0 0 auto;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 9px 14px;
+        border-radius: 25px;
+        background: rgba(250, 204, 21, 0.10);
+        border: 1px solid rgba(250, 204, 21, 0.22);
+        font-size: 0.86rem;
+      }
+
+      .main-nav::-webkit-scrollbar {
+        height: 4px;
+      }
+
+      .main-nav::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
+      }
+
+      .main-nav::-webkit-scrollbar-thumb {
+        background: #facc15;
+        border-radius: 20px;
+      }
+
       .contact-grid {
         grid-template-columns: 1fr;
       }
 
       .service-list {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-grid div:first-child {
+        grid-column: span 2;
       }
     }
 
     @media (max-width: 700px) {
-      header {
-        justify-content: center;
-        text-align: center;
+      .hero {
+        padding: 70px 5% 50px;
       }
 
-      nav {
-        justify-content: center;
+      .contact-section {
+        padding: 55px 5%;
+      }
+
+      .service-section {
+        padding: 0 5% 55px;
       }
 
       .info-box,
@@ -301,40 +593,100 @@
       .service-box {
         padding: 24px;
       }
+
+      .service-list {
+        grid-template-columns: 1fr;
+      }
+
+      .btn-row {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .footer {
+        padding: 50px 5% 20px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .footer-grid div:first-child {
+        grid-column: span 1;
+      }
+
+      .copyright {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+      }
+
+      .brand-text strong {
+        font-size: 19px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .logo {
+        font-size: 1rem;
+      }
+
+      .logo img {
+        width: 42px;
+        height: 42px;
+      }
+
+      .main-nav a {
+        font-size: 0.78rem;
+        padding: 8px 12px;
+      }
     }
   </style>
 </head>
 
 <body>
 
+  <!-- ================= HEADER ================= -->
   <header>
     <a href="index.html" class="logo">
-      <img src="images/logo.png" alt="SAFA TECH HUB Logo">
+      <img src="images/logos.jpeg" alt="SAFA TECH HUB Logo">
       SAFA TECH HUB
     </a>
 
-    <nav>
+    <nav class="main-nav">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="website.html">Website</a>
       <a href="poster.html">Poster</a>
       <a href="ads.html">Ads</a>
+      <a href="event-video.html">Invitation</a>
+      <a href="admission.html">Admission</a>
+      <a href="work.html">Work</a>
       <a href="blog.html">Blog</a>
-      <a href="privacy-policy.html">Privacy</a>
-      <a href="terms-conditions.html">Terms</a>
+      <a href="resume.html">Resume</a>
       <a href="contact.html" class="active">Contact</a>
+      <a href="https://wa.me/918090365014?text=Hello%20SAFA%20TECH%20HUB%2C%20I%20want%20to%20know%20about%20your%20services."
+        target="_blank" rel="noopener" class="nav-cta">WhatsApp</a>
     </nav>
   </header>
 
+  <!-- ================= HERO ================= -->
   <section class="hero">
     <span><i class="fa-solid fa-headset"></i> Contact SAFA TECH HUB</span>
+
     <h1>Contact Us</h1>
+
     <p>
       Contact SAFA TECH HUB for website development, poster design, logo design, video ads,
       event video invitations, resume design and admission guidance.
     </p>
   </section>
 
+  <!-- ================= CONTACT SECTION ================= -->
   <main class="contact-section">
     <div class="contact-grid">
 
@@ -395,7 +747,7 @@
           </a>
 
           <a href="https://wa.me/918090365014?text=Hello%20SAFA%20TECH%20HUB%2C%20I%20want%20to%20know%20about%20your%20services."
-            target="_blank" rel="noopener" class="btn btn-outline">
+            target="_blank" rel="noopener" class="btn btn-whatsapp">
             <i class="fa-brands fa-whatsapp"></i> WhatsApp
           </a>
         </div>
@@ -451,9 +803,11 @@
     </div>
   </main>
 
+  <!-- ================= SERVICE SECTION ================= -->
   <section class="service-section">
     <div class="service-box">
       <h2>Services You Can Contact For</h2>
+
       <p style="color:#cbd5e1;">
         SAFA TECH HUB provides online and local digital services for students, businesses, colleges,
         institutes, shops, offices, service providers and professionals.
@@ -473,13 +827,60 @@
     </div>
   </section>
 
-  <footer>
-    <p>© 2026 <strong>SAFA TECH HUB</strong>. All Rights Reserved.</p>
-    <p>
-      <a href="privacy-policy.html">Privacy Policy</a> |
-      <a href="terms-conditions.html">Terms & Conditions</a> |
-      <a href="contact.html">Contact Us</a>
-    </p>
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-grid">
+
+        <div>
+          <a href="index.html" class="footer-brand">
+            <img src="images/logos.jpeg" alt="SAFA TECH HUB Logo">
+            <div class="brand-text">
+              <strong>SAFA TECH HUB</strong>
+              <small>Digital Solutions</small>
+            </div>
+          </a>
+
+          <p>
+            SAFA TECH HUB creates modern, responsive, professional and mobile-friendly websites,
+            posters, logos, video ads, resume designs and digital solutions for businesses,
+            students, institutes and professionals.
+          </p>
+        </div>
+
+        <div>
+          <h3>Quick Links</h3>
+          <p><a href="about.html">About</a></p>
+          <p><a href="website.html">Website Service</a></p>
+          <p><a href="poster.html">Poster & Logo</a></p>
+          <p><a href="ads.html">Video Ads</a></p>
+          <p><a href="event-video.html">Invitation Video</a></p>
+          <p><a href="work.html">Work</a></p>
+          <p><a href="resume.html">Resume</a></p>
+          <p><a href="blog.html">Blog</a></p>
+          <p><a href="admission.html">Admission</a></p>
+        </div>
+
+        <div>
+          <h3>Important Link</h3>
+          <p><a href="privacy-policy.html">Privacy Policy</a></p>
+          <p><a href="terms-conditions.html">Terms & Conditions</a></p>
+          <p><a href="contact.html">Contact Us</a></p>
+
+          
+        </div>
+
+      </div>
+
+      
+
+      <div class="copyright">
+        <span>© 2026 SAFA TECH HUB. All Rights Reserved.</span>
+        <span>Designed for powerful online business growth.</span>
+      </div>
+
+    </div>
   </footer>
 
   <script>

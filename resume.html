@@ -1161,6 +1161,221 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* ================= FOOTER CSS - SAFA TECH ================= */
+
+    footer {
+      background:
+        radial-gradient(circle at top left, rgba(245, 197, 66, 0.13), transparent 35%),
+        linear-gradient(135deg, #050505, #101010);
+      color: #ffffff;
+      padding: 65px 0 22px;
+      border-top: 1px solid rgba(245, 197, 66, 0.35);
+      position: relative;
+      overflow: hidden;
+    }
+
+    footer::before {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      background: rgba(245, 197, 66, 0.08);
+      border-radius: 50%;
+      top: -120px;
+      right: -90px;
+      filter: blur(4px);
+    }
+
+    footer .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr 1.2fr;
+      gap: 35px;
+      align-items: flex-start;
+    }
+
+    .footer-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      margin-bottom: 18px;
+    }
+
+    .logo-mark {
+      width: 50px;
+      height: 50px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #f5c542, #b88908);
+      color: #050505;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      box-shadow: 0 8px 25px rgba(245, 197, 66, 0.25);
+    }
+
+    .logo-mark span {
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .brand-text strong {
+      color: #f5c542;
+      font-size: 22px;
+      letter-spacing: 0.5px;
+    }
+
+    .brand-text small {
+      color: #d8d8d8;
+      font-size: 13px;
+      margin-top: 3px;
+    }
+
+    .footer-grid p {
+      color: #d5d5d5;
+      font-size: 15px;
+      line-height: 1.8;
+      margin-bottom: 9px;
+    }
+
+    .footer-grid h3 {
+      color: #f5c542;
+      font-size: 21px;
+      margin-bottom: 18px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .footer-grid h3::after {
+      content: "";
+      position: absolute;
+      width: 45px;
+      height: 3px;
+      background: #f5c542;
+      left: 0;
+      bottom: 0;
+      border-radius: 20px;
+    }
+
+    .footer-grid a {
+      color: #e8e8e8;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .footer-grid a:hover {
+      color: #f5c542;
+      padding-left: 5px;
+    }
+
+    .footer-grid div:nth-child(2) p {
+      margin-bottom: 10px;
+    }
+
+    .footer-grid div:nth-child(2) a::before {
+      content: "›";
+      color: #f5c542;
+      margin-right: 8px;
+      font-weight: 900;
+    }
+
+    .footer-grid div:nth-child(3) a {
+      color: #f5c542;
+      font-weight: 700;
+    }
+
+    .footer-grid div:nth-child(3) a:hover {
+      color: #ffffff;
+      padding-left: 0;
+    }
+
+    .copyright {
+      margin-top: 45px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+      color: #bbbbbb;
+      font-size: 14px;
+    }
+
+    .copyright span:last-child {
+      color: #f5c542;
+    }
+
+    /* User Friendly Focus */
+    .footer-grid a:focus,
+    .footer-brand:focus {
+      outline: 2px solid #f5c542;
+      outline-offset: 4px;
+      border-radius: 6px;
+    }
+
+    /* ================= FOOTER RESPONSIVE ================= */
+
+    @media (max-width: 992px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-grid div:first-child {
+        grid-column: span 2;
+      }
+    }
+
+    @media (max-width: 600px) {
+      footer {
+        padding: 50px 0 20px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .footer-grid div:first-child {
+        grid-column: span 1;
+      }
+
+      .footer-brand {
+        align-items: center;
+      }
+
+      .brand-text strong {
+        font-size: 20px;
+      }
+
+      .footer-grid h3 {
+        font-size: 19px;
+      }
+
+      .footer-grid p {
+        font-size: 14px;
+      }
+
+      .copyright {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+      }
+    }
   </style>
 </head>
 
@@ -1193,7 +1408,7 @@
       <p>
         Enter your details, upload your photo and preview your resume in 10 different professional layouts.
         Final PDF / Word file is not available for direct download. Choose your favorite template and contact
-        SAFA TECH  HUB to get your final resume at low cost.
+        SAFA TECH HUB to get your final resume at low cost.
       </p>
 
       <div class="rb-hero-buttons">
@@ -1263,8 +1478,7 @@
 
         <div class="rb-form-group">
           <label>Professional Summary</label>
-          <textarea id="summary" rows="4"
-            placeholder="Write 3-4 lines about your career, skills and goal."></textarea>
+          <textarea id="summary" rows="4" placeholder="Write 3-4 lines about your career, skills and goal."></textarea>
         </div>
 
         <div class="rb-form-group">
@@ -1281,8 +1495,7 @@
 
         <div class="rb-form-group">
           <label>Skills</label>
-          <textarea id="skills" rows="3"
-            placeholder="Example: HTML, CSS, JavaScript, Java, C, MS Office"></textarea>
+          <textarea id="skills" rows="3" placeholder="Example: HTML, CSS, JavaScript, Java, C, MS Office"></textarea>
         </div>
 
         <div class="rb-form-group">
@@ -1316,7 +1529,8 @@
         <div>
           <h2><i class="fa-solid fa-layer-group"></i> 10 Resume Templates Preview</h2>
           <p>
-            All templates update automatically after entering details. User can select any template and contact SAFA TECH HUB 
+            All templates update automatically after entering details. User can select any template and contact SAFA
+            TECH HUB
             for final professional resume design.
           </p>
         </div>
@@ -1364,8 +1578,56 @@
     </div>
   </section>
 
-  <footer class="footer">
-    <p>© 2026 SAFA TECH HUB | Resume Making, Website & Digital Services | All Rights Reserved</p>
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+
+        <div>
+          <a href="index.html" class="brand footer-brand">
+            <img src="images/logo.png" alt="SAFA TECH HUB Logo" class="logo-img">
+            <div class="brand-text">
+              <strong>SAFA TECH HUB</strong>
+              <small>Digital Solutions</small>
+            </div>
+          </a>
+          <p>
+            SAFA TECH HUB creates modern, responsive, professional and mobile-friendly websites,
+            posters, logos, video ads, resume designs and digital solutions for businesses,
+            students, institutes and professionals.
+          </p>
+        </div>
+
+        <div>
+          <h3>Quick Links</h3>
+          <p><a href="about.html">About</a></p>
+          <p><a href="website.html">Website Service</a></p>
+          <p><a href="poster.html">Poster & Logo</a></p>
+          <p><a href="ads.html">Video Ads</a></p>
+          <p><a href="event-video.html">Invitation Video</a></p>
+          <p><a href="work.html">Work</a></p>
+          <p><a href="resume.html">Resume</a></p>
+          <p><a href="blog.html">Blog</a></p>
+          <p><a href="admission.html">Admission</a></p>
+
+        </div>
+        <div>
+          <h3>Important Link</h3>
+          <p> <a href="privacy-policy.html">Privacy Policy</a></p>
+          <p><a href="terms-conditions.html">Terms & Conditions</a></p>
+          <p><a href="contact.html">Contact Us</a></p>
+        </div>
+
+
+      </div>
+
+
+
+      <div class="copyright">
+        <span>© 2026 SAFA TECH HUB. All Rights Reserved.</span>
+        <span>Designed for powerful online business growth.</span>
+      </div>
+    </div>
   </footer>
 
   <script>

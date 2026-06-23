@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 
 <head>
-    <title>Poster Design & Logo Design Service | SAFA TECH Hub</title>
-<meta name="description" content="Get professional poster design, logo design, social media post design, admission posters, business banners and branding designs from SAFA TECH Hub.">
-<link rel="canonical" href="https://safatechhub.in/poster-logo.html">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Poster Design & Logo Design Service | SAFA TECH HUB</title>
+
+    <meta name="description"
+        content="Get professional poster design, logo design, social media post design, admission posters, business banners and branding designs from SAFA TECH HUB in Jaunpur and online across India.">
+
+    <meta name="keywords"
+        content="poster design in Jaunpur, logo design service, SAFA TECH HUB, safatechhub, business poster design, admission poster design, social media post design, banner design, professional logo design, digital branding service">
+
+    <meta name="author" content="SAFA TECH HUB">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://safatechhub.in/poster.html">
     <link rel="icon" type="image/png" href="images/logos.jpeg">
-    <title>Poster & Logo Design | SAFA TECH</title>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
@@ -21,6 +30,7 @@
             --light-gold: #ffd700;
             --white: #ffffff;
             --gray: #cfcfcf;
+            --border: rgba(212, 175, 55, 0.30);
         }
 
         * {
@@ -31,16 +41,108 @@
             text-decoration: none;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background: var(--black);
             color: var(--white);
+            overflow-x: hidden;
         }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* ================= HEADER ================= */
+
+        .header {
+            width: 100%;
+            min-height: 78px;
+            padding: 12px 8%;
+            background: rgba(5, 5, 5, 0.95);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 18px;
+            position: sticky;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
+            backdrop-filter: blur(14px);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--light-gold);
+            text-decoration: none;
+            letter-spacing: 1px;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.35);
+            flex-shrink: 0;
+        }
+
+        .logo-img {
+            width: 52px;
+            height: 52px;
+            object-fit: contain;
+            border-radius: 50%;
+            border: 2px solid var(--gold);
+            box-shadow: 0 0 18px rgba(212, 175, 55, 0.3);
+        }
+
+        .logo span {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--light-gold);
+            white-space: nowrap;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .navbar a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            color: var(--light-gold);
+            text-shadow: 0 0 10px var(--gold);
+        }
+
+        .nav-cta {
+            padding: 9px 15px;
+            border-radius: 30px;
+            background: linear-gradient(135deg, var(--gold), var(--light-gold));
+            color: #000 !important;
+            font-weight: 800 !important;
+            box-shadow: 0 0 18px rgba(212, 175, 55, 0.25);
+        }
+
+        /* ================= MAIN DESIGN PAGE ================= */
 
         .design-page {
             min-height: 100vh;
-            padding: 70px 8%;
+            padding: 80px 8%;
             background:
                 radial-gradient(circle at top left, rgba(212, 175, 55, 0.18), transparent 35%),
+                radial-gradient(circle at bottom right, rgba(255, 215, 0, 0.10), transparent 35%),
                 linear-gradient(135deg, #050505, #0b0b0b);
         }
 
@@ -57,9 +159,10 @@
         }
 
         .design-header h1 {
-            font-size: 42px;
+            font-size: clamp(2rem, 5vw, 3.4rem);
             margin: 12px 0;
             color: var(--white);
+            line-height: 1.2;
         }
 
         .design-header h1 strong {
@@ -67,16 +170,16 @@
         }
 
         .design-header p {
-            max-width: 820px;
+            max-width: 850px;
             margin: auto;
             color: var(--gray);
-            font-size: 16px;
+            font-size: 1rem;
             line-height: 1.8;
         }
 
         .design-cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
             margin-top: 40px;
         }
@@ -111,26 +214,32 @@
 
         .design-card h2 {
             color: var(--light-gold);
-            font-size: 24px;
+            font-size: 1.5rem;
             margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
         }
 
         .design-card p {
             color: var(--gray);
-            font-size: 15px;
+            font-size: 0.95rem;
             line-height: 1.7;
             margin-bottom: 18px;
+            position: relative;
+            z-index: 2;
         }
 
         .price {
-            font-size: 30px;
+            font-size: 2rem;
             font-weight: 800;
             color: var(--white);
             margin: 15px 0;
+            position: relative;
+            z-index: 2;
         }
 
         .price span {
-            font-size: 14px;
+            font-size: 0.88rem;
             color: var(--gold);
             font-weight: 500;
         }
@@ -138,12 +247,15 @@
         .design-card ul {
             list-style: none;
             margin: 20px 0;
+            position: relative;
+            z-index: 2;
         }
 
         .design-card ul li {
             color: var(--gray);
             margin-bottom: 10px;
-            font-size: 14px;
+            font-size: 0.9rem;
+            line-height: 1.5;
         }
 
         .design-card ul li::before {
@@ -158,9 +270,12 @@
             padding: 12px 24px;
             background: linear-gradient(135deg, var(--gold), var(--light-gold));
             color: #000;
-            font-weight: 700;
+            font-weight: 800;
             border-radius: 30px;
             transition: 0.3s ease;
+            position: relative;
+            z-index: 2;
+            text-align: center;
         }
 
         .btn:hover {
@@ -183,90 +298,336 @@
             color: var(--light-gold);
         }
 
-        @media (max-width: 600px) {
+        /* ================= FOOTER CSS ================= */
+
+        footer {
+            background:
+                radial-gradient(circle at top left, rgba(245, 197, 66, 0.13), transparent 35%),
+                linear-gradient(135deg, #050505, #101010);
+            color: #ffffff;
+            padding: 65px 0 22px;
+            border-top: 1px solid rgba(245, 197, 66, 0.35);
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: "";
+            position: absolute;
+            width: 260px;
+            height: 260px;
+            background: rgba(245, 197, 66, 0.08);
+            border-radius: 50%;
+            top: -120px;
+            right: -90px;
+            filter: blur(4px);
+        }
+
+        footer .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 0.8fr 1.2fr;
+            gap: 35px;
+            align-items: flex-start;
+        }
+
+        .footer-brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            margin-bottom: 18px;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        .brand-text strong {
+            color: #f5c542;
+            font-size: 22px;
+            letter-spacing: 0.5px;
+        }
+
+        .brand-text small {
+            color: #d8d8d8;
+            font-size: 13px;
+            margin-top: 3px;
+        }
+
+        .footer-grid p {
+            color: #d5d5d5;
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 9px;
+        }
+
+        .footer-grid h3 {
+            color: #f5c542;
+            font-size: 21px;
+            margin-bottom: 18px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-grid h3::after {
+            content: "";
+            position: absolute;
+            width: 45px;
+            height: 3px;
+            background: #f5c542;
+            left: 0;
+            bottom: 0;
+            border-radius: 20px;
+        }
+
+        .footer-grid a {
+            color: #e8e8e8;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .footer-grid a:hover {
+            color: #f5c542;
+            padding-left: 5px;
+        }
+
+        .footer-grid div:nth-child(2) p,
+        .footer-grid div:nth-child(3) p {
+            margin-bottom: 10px;
+        }
+
+        .footer-grid div:nth-child(2) a::before,
+        .footer-grid div:nth-child(3) a::before {
+            content: "›";
+            color: #f5c542;
+            margin-right: 8px;
+            font-weight: 900;
+        }
+
+        .copyright {
+            margin-top: 45px;
+            padding-top: 18px;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+            color: #bbbbbb;
+            font-size: 14px;
+        }
+
+        .copyright span:last-child {
+            color: #f5c542;
+        }
+
+        .footer-grid a:focus,
+        .footer-brand:focus,
+        .navbar a:focus {
+            outline: 2px solid #f5c542;
+            outline-offset: 4px;
+            border-radius: 6px;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 1100px) {
+            .design-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .header {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 14px 5%;
+            }
+
+            .logo {
+                justify-content: center;
+            }
+
+            .navbar {
+                width: 100%;
+                justify-content: flex-start;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                overflow-y: hidden;
+                gap: 10px;
+                padding: 8px 4px 10px;
+                scroll-behavior: smooth;
+                -webkit-overflow-scrolling: touch;
+                white-space: nowrap;
+            }
+
+            .navbar a {
+                flex: 0 0 auto;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding: 9px 14px;
+                border-radius: 25px;
+                background: rgba(212, 175, 55, 0.10);
+                border: 1px solid rgba(212, 175, 55, 0.22);
+                font-size: 0.86rem;
+            }
+
+            .navbar::-webkit-scrollbar {
+                height: 4px;
+            }
+
+            .navbar::-webkit-scrollbar-track {
+                background: rgba(255, 255, 255, 0.08);
+                border-radius: 20px;
+            }
+
+            .navbar::-webkit-scrollbar-thumb {
+                background: var(--gold);
+                border-radius: 20px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-grid div:first-child {
+                grid-column: span 2;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .header {
+                position: sticky;
+            }
+
+            .logo-img {
+                width: 45px;
+                height: 45px;
+            }
+
+            .logo span {
+                font-size: 1.05rem;
+            }
+
             .design-page {
-                padding: 50px 5%;
+                padding: 55px 5%;
             }
 
             .design-header h1 {
-                font-size: 30px;
+                font-size: 2rem;
+            }
+
+            .design-header p {
+                font-size: 0.95rem;
+            }
+
+            .design-cards {
+                grid-template-columns: 1fr;
+                gap: 22px;
             }
 
             .design-card {
                 padding: 24px;
             }
+
+            .btn {
+                width: 100%;
+            }
+
+            footer {
+                padding: 50px 0 20px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+
+            .footer-grid div:first-child {
+                grid-column: span 1;
+            }
+
+            .footer-brand {
+                align-items: center;
+            }
+
+            .brand-text strong {
+                font-size: 20px;
+            }
+
+            .footer-grid h3 {
+                font-size: 19px;
+            }
+
+            .footer-grid p {
+                font-size: 14px;
+            }
+
+            .copyright {
+                flex-direction: column;
+                text-align: center;
+                gap: 8px;
+            }
         }
 
-        .header {
-            width: 100%;
-            height: 15%;
-            padding: 20px 8%;
-            background: rgba(5, 5, 5, 0.95);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 200;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
-            box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
-        }
+        @media (max-width: 420px) {
+            .navbar a {
+                font-size: 0.78rem;
+                padding: 8px 12px;
+            }
 
-        .logo {
-            font-size: 35px;
-            height: 20%;
-            font-weight: 50;
-            color: var(--light-gold);
-            text-decoration: none;
-            letter-spacing: 1px;
-            text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
-        }
-
-        .logo-img {
-            width: 50px;
-            height: 50px;
-            object-fit: contain;
-        }
-
-        .navbar a {
-            color: var(--white);
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 500;
-            margin-left: 28px;
-            transition: 0.3s ease;
-        }
-
-        .navbar a:hover {
-            color: var(--light-gold);
-            text-shadow: 0 0 10px var(--gold);
+            .price {
+                font-size: 1.75rem;
+            }
         }
     </style>
 </head>
 
 <body>
-    <!-- Header -->
+
+    <!-- ================= HEADER ================= -->
     <header class="header">
         <a href="index.html" class="logo">
-            <img src="images/logo.png" class="logo-img">
-            <span>SAFA TECH</span>
+            <img src="images/logo.png" alt="SAFA TECH HUB Logo" class="logo-img">
+            <span>SAFA TECH HUB</span>
         </a>
 
         <nav class="navbar">
             <a href="index.html">Home</a>
-            <a href="index.html#services">Services</a>
-
+            <a href="website.html">Website</a>
+            <a href="poster.html" class="active">Poster</a>
+            <a href="ads.html">Ads</a>
+            <a href="event-video.html">Invitation</a>
+            <a href="work.html">Work</a>
+            <a href="blog.html">Blog</a>
+            <a href="resume.html">Resume</a>
+            <a href="contact.html">Contact</a>
+            <a href="https://wa.me/918090365014?text=Hello%20SAFA%20TECH%20HUB%2C%20I%20want%20poster%20or%20logo%20design%20service."
+                target="_blank" rel="noopener" class="nav-cta">WhatsApp</a>
         </nav>
     </header>
 
+    <!-- ================= MAIN SECTION ================= -->
     <section class="design-page">
 
         <div class="design-header">
-            <span>SAFA TECH Design Services</span>
+            <span>SAFA TECH HUB Design Services</span>
+
             <h1>Poster Design & <strong>Logo Design</strong></h1>
+
             <p>
-                SAFA TECH designs professional posters for admission, events, education promotion,
+                SAFA TECH HUB designs professional posters for admission, events, education promotion,
                 business branding, social media posts, offers, banners, and digital advertisements.
                 We also create clean, modern, and attractive logos for your business and brand identity.
             </p>
@@ -276,7 +637,10 @@
 
             <div class="design-card">
                 <h2>Poster Design</h2>
-                <p>Best for admission posters, event posters, business offers, social media posts and promotion banners.
+
+                <p>
+                    Best for admission posters, event posters, business offers, social media posts
+                    and promotion banners.
                 </p>
 
                 <div class="price">₹49 <span>/ per poster</span></div>
@@ -289,15 +653,18 @@
                     <li>Delivery: 1 day</li>
                 </ul>
 
-                <a class="btn"
-                    href="https://wa.me/918090365014?text=I%20want%20Poster%20Design%20service%20from%20SAFA%20TECH">
+                <a class="btn" target="_blank" rel="noopener"
+                    href="https://wa.me/918090365014?text=I%20want%20Poster%20Design%20service%20from%20SAFA%20TECH%20HUB">
                     Order Poster
                 </a>
             </div>
 
             <div class="design-card">
                 <h2>Logo Design</h2>
-                <p>Perfect for business, startup, institute, coaching, website, shop, brand and professional identity.
+
+                <p>
+                    Perfect for business, startup, institute, coaching, website, shop, brand
+                    and professional identity.
                 </p>
 
                 <div class="price">₹199 <span>/ starting</span></div>
@@ -307,18 +674,22 @@
                     <li>Modern brand style</li>
                     <li>PNG / JPG file included</li>
                     <li>Suitable for website and social media</li>
-                    <li>Delivery: 1-2 days</li>
+                    <li>Delivery: 1–2 days</li>
                 </ul>
 
-                <a class="btn"
-                    href="https://wa.me/918090365014?text=I%20want%20Logo%20Design%20service%20from%20SAFA%20TECH">
+                <a class="btn" target="_blank" rel="noopener"
+                    href="https://wa.me/918090365014?text=I%20want%20Logo%20Design%20service%20from%20SAFA%20TECH%20HUB">
                     Order Logo
                 </a>
             </div>
 
             <div class="design-card">
                 <h2>Poster + Logo Combo</h2>
-                <p>Complete branding package for new business, institute, admission campaign or online promotion.</p>
+
+                <p>
+                    Complete branding package for new business, institute, admission campaign
+                    or online promotion.
+                </p>
 
                 <div class="price">₹221 <span>/ combo</span></div>
 
@@ -330,8 +701,8 @@
                     <li>Best for quick promotion</li>
                 </ul>
 
-                <a class="btn"
-                    href="https://wa.me/918090365014?text=I%20want%20Poster%20and%20Logo%20Combo%20service%20from%20SAFA%20TECH">
+                <a class="btn" target="_blank" rel="noopener"
+                    href="https://wa.me/918090365014?text=I%20want%20Poster%20and%20Logo%20Combo%20service%20from%20SAFA%20TECH%20HUB">
                     Order Combo
                 </a>
             </div>
@@ -345,6 +716,56 @@
         </div>
 
     </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+
+                <div>
+                    <a href="index.html" class="footer-brand">
+                        <img src="images/logo.png" alt="SAFA TECH HUB Logo" class="logo-img">
+                        <div class="brand-text">
+                            <strong>SAFA TECH HUB</strong>
+                            <small>Digital Solutions</small>
+                        </div>
+                    </a>
+
+                    <p>
+                        SAFA TECH HUB creates modern, responsive, professional and mobile-friendly websites,
+                        posters, logos, video ads, resume designs and digital solutions for businesses,
+                        students, institutes and professionals.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Quick Links</h3>
+                    <p><a href="about.html">About</a></p>
+                    <p><a href="website.html">Website Service</a></p>
+                    <p><a href="poster.html">Poster & Logo</a></p>
+                    <p><a href="ads.html">Video Ads</a></p>
+                    <p><a href="event-video.html">Invitation Video</a></p>
+                    <p><a href="work.html">Work</a></p>
+                    <p><a href="resume.html">Resume</a></p>
+                    <p><a href="blog.html">Blog</a></p>
+                    <p><a href="admission.html">Admission</a></p>
+                </div>
+
+                <div>
+                    <h3>Important Link</h3>
+                    <p><a href="privacy-policy.html">Privacy Policy</a></p>
+                    <p><a href="terms-conditions.html">Terms & Conditions</a></p>
+                    <p><a href="contact.html">Contact Us</a></p>
+                </div>
+
+            </div>
+
+            <div class="copyright">
+                <span>© 2026 SAFA TECH HUB. All Rights Reserved.</span>
+                <span>Designed for powerful online business growth.</span>
+            </div>
+        </div>
+    </footer>
 
 </body>
 

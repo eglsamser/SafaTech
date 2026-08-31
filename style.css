@@ -182,6 +182,7 @@ section {
 
 /* Home Right Card */
 .home-image {
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -222,6 +223,13 @@ section {
 .profile-card p {
   position: relative;
   z-index: 1;
+}
+.profile-card img{
+  
+      width: 300px;
+      height: 300px;
+      object-fit: contain;
+    
 }
 
 .profile-card i {
@@ -448,6 +456,7 @@ section {
 
 /* Contact */
 .contact {
+  
   align-items: center;
   background:
     radial-gradient(circle at top, rgba(212, 175, 55, 0.18), transparent 40%),
@@ -626,7 +635,7 @@ footer .container {
   padding-top: 18px;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 15px;
   flex-wrap: wrap;
   color: #bbbbbb;
@@ -1105,10 +1114,13 @@ footer .container {
 
 /* ================= CONTACT FORM SECTION ================= */
 .contact-main {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 30px;
-  padding: 0 8% 70px;
+  max-width: 1000px;
+  margin: auto;
+  background: linear-gradient(145deg, #111111, #080808);
+  padding: 40px;
+  border-radius: 25px;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
 }
 
 .contact-info-card,

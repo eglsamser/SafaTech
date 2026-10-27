@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Diploma Previous Year Question Papers | Coming Soon - SAFA TECH HUB</title>
+
+    <meta name="description" content="Diploma Polytechnic Previous Year Question Papers are coming soon to SAFA TECH HUB. Get semester-wise question papers for Computer Science, Electrical, Civil and Mechanical Engineering.">
+
+    <meta name="keywords" content="Diploma Previous Year Question Papers, Polytechnic Question Papers, Diploma Semester Papers, Computer Science Diploma Papers, SAFA TECH HUB">
+
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#123c69">
+
+    <link rel="canonical" href="https://safatechhub.in/diploma-previous-year-question-papers.html">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7fc;
+            color: #1d2939;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: #ffffff;
+            padding: 16px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .logo {
+            color: #123c69;
+            font-size: 21px;
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #f59e0b;
+        }
+
+        .back-link {
+            text-decoration: none;
+            color: #123c69;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 45px 18px;
+        }
+
+        .coming-soon {
+            width: 100%;
+            max-width: 700px;
+            background: #ffffff;
+            border-radius: 22px;
+            padding: 48px 28px;
+            text-align: center;
+            box-shadow: 0 12px 40px rgba(18, 60, 105, 0.09);
+            border: 1px solid #e7edf5;
+        }
+
+        .icon-box {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 25px;
+            border-radius: 25px;
+            background: #eaf2ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 30px;
+            background: #fff4d6;
+            color: #925c00;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #123c69;
+            font-size: clamp(28px, 5vw, 42px);
+            line-height: 1.2;
+            margin-bottom: 18px;
+        }
+
+        .description {
+            max-width: 540px;
+            margin: 0 auto 28px;
+            color: #667085;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .branches {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 25px 0 32px;
+        }
+
+        .branch {
+            background: #f0f5fb;
+            color: #24476d;
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .notify-text {
+            color: #344054;
+            font-size: 14px;
+            margin-bottom: 22px;
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+            background: #123c69;
+            color: #ffffff;
+            padding: 14px 25px;
+            border-radius: 9px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 700;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .button:hover {
+            background: #0b2b4e;
+            transform: translateY(-2px);
+        }
+
+        .home-link {
+            display: block;
+            margin-top: 22px;
+            color: #667085;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .home-link:hover {
+            color: #123c69;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 15px;
+            background: #ffffff;
+            color: #667085;
+            font-size: 13px;
+            line-height: 1.8;
+            border-top: 1px solid #e7edf5;
+        }
+
+        footer a {
+            color: #123c69;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 15px 5%;
+            }
+
+            .logo {
+                font-size: 17px;
+            }
+
+            .coming-soon {
+                padding: 38px 19px;
+                border-radius: 16px;
+            }
+
+            .description {
+                font-size: 14px;
+            }
+
+            .icon-box {
+                width: 82px;
+                height: 82px;
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a class="logo" href="index.html">
+            SAFA TECH <span>HUB</span>
+        </a>
+
+        <a class="back-link" href="index.html">← Home</a>
+    </header>
+
+    <main>
+        <section class="coming-soon">
+
+            <div class="icon-box" aria-hidden="true">📚</div>
+
+            <div class="badge">COMING SOON</div>
+
+            <h1>Diploma Previous Year Question Papers</h1>
+
+            <p class="description">
+                We are preparing a collection of Diploma Polytechnic previous
+                year question papers to help students prepare smarter for
+                their semester examinations. The papers will be organized
+                branch-wise and semester-wise for easy access.
+            </p>
+
+            <div class="branches">
+                <span class="branch">Computer Science</span>
+                <span class="branch">Electrical Engineering</span>
+                <span class="branch">Civil Engineering</span>
+                <span class="branch">Mechanical Engineering</span>
+            </div>
+
+            <p class="notify-text">
+                Stay connected with SAFA TECH HUB for study materials,
+                important questions, syllabus and upcoming question papers.
+            </p>
+
+            <a class="button" href="diploma-important-questions.html">
+                Explore Important Questions →
+            </a>
+
+            <a class="home-link" href="index.html">
+                ← Back to SAFA TECH HUB Home
+            </a>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            © <span id="year"></span>
+            <a href="https://safatechhub.in">SAFA TECH HUB</a>.
+            All rights reserved.
+        </p>
+        <p>Learn Better. Prepare Smarter. Build Your Future.</p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+</html>
